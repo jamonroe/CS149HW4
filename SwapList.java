@@ -36,7 +36,8 @@ public class SwapList extends ArrayList<SwapProcess>
 					curr = get(i);
 					if (i == 0)
 					{
-						if (curr.getStartPoint() - 0 >= sp.getDuration())
+						//check if the space before the first entry is big enough
+						if (curr.getStartPoint() - 0 >= sp.getSize())
 						{
 							return 0;
 						}
@@ -45,7 +46,7 @@ public class SwapList extends ArrayList<SwapProcess>
 					{
 						prev = get(i - 1);
 						diff = curr.getStartPoint() - prev.getEndPoint() - 1;
-						if (diff >= sp.getDuration())
+						if (diff >= sp.getSize())
 						{
 							return prev.getEndPoint() + 1;
 						}
