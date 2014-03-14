@@ -1,10 +1,15 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-
+/**
+ * SwapList acts as the "LinkedList"
+ * This is the "memory for the processes to run"
+ * @author DerrL
+ *
+ */
 public class SwapList extends ArrayList<SwapProcess>
 {
-	public static final int MAX_SIZE = 99;
+	public static final int MAX_SIZE = 99; //amount of memory space
 	
 	/**
 	 * Checks if there is space for a process
@@ -42,7 +47,7 @@ public class SwapList extends ArrayList<SwapProcess>
 							return 0;
 						}
 					}
-					else
+					else //check if spaces between each entry is big enough
 					{
 						prev = get(i - 1);
 						diff = curr.getStartPoint() - prev.getEndPoint() - 1;
@@ -54,6 +59,11 @@ public class SwapList extends ArrayList<SwapProcess>
 				}
 				
 				diff = MAX_SIZE - curr.getEndPoint() - 1;
+				//check if the space after the last entry is big enough
+				if (diff >= sp.getSize())
+				{
+					return curr.getEndPoint() + 1;
+				}
 			}
 			
 			return -1;
@@ -63,7 +73,63 @@ public class SwapList extends ArrayList<SwapProcess>
 		/* ~~~~~NEXT FIT ALGORITHM HERE~~~~~ */
 		else if ( s == "NF" )
 		{
-			return 0;
+			if (isEmpty())
+				return 0;
+			else
+			{
+				SwapProcess curr, next, prev;
+				int diff;
+				
+				next = get(index); //in case this is the last entry of the list
+				
+				for (int i = index; i < size() - 1; i++)
+				//check between each entry (after the index of previous hasSpace call)
+				{
+					curr = get(i);
+					next = get(i + 1);
+					
+					diff = next.getStartPoint() - curr.getEndPoint() - 1;
+					if (diff >= sp.getSize())
+					{
+						return curr.getEndPoint() + 1;
+					}
+				}
+				
+				diff = MAX_SIZE - next.getEndPoint() - 1;
+				//check if the space after the last entry is big enough
+				if (diff >= sp.getSize())
+				{
+					return next.getEndPoint() + 1;
+				}
+				
+				for (int i = 0; i <= index; i++)
+				{
+					curr = get(i);
+					if (i == 0)
+					{
+						//check if the space before the first entry is big enough
+						if (curr.getStartPoint() - 0 >= sp.getSize())
+						{
+							return 0;
+						}
+					}
+					else //check spaces between each entry (before index of previous hasSpace call)
+					{
+						curr = get(i);
+						prev = get(i - 1);
+						
+						diff = curr.getStartPoint() - prev.getEndPoint() - 1;
+						if (diff >= sp.getSize())
+						{
+							return prev.getEndPoint() + 1;
+						}
+						
+					}
+				}
+				
+			}
+			
+			return -1;
 		}
 		
 		/* ~~~~~BEST FIT ALGORITHM HERE~~~~~ */
@@ -71,17 +137,65 @@ public class SwapList extends ArrayList<SwapProcess>
 		
 		else if ( s == "BF" )
 		{
-			return 0;
+			if(isEmpty())
+				return 0;
+			else
+			{
+				SwapProcess curr, prev;
+				int smallest_location = -1;
+				int diff;
+				int smallest_diff = 99;
+				
+				curr = get(0); //in case the ArrayList only has 1 item
+				
+				for (int i = 0; i < size(); i++)
+				{
+					curr = get(i);
+					if (i == 0)
+					{
+						//check if the space before the first entry is big enough
+						diff = curr.getStartPoint() - 0;
+						if (diff >= sp.getSize() && diff < smallest_diff)
+						{
+							smallest_location = 0;
+						}
+					}
+					else //check if spaces between each entry is big enough
+					{
+						prev = get(i - 1);
+						diff = curr.getStartPoint() - prev.getEndPoint() - 1;
+						if (diff >= sp.getSize() && diff < smallest_diff)
+						{
+							smallest_diff = diff;
+							smallest_location = prev.getEndPoint() + 1;
+						}
+					}
+				}
+				
+				diff = MAX_SIZE - curr.getEndPoint() - 1;
+				//check if the space after the last entry is big enough
+				if (diff >= sp.getSize() && diff < smallest_diff)
+				{
+					smallest_diff = diff;
+					smallest_location = curr.getEndPoint() + 1; 
+				}
+				
+				return smallest_location;
+			}
 		}
 		
 		else
+		{
+			System.out.println("INCORRECT ALGORITHM!!!");
 			return -1;
+		}
 	}
 	
 	/**
-	 * 
+	 * calls hasSpace using the First Fit algorithm
+	 * adds to the list then sorts the list
 	 * @param sp process to swap in
-	 * @return true if process gets swapped in, false otherwise
+	 * @return true if swapping in succeeded, false if otherwise
 	 */
 	public boolean swapInFirstFit(SwapProcess sp)
 	{
@@ -94,31 +208,58 @@ public class SwapList extends ArrayList<SwapProcess>
 			return true;
 		}
 		else
+		{
 			return false;
+		}
 	}
 	
+	/**
+	 * calls hasSpace using the Next Fit algorithm
+	 * adds to the list then sorts the list
+	 * @param sp SwapProcess to swap in
+	 * @param index of previous swapped in process
+	 * @return true if swapping in succeeded, false if otherwise
+	 */
 	public boolean swapInNextFit(SwapProcess sp, int index)
 	{
 		int slot = hasSpace(sp, "NF", index);
 		if (slot != -1)
 		{
+			sp.setStartPoint(slot);
+			add(sp);
+			Collections.sort(this, SwapProcess.startPointComparator());
 			return true;
 		}
 		else
+		{
 			return false;
+		}
 	}
 	
+	/**
+	 * calls hasSpace using the Best Fit algorithm
+	 * adds to the list then sorts the list
+	 * @param sp SwapProcess to swap in to the list
+	 * @return true if swapping in succeeded, false if otherwise
+	 */
 	public boolean swapInBestFit(SwapProcess sp)
 	{
 		int slot = hasSpace(sp, "BF", 0);
 		if (slot != -1)
 		{
+			sp.setStartPoint(slot);
+			add(sp);
+			Collections.sort(this, SwapProcess.startPointComparator());
 			return true;
 		}
 		else
 			return false;
 	}
 	
+	/**
+	 * calls the run method on each process
+	 * which just decrements the time remaining of each process
+	 */
 	public void run()
 	{
 		for (SwapProcess sp : this)
@@ -126,15 +267,10 @@ public class SwapList extends ArrayList<SwapProcess>
 			sp.run();
 		}
 		
-		for (SwapProcess sp : this)
-		{
-			if (sp.getRemainingTime() == 0)
-				{ remove(sp); }
-		}
 	}
 	
 	/**
-	 * toString method to print out the entire list
+	 * toString method to create a string for list
 	 */
 	public String toString()
 	{
