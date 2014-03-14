@@ -94,7 +94,7 @@ public class SwapSimulator
 				while (list.swapInFirstFit(q.peek()))
 				{
 					SwapProcess gotten = q.remove();
-					System.out.printf("00:%02d Swapped  in %c: %s\n", i, gotten.getName(), list.toString());
+					printSwappedIn(gotten, i);
 					count++;
 				}
 				
@@ -105,7 +105,7 @@ public class SwapSimulator
 					if (sp.isComplete())
 					{
 						list.remove(sp);
-						System.out.printf("00:%02d Swapped out %c: %s\n", i, sp.getName(), list.toString());
+						printSwappedOut(sp, i);
 					}
 				}
 			}
@@ -115,7 +115,7 @@ public class SwapSimulator
 				while (list.swapInNextFit(q.peek(), index))
 				{
 					SwapProcess gotten = q.remove();
-					System.out.printf("00:%02d Swapped  in %c: %s\n", i, gotten.getName(), list.toString());
+					printSwappedIn(gotten, i);
 					index = list.indexOf(gotten);
 					count++;
 				}
@@ -127,7 +127,7 @@ public class SwapSimulator
 					if (sp.isComplete())
 					{
 						list.remove(sp);
-						System.out.printf("00:%02d Swapped out %c: %s\n", i, sp.getName(), list.toString());
+						printSwappedOut(sp, i);
 					}
 				}
 			}
@@ -138,7 +138,7 @@ public class SwapSimulator
 				while (list.swapInBestFit(q.peek())) //ADDED ONE RIGHT HERE TOO! WHAT WAS I THINKING?
 				{
 					SwapProcess gotten = q.remove();
-					System.out.printf("00:%02d Swapped  in %c: %s\n", i, gotten.getName(), list.toString());
+					printSwappedIn(gotten, i);
 					count++;
 				}
 				
@@ -149,7 +149,7 @@ public class SwapSimulator
 					if (sp.isComplete())
 					{
 						list.remove(sp);
-						System.out.printf("00:%02d Swapped out %c: %s\n", i, sp.getName(), list.toString());
+						printSwappedOut(sp, i);
 					}
 				}
 			}
@@ -158,6 +158,23 @@ public class SwapSimulator
 		}
 		
 		return count;
+	}
+	
+	public void printSwappedIn(SwapProcess sp, int time)
+	{
+		if (time == 60)
+			System.out.printf("01:00 Swapped  in %c : %s\n", sp.getName(), list.toString());
+		else
+			System.out.printf("00:%02d Swapped  in %c : %s\n", time, sp.getName(), list.toString());
+	}
+	
+	public void printSwappedOut(SwapProcess sp, int time)
+	{
+		if (time == 60)
+			System.out.printf("01:00 Swapped out %c : %s\n", sp.getName(), list.toString());
+		else
+			System.out.printf("00:%02d Swapped out %c : %s\n", time, sp.getName(), list.toString());
+		
 	}
 
 }
