@@ -48,16 +48,59 @@ public class Main
 		System.out.println("The average number of processes swapped in for Next Fit is: " + nf_avg);
 		System.out.println("The average number of processes swapped in for Best Fit is: " + bf_avg);
 		
+		System.out.println();
 		System.out.println("=========== Page Simulation ===========");
-		
+		double hitRatioAvgs[] = new double[5];
 		// true - print all information about the runs
 		// false - only print statistic information about the Average Hit Ratios
 		PageSimulator ps = new PageSimulator(true);
-		ps.fifo();
-		ps.lru();
-		ps.lfu();
-		ps.mfu();
-		ps.randomPick();
+		
+		System.out.println("----------- FIFO Start -----------");
+		for (int i = 0; i < 5; i++) {
+			double hitRatio = ps.fifo() * 100;
+			hitRatioAvgs[0]+=hitRatio;
+			System.out.printf("Run %d Hit Ratio: %.0f%%\n", (i+1), hitRatio);
+		}
+		hitRatioAvgs[0]/=5;
+
+		System.out.println("----------- LRU Start -----------");
+		for (int i = 0; i < 5; i++) {
+			double hitRatio = ps.lru() * 100;
+			hitRatioAvgs[1]+=hitRatio;
+			System.out.printf("Run %d Hit Ratio: %.0f%%\n", (i+1), hitRatio);
+		}
+		hitRatioAvgs[1]/=5;
+		
+		System.out.println("----------- LFU Start -----------");
+		for (int i = 0; i < 5; i++) {
+			double hitRatio = ps.lfu() * 100;
+			hitRatioAvgs[2]+=hitRatio;
+			System.out.printf("Run %d Hit Ratio: %.0f%%\n", (i+1), hitRatio);
+		}
+		hitRatioAvgs[2]/=5;
+		
+		System.out.println("----------- MFU Start -----------");
+		for (int i = 0; i < 5; i++) {
+			double hitRatio = ps.mfu() * 100;
+			hitRatioAvgs[3]+=hitRatio;
+			System.out.printf("Run %d Hit Ratio: %.0f%%\n", (i+1), hitRatio);
+		}
+		hitRatioAvgs[3]/=5;
+		
+		System.out.println("----------- Random Pick Start -----------");
+		for (int i = 0; i < 5; i++) {
+			double hitRatio = ps.randomPick() * 100;
+			hitRatioAvgs[4]+=hitRatio;
+			System.out.printf("Run %d Hit Ratio: %.0f%%\n", (i+1), hitRatio);
+		}
+		hitRatioAvgs[4]/=5;
+		
+		System.out.println();
+		System.out.printf("Average Hit Ratio for \"FIFO\": %.2f%%\n", hitRatioAvgs[0]);
+		System.out.printf("Average Hit Ratio for \"LRU\": %.2f%%\n", hitRatioAvgs[1]);
+		System.out.printf("Average Hit Ratio for \"LFU\": %.2f%%\n", hitRatioAvgs[2]);
+		System.out.printf("Average Hit Ratio for \"MFU\": %.2f%%\n", hitRatioAvgs[3]);
+		System.out.printf("Average Hit Ratio for \"Random Pick\": %.2f%%\n", hitRatioAvgs[4]);
 	}
 	
 }

@@ -8,7 +8,7 @@ public class PageSimulator
 {
 	private final int MEMORY_SIZE = 4;//Max pages in memory;
 	private final int PROGRAM_SIZE = 10;//Number of pages in the program
-	private final int PAGE_REFERENCES = 20;//Number of times a page is picked (Paging simulation)
+	private final int PAGE_REFERENCES = 100;//Number of times a page is picked (Paging simulation)
 	
 	private Random rand;
 	
@@ -31,10 +31,14 @@ public class PageSimulator
 	
 	/**
 	 * First In First Out (FIFO) paging algorithm
+	 * @return Hit Ratio
 	 */
-	public void fifo()
+	public double fifo()
 	{
-		System.out.println("~~~~~ First In First Out ~~~~~");
+		if(printAll)
+			System.out.println("~~~~~ First In First Out ~~~~~");
+		
+		int hits = 0;
 		int prevPageRef = -1;
 		int nextPage;
 		Page evictedPage;
@@ -59,6 +63,8 @@ public class PageSimulator
 					memory.add(page);
 				}
 			}
+			else
+				hits++;
 			
 			if(printAll)
 			{
@@ -72,16 +78,22 @@ public class PageSimulator
 		
 		resetProgram();
 		memory.clear();
-		System.out.println();
+		if(printAll)
+			System.out.println();
+		
+		return (double) hits / (double) PAGE_REFERENCES;
 	}
 	
 	/**
 	 * Least Recently Used (LRU) paging algorithm
+	 * @return Hit Ratio
 	 */
-	public void lru()
+	public double lru()
 	{
-		System.out.println("~~~~~ Least Recently Used ~~~~~");
+		if(printAll)
+			System.out.println("~~~~~ Least Recently Used ~~~~~");
 		
+		int hits = 0;
 		Page evictedPage;
 		int prevPageRef = -1;
 		int nextPage;
@@ -114,6 +126,8 @@ public class PageSimulator
 					memory.add(page);
 				}
 			}
+			else
+				hits++;
 			
 			if(printAll)
 			{
@@ -128,16 +142,22 @@ public class PageSimulator
 		
 		resetProgram();
 		memory.clear();
-		System.out.println();
+		if(printAll)
+			System.out.println();
+		
+		return (double) hits / (double) PAGE_REFERENCES;
 	}
 	
 	/**
 	 * Least Frequently Used (LFU) paging algorithm
+	 * @return Hit Ratio
 	 */
-	public void lfu()
+	public double lfu()
 	{
-		System.out.println("~~~~~ Least Frequently Used ~~~~~");
+		if(printAll)
+			System.out.println("~~~~~ Least Frequently Used ~~~~~");
 		
+		int hits = 0;
 		Page evictedPage;
 		int prevPageRef = -1;
 		int nextPage;
@@ -170,6 +190,8 @@ public class PageSimulator
 					memory.add(page);
 				}
 			}
+			else
+				hits++;
 			
 			if(printAll)
 			{
@@ -184,16 +206,22 @@ public class PageSimulator
 		
 		resetProgram();
 		memory.clear();	
-		System.out.println();	
+		if(printAll)
+			System.out.println();
+		
+		return (double) hits / (double) PAGE_REFERENCES;	
 	}
 
 	/**
 	 * Most Frequently Used (MFU) paging algorithm
+	 * @return Hit Ratio
 	 */
-	public void mfu()
+	public double mfu()
 	{
-		System.out.println("~~~~~ Most Frequently Used ~~~~~");
+		if(printAll)
+			System.out.println("~~~~~ Most Frequently Used ~~~~~");
 		
+		int hits = 0;
 		Page evictedPage;
 		int prevPageRef = -1;
 		int nextPage;
@@ -226,6 +254,8 @@ public class PageSimulator
 					memory.add(page);
 				}
 			}
+			else
+				hits++;
 			
 			if(printAll)
 			{
@@ -240,16 +270,22 @@ public class PageSimulator
 		
 		resetProgram();
 		memory.clear();	
-		System.out.println();	
+		if(printAll)
+			System.out.println();
+		
+		return (double) hits / (double) PAGE_REFERENCES;
 	}
 
 	/**
 	 * Random Pick paging algorithm
+	 * @return Hit ratio
 	 */
-	public void randomPick()
+	public double randomPick()
 	{
-		System.out.println("~~~~~ Random Pick ~~~~~");
+		if(printAll)
+			System.out.println("~~~~~ Random Pick ~~~~~");
 		
+		int hits = 0;
 		Page evictedPage;
 		int prevPageRef = -1;
 		int nextPage;
@@ -265,7 +301,6 @@ public class PageSimulator
 				//Add page into memory
 				if(memory.size() != MEMORY_SIZE)//Is memory full?
 				{//No
-					program.get(nextPage).incrementFrequency();
 					memory.add(program.get(nextPage));
 				}
 				else
@@ -276,6 +311,8 @@ public class PageSimulator
 					memory.add(page);
 				}
 			}
+			else
+				hits++;
 			
 			if(printAll)
 			{
@@ -286,11 +323,15 @@ public class PageSimulator
 				else
 					System.out.printf("   Page Referenced: %d | No eviction\n", nextPage);
 			}
+			
 		}
 		
 		resetProgram();
 		memory.clear();	
-		System.out.println();	
+		if(printAll)
+			System.out.println();	
+		
+		return (double) hits / (double) PAGE_REFERENCES;
 	}
 	
 	private boolean pageInMemory(int pageIndex)
