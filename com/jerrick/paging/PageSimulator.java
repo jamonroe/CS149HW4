@@ -62,7 +62,9 @@ public class PageSimulator
 			else
 				System.out.printf("   Page Referenced: %d | No eviction\n", nextPage);
 		}
-		System.out.println("~~~~~ FIFO Done ~~~~~");
+		
+		memory.clear();
+		System.out.println();
 	}
 	
 	/**
@@ -85,6 +87,9 @@ public class PageSimulator
 			for(int index=0;index<memory.size();index++)
 				memory.get(index).incrementTimeSinceUsage();
 			
+			//for(int x=0;x<memory.size();x++)
+			//	System.out.printf("%d: %d\n", memory.get(x).getIndex(), memory.get(x).getTimeSinceUsage());
+			
 			if(!pageInMemory(nextPage))
 			{
 				//Add page into memory
@@ -94,6 +99,7 @@ public class PageSimulator
 				}
 				else
 				{//Yes
+					Collections.sort(memory, Page.recentComparator());
 					Page page = program.get(nextPage);
 					evictedPage = memory.remove(0);
 					memory.add(page);
@@ -106,7 +112,17 @@ public class PageSimulator
 			else
 				System.out.printf("   Page Referenced: %d | No eviction\n", nextPage);
 		}
-		System.out.println("~~~~~ LRU Done ~~~~~");
+		
+		memory.clear();
+		System.out.println();
+	}
+	
+	/**
+	 * Least Frequently Used (LFU) paging algorithm
+	 */
+	public void lfu()
+	{
+		
 	}
 	
 	private boolean pageInMemory(int pageIndex)

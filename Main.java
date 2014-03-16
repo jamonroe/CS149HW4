@@ -52,7 +52,7 @@ public class Main
 		
 		PageSimulator ps = new PageSimulator();
 		ps.fifo();
-		//ps.lru();
+		ps.lru();
 	}
 	
 }

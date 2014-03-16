@@ -39,8 +39,8 @@ public class Page
 			@Override
 			public int compare(Page pageA, Page pageB) 
 			{
-				if (pageB.getTimeSinceUsage() - pageA.getTimeSinceUsage() < 0) return 1;
-				if (pageB.getTimeSinceUsage() - pageA.getTimeSinceUsage() > 0) return -1;
+				if (pageB.getTimeSinceUsage() - pageA.getTimeSinceUsage() < 0) return -1;
+				if (pageB.getTimeSinceUsage() - pageA.getTimeSinceUsage() > 0) return 1;
 				return 0;
 			}
 		};
