@@ -50,9 +50,14 @@ public class Main
 		
 		System.out.println("=========== Page Simulation ===========");
 		
-		PageSimulator ps = new PageSimulator();
+		// true - print all information about the runs
+		// false - only print statistic information about the Average Hit Ratios
+		PageSimulator ps = new PageSimulator(true);
 		ps.fifo();
 		ps.lru();
+		ps.lfu();
+		ps.mfu();
+		ps.randomPick();
 	}
 	
 }

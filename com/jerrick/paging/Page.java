@@ -32,6 +32,11 @@ public class Page
 		timeSinceUsage = 0;
 	}
 	
+	public void resetFrequency()
+	{
+		frequency = 0;
+	}
+	
 	public static Comparator<Page> recentComparator()
 	{
 		return new Comparator<Page>() 
