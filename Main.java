@@ -1,3 +1,5 @@
+import com.jerrick.paging.PageSimulator;
+
 
 public class Main
 {
@@ -45,6 +47,12 @@ public class Main
 		System.out.println("The average number of processes swapped in for First Fit is: " + ff_avg);
 		System.out.println("The average number of processes swapped in for Next Fit is: " + nf_avg);
 		System.out.println("The average number of processes swapped in for Best Fit is: " + bf_avg);
+		
+		System.out.println("=========== Page Simulation ===========");
+		
+		PageSimulator ps = new PageSimulator();
+		ps.fifo();
+		//ps.lru();
 	}
 	
 }
