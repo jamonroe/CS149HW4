@@ -14,6 +14,7 @@ public class SwapSimulator
 	private SwapList list; //Memory space for processes to run on
 	private Queue<SwapProcess> q; //Queue of processes
 	private String alg; //Algorithm to use "FF"/"NF"/"BF"
+	private int[] sizes = {5, 11, 17, 31};
 	
 	public static final int TWO = 2;
 	public static final int MAX_TIME = 60;
@@ -49,14 +50,14 @@ public class SwapSimulator
 	 */
 	private void processGenerator()
 	{
-		for (int j = 0; j < 5; j++)
+		for (int j = 0; j < 2; j++)
 		{
 			for (int i = 0; i < 26; i++)
 			{
 				char c = (char) ('A' + i);
 				int time = rangedRandom(1, 5); //1-5 for duration
-				int pow = rangedRandom(2, 5); //2-5 for size
-				int size = (int)(Math.pow(TWO, pow)); 
+				int index = rangedRandom(0, 3); //indexes 0-3
+				int size = sizes[index];
 				
 				q.add(new SwapProcess(c, size, time));
 			}
@@ -65,8 +66,18 @@ public class SwapSimulator
 			{
 				char c = (char) ('a' + i);
 				int time = rangedRandom(1, 5);
-				int pow = rangedRandom(2, 5);
-				int size = (int)(Math.pow(TWO, pow));
+				int index = rangedRandom(0, 3);
+				int size = sizes[index];
+				
+				q.add(new SwapProcess(c, size, time));
+			}
+			
+			for (int i = 0; i < 10; i++)
+			{
+				char c = (char) ('0' + i);
+				int time = rangedRandom(1, 5);
+				int index = rangedRandom(0, 3);
+				int size = sizes[index];
 				
 				q.add(new SwapProcess(c, size, time));
 			}
@@ -163,17 +174,21 @@ public class SwapSimulator
 	public void printSwappedIn(SwapProcess sp, int time)
 	{
 		if (time == 60)
-			System.out.printf("01:00 Swapped  in %c : %s\n", sp.getName(), list.toString());
+			System.out.printf("01:00 Swapped  in %c (Size %2d, Duration %d) : %s\n", sp.getName(), 
+					sp.getSize(), sp.getDuration(), list.toString());
 		else
-			System.out.printf("00:%02d Swapped  in %c : %s\n", time, sp.getName(), list.toString());
+			System.out.printf("00:%02d Swapped  in %c (Size %2d, Duration %d) : %s\n", time, sp.getName(), 
+					sp.getSize(), sp.getDuration(), list.toString());
 	}
 	
 	public void printSwappedOut(SwapProcess sp, int time)
 	{
 		if (time == 60)
-			System.out.printf("01:00 Swapped out %c : %s\n", sp.getName(), list.toString());
+			System.out.printf("01:00 Swapped out %c (Size %2d, Duration %d) : %s\n", sp.getName(), 
+					sp.getSize(), sp.getDuration(), list.toString());
 		else
-			System.out.printf("00:%02d Swapped out %c : %s\n", time, sp.getName(), list.toString());
+			System.out.printf("00:%02d Swapped out %c (Size %2d, Duration %d) : %s\n", time, sp.getName(), 
+					sp.getSize(), sp.getDuration(), list.toString());
 		
 	}
 
