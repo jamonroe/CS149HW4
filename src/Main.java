@@ -1,6 +1,3 @@
-import com.jerrick.paging.PageSimulator;
-
-
 public class Main
 {
 	public static final int RUNS = 5;

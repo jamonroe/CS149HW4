@@ -1,5 +1,3 @@
-package com.jerrick.paging;
-
 import java.util.Comparator;
 
 public class Page 

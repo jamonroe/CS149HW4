@@ -19,6 +19,16 @@ public class SwapSimulator
 	public static final int TWO = 2;
 	public static final int MAX_TIME = 60;
 	
+	public static void main(String[] args) {
+		int count = 0;
+		for (int i = 0; i < 5; i++) {
+			System.out.println("Run #" + i);
+			count += new SwapSimulator("FF").run();
+			System.out.println();
+		}
+		System.out.println("Average processes swapped in: " + count/5);
+	}
+	
 	/**
 	 * constructor
 	 * @param alg name of the algorithm to use
