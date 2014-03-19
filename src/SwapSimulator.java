@@ -18,15 +18,21 @@ public class SwapSimulator
 	
 	public static final int TWO = 2;
 	public static final int MAX_TIME = 60;
+	public static final int RUNS = 5;
 	
 	public static void main(String[] args) {
-		int count = 0;
-		for (int i = 0; i < 5; i++) {
-			System.out.println("Run #" + i);
-			count += new SwapSimulator("FF").run();
-			System.out.println();
+		String[] algorithms = {"FF", "NF", "BF"};
+		int results[] = {0, 0, 0};
+		for (int i = 0; i < algorithms.length; i++) {
+			for (int j = 0; j < RUNS; j++) {
+				System.out.println(algorithms[i] + " run #" + (j + 1));
+				results[i] += new SwapSimulator(algorithms[i]).run();
+				System.out.println();
+			}
 		}
-		System.out.println("Average processes swapped in: " + count/5);
+		for (int i = 0; i < algorithms.length; i++) {
+			System.out.println("Average processes swapped in for " + algorithms[i] + ": " + results[i]/RUNS);
+		}
 	}
 	
 	/**
