@@ -1,0 +1,2588 @@
+
+=========== Page Simulation ===========
+----------- FIFO Start -----------
+~~~~~ First In First Out ~~~~~
+Memory: [ 5 X X X ]   Page Referenced: 5 | No eviction
+Memory: [ 5 X X X ]   Page Referenced: 5 | No eviction
+Memory: [ 5 6 X X ]   Page Referenced: 6 | No eviction
+Memory: [ 5 6 2 X ]   Page Referenced: 2 | No eviction
+Memory: [ 5 6 2 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 5 6 2 4 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 6 2 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 5 6 2 4 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 6 2 4 ]   Page Referenced: 5 | No eviction
+Memory: [ 6 2 4 8 ]   Page Referenced: 8 | Page 5 evicted
+Memory: [ 6 2 4 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 2 4 8 7 ]   Page Referenced: 7 | Page 6 evicted
+Memory: [ 4 8 7 6 ]   Page Referenced: 6 | Page 2 evicted
+Memory: [ 4 8 7 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 8 7 6 1 ]   Page Referenced: 1 | Page 4 evicted
+Memory: [ 7 6 1 2 ]   Page Referenced: 2 | Page 8 evicted
+Memory: [ 7 6 1 2 ]   Page Referenced: 1 | No eviction
+Memory: [ 6 1 2 0 ]   Page Referenced: 0 | Page 7 evicted
+Memory: [ 6 1 2 0 ]   Page Referenced: 1 | No eviction
+Memory: [ 6 1 2 0 ]   Page Referenced: 2 | No eviction
+Memory: [ 6 1 2 0 ]   Page Referenced: 2 | No eviction
+Memory: [ 6 1 2 0 ]   Page Referenced: 1 | No eviction
+Memory: [ 6 1 2 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 1 2 0 9 ]   Page Referenced: 9 | Page 6 evicted
+Memory: [ 1 2 0 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 1 2 0 9 ]   Page Referenced: 0 | No eviction
+Memory: [ 1 2 0 9 ]   Page Referenced: 1 | No eviction
+Memory: [ 1 2 0 9 ]   Page Referenced: 0 | No eviction
+Memory: [ 1 2 0 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 2 0 9 8 ]   Page Referenced: 8 | Page 1 evicted
+Memory: [ 2 0 9 8 ]   Page Referenced: 9 | No eviction
+Memory: [ 2 0 9 8 ]   Page Referenced: 0 | No eviction
+Memory: [ 2 0 9 8 ]   Page Referenced: 0 | No eviction
+Memory: [ 0 9 8 1 ]   Page Referenced: 1 | Page 2 evicted
+Memory: [ 0 9 8 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 0 9 8 1 ]   Page Referenced: 0 | No eviction
+Memory: [ 0 9 8 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 9 8 1 5 ]   Page Referenced: 5 | Page 0 evicted
+Memory: [ 8 1 5 6 ]   Page Referenced: 6 | Page 9 evicted
+Memory: [ 1 5 6 7 ]   Page Referenced: 7 | Page 8 evicted
+Memory: [ 1 5 6 7 ]   Page Referenced: 5 | No eviction
+Memory: [ 1 5 6 7 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 6 7 0 ]   Page Referenced: 0 | Page 1 evicted
+Memory: [ 6 7 0 8 ]   Page Referenced: 8 | Page 5 evicted
+Memory: [ 6 7 0 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 6 7 0 8 ]   Page Referenced: 7 | No eviction
+Memory: [ 6 7 0 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 6 7 0 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 6 7 0 8 ]   Page Referenced: 7 | No eviction
+Memory: [ 7 0 8 1 ]   Page Referenced: 1 | Page 6 evicted
+Memory: [ 7 0 8 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 7 0 8 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 0 8 1 6 ]   Page Referenced: 6 | Page 7 evicted
+Memory: [ 8 1 6 5 ]   Page Referenced: 5 | Page 0 evicted
+Memory: [ 1 6 5 4 ]   Page Referenced: 4 | Page 8 evicted
+Memory: [ 1 6 5 4 ]   Page Referenced: 5 | No eviction
+Memory: [ 6 5 4 8 ]   Page Referenced: 8 | Page 1 evicted
+Memory: [ 5 4 8 9 ]   Page Referenced: 9 | Page 6 evicted
+Memory: [ 4 8 9 0 ]   Page Referenced: 0 | Page 5 evicted
+Memory: [ 4 8 9 0 ]   Page Referenced: 9 | No eviction
+Memory: [ 4 8 9 0 ]   Page Referenced: 9 | No eviction
+Memory: [ 4 8 9 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 4 8 9 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 4 8 9 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 4 8 9 0 ]   Page Referenced: 9 | No eviction
+Memory: [ 4 8 9 0 ]   Page Referenced: 9 | No eviction
+Memory: [ 4 8 9 0 ]   Page Referenced: 8 | No eviction
+Memory: [ 4 8 9 0 ]   Page Referenced: 8 | No eviction
+Memory: [ 4 8 9 0 ]   Page Referenced: 9 | No eviction
+Memory: [ 8 9 0 7 ]   Page Referenced: 7 | Page 4 evicted
+Memory: [ 9 0 7 1 ]   Page Referenced: 1 | Page 8 evicted
+Memory: [ 0 7 1 6 ]   Page Referenced: 6 | Page 9 evicted
+Memory: [ 0 7 1 6 ]   Page Referenced: 0 | No eviction
+Memory: [ 7 1 6 2 ]   Page Referenced: 2 | Page 0 evicted
+Memory: [ 7 1 6 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 7 1 6 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 7 1 6 2 ]   Page Referenced: 6 | No eviction
+Memory: [ 1 6 2 3 ]   Page Referenced: 3 | Page 7 evicted
+Memory: [ 1 6 2 3 ]   Page Referenced: 2 | No eviction
+Memory: [ 6 2 3 4 ]   Page Referenced: 4 | Page 1 evicted
+Memory: [ 6 2 3 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 6 2 3 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 6 2 3 4 ]   Page Referenced: 2 | No eviction
+Memory: [ 6 2 3 4 ]   Page Referenced: 6 | No eviction
+Memory: [ 6 2 3 4 ]   Page Referenced: 6 | No eviction
+Memory: [ 2 3 4 5 ]   Page Referenced: 5 | Page 6 evicted
+Memory: [ 2 3 4 5 ]   Page Referenced: 4 | No eviction
+Memory: [ 3 4 5 7 ]   Page Referenced: 7 | Page 2 evicted
+Memory: [ 4 5 7 6 ]   Page Referenced: 6 | Page 3 evicted
+Memory: [ 4 5 7 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 5 7 6 3 ]   Page Referenced: 3 | Page 4 evicted
+Memory: [ 7 6 3 2 ]   Page Referenced: 2 | Page 5 evicted
+Memory: [ 6 3 2 1 ]   Page Referenced: 1 | Page 7 evicted
+Memory: [ 3 2 1 9 ]   Page Referenced: 9 | Page 6 evicted
+Memory: [ 3 2 1 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 3 2 1 9 ]   Page Referenced: 2 | No eviction
+Memory: [ 2 1 9 7 ]   Page Referenced: 7 | Page 3 evicted
+Memory: [ 2 1 9 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 2 1 9 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 1 9 7 8 ]   Page Referenced: 8 | Page 2 evicted
+
+Run 1 Hit Ratio: 60%
+~~~~~ First In First Out ~~~~~
+Memory: [ 0 X X X ]   Page Referenced: 0 | No eviction
+Memory: [ 0 X X X ]   Page Referenced: 0 | No eviction
+Memory: [ 0 9 X X ]   Page Referenced: 9 | No eviction
+Memory: [ 0 9 3 X ]   Page Referenced: 3 | No eviction
+Memory: [ 0 9 3 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 0 9 3 4 ]   Page Referenced: 9 | No eviction
+Memory: [ 9 3 4 8 ]   Page Referenced: 8 | Page 0 evicted
+Memory: [ 9 3 4 8 ]   Page Referenced: 9 | No eviction
+Memory: [ 9 3 4 8 ]   Page Referenced: 9 | No eviction
+Memory: [ 3 4 8 0 ]   Page Referenced: 0 | Page 9 evicted
+Memory: [ 4 8 0 9 ]   Page Referenced: 9 | Page 3 evicted
+Memory: [ 4 8 0 9 ]   Page Referenced: 0 | No eviction
+Memory: [ 8 0 9 1 ]   Page Referenced: 1 | Page 4 evicted
+Memory: [ 8 0 9 1 ]   Page Referenced: 0 | No eviction
+Memory: [ 8 0 9 1 ]   Page Referenced: 9 | No eviction
+Memory: [ 8 0 9 1 ]   Page Referenced: 0 | No eviction
+Memory: [ 8 0 9 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 0 9 1 2 ]   Page Referenced: 2 | Page 8 evicted
+Memory: [ 9 1 2 8 ]   Page Referenced: 8 | Page 0 evicted
+Memory: [ 1 2 8 7 ]   Page Referenced: 7 | Page 9 evicted
+Memory: [ 1 2 8 7 ]   Page Referenced: 8 | No eviction
+Memory: [ 2 8 7 5 ]   Page Referenced: 5 | Page 1 evicted
+Memory: [ 2 8 7 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 8 7 5 6 ]   Page Referenced: 6 | Page 2 evicted
+Memory: [ 8 7 5 6 ]   Page Referenced: 7 | No eviction
+Memory: [ 8 7 5 6 ]   Page Referenced: 7 | No eviction
+Memory: [ 8 7 5 6 ]   Page Referenced: 7 | No eviction
+Memory: [ 7 5 6 3 ]   Page Referenced: 3 | Page 8 evicted
+Memory: [ 7 5 6 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 5 6 3 1 ]   Page Referenced: 1 | Page 7 evicted
+Memory: [ 5 6 3 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 5 6 3 1 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 6 3 1 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 6 3 1 ]   Page Referenced: 6 | No eviction
+Memory: [ 5 6 3 1 ]   Page Referenced: 6 | No eviction
+Memory: [ 5 6 3 1 ]   Page Referenced: 5 | No eviction
+Memory: [ 6 3 1 2 ]   Page Referenced: 2 | Page 5 evicted
+Memory: [ 3 1 2 5 ]   Page Referenced: 5 | Page 6 evicted
+Memory: [ 1 2 5 0 ]   Page Referenced: 0 | Page 3 evicted
+Memory: [ 1 2 5 0 ]   Page Referenced: 2 | No eviction
+Memory: [ 2 5 0 8 ]   Page Referenced: 8 | Page 1 evicted
+Memory: [ 5 0 8 7 ]   Page Referenced: 7 | Page 2 evicted
+Memory: [ 5 0 8 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 0 8 7 2 ]   Page Referenced: 2 | Page 5 evicted
+Memory: [ 8 7 2 9 ]   Page Referenced: 9 | Page 0 evicted
+Memory: [ 8 7 2 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 8 7 2 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 8 7 2 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 8 7 2 9 ]   Page Referenced: 8 | No eviction
+Memory: [ 8 7 2 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 7 2 9 6 ]   Page Referenced: 6 | Page 8 evicted
+Memory: [ 2 9 6 1 ]   Page Referenced: 1 | Page 7 evicted
+Memory: [ 9 6 1 5 ]   Page Referenced: 5 | Page 2 evicted
+Memory: [ 6 1 5 4 ]   Page Referenced: 4 | Page 9 evicted
+Memory: [ 1 5 4 7 ]   Page Referenced: 7 | Page 6 evicted
+Memory: [ 5 4 7 8 ]   Page Referenced: 8 | Page 1 evicted
+Memory: [ 4 7 8 1 ]   Page Referenced: 1 | Page 5 evicted
+Memory: [ 7 8 1 0 ]   Page Referenced: 0 | Page 4 evicted
+Memory: [ 8 1 0 9 ]   Page Referenced: 9 | Page 7 evicted
+Memory: [ 8 1 0 9 ]   Page Referenced: 0 | No eviction
+Memory: [ 8 1 0 9 ]   Page Referenced: 0 | No eviction
+Memory: [ 8 1 0 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 8 1 0 9 ]   Page Referenced: 0 | No eviction
+Memory: [ 8 1 0 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 8 1 0 9 ]   Page Referenced: 0 | No eviction
+Memory: [ 8 1 0 9 ]   Page Referenced: 1 | No eviction
+Memory: [ 1 0 9 7 ]   Page Referenced: 7 | Page 8 evicted
+Memory: [ 1 0 9 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 1 0 9 7 ]   Page Referenced: 1 | No eviction
+Memory: [ 1 0 9 7 ]   Page Referenced: 9 | No eviction
+Memory: [ 1 0 9 7 ]   Page Referenced: 0 | No eviction
+Memory: [ 1 0 9 7 ]   Page Referenced: 1 | No eviction
+Memory: [ 1 0 9 7 ]   Page Referenced: 0 | No eviction
+Memory: [ 1 0 9 7 ]   Page Referenced: 0 | No eviction
+Memory: [ 1 0 9 7 ]   Page Referenced: 1 | No eviction
+Memory: [ 0 9 7 5 ]   Page Referenced: 5 | Page 1 evicted
+Memory: [ 9 7 5 4 ]   Page Referenced: 4 | Page 0 evicted
+Memory: [ 9 7 5 4 ]   Page Referenced: 5 | No eviction
+Memory: [ 7 5 4 3 ]   Page Referenced: 3 | Page 9 evicted
+Memory: [ 7 5 4 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 7 5 4 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 7 5 4 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 7 5 4 3 ]   Page Referenced: 4 | No eviction
+Memory: [ 7 5 4 3 ]   Page Referenced: 5 | No eviction
+Memory: [ 7 5 4 3 ]   Page Referenced: 5 | No eviction
+Memory: [ 7 5 4 3 ]   Page Referenced: 5 | No eviction
+Memory: [ 7 5 4 3 ]   Page Referenced: 5 | No eviction
+Memory: [ 7 5 4 3 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 4 3 6 ]   Page Referenced: 6 | Page 7 evicted
+Memory: [ 5 4 3 6 ]   Page Referenced: 5 | No eviction
+Memory: [ 4 3 6 2 ]   Page Referenced: 2 | Page 5 evicted
+Memory: [ 3 6 2 9 ]   Page Referenced: 9 | Page 4 evicted
+Memory: [ 6 2 9 0 ]   Page Referenced: 0 | Page 3 evicted
+Memory: [ 2 9 0 1 ]   Page Referenced: 1 | Page 6 evicted
+Memory: [ 9 0 1 5 ]   Page Referenced: 5 | Page 2 evicted
+Memory: [ 0 1 5 6 ]   Page Referenced: 6 | Page 9 evicted
+Memory: [ 0 1 5 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 0 1 5 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 0 1 5 6 ]   Page Referenced: 5 | No eviction
+Memory: [ 1 5 6 4 ]   Page Referenced: 4 | Page 0 evicted
+
+Run 2 Hit Ratio: 57%
+~~~~~ First In First Out ~~~~~
+Memory: [ 1 X X X ]   Page Referenced: 1 | No eviction
+Memory: [ 1 0 X X ]   Page Referenced: 0 | No eviction
+Memory: [ 1 0 5 X ]   Page Referenced: 5 | No eviction
+Memory: [ 1 0 5 X ]   Page Referenced: 5 | No eviction
+Memory: [ 1 0 5 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 0 5 9 8 ]   Page Referenced: 8 | Page 1 evicted
+Memory: [ 5 9 8 4 ]   Page Referenced: 4 | Page 0 evicted
+Memory: [ 5 9 8 4 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 9 8 4 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 9 8 4 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 9 8 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 9 8 4 1 ]   Page Referenced: 1 | Page 5 evicted
+Memory: [ 9 8 4 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 8 4 1 0 ]   Page Referenced: 0 | Page 9 evicted
+Memory: [ 8 4 1 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 4 1 0 9 ]   Page Referenced: 9 | Page 8 evicted
+Memory: [ 4 1 0 9 ]   Page Referenced: 4 | No eviction
+Memory: [ 1 0 9 3 ]   Page Referenced: 3 | Page 4 evicted
+Memory: [ 0 9 3 2 ]   Page Referenced: 2 | Page 1 evicted
+Memory: [ 9 3 2 1 ]   Page Referenced: 1 | Page 0 evicted
+Memory: [ 3 2 1 0 ]   Page Referenced: 0 | Page 9 evicted
+Memory: [ 3 2 1 0 ]   Page Referenced: 1 | No eviction
+Memory: [ 3 2 1 0 ]   Page Referenced: 2 | No eviction
+Memory: [ 2 1 0 7 ]   Page Referenced: 7 | Page 3 evicted
+Memory: [ 1 0 7 8 ]   Page Referenced: 8 | Page 2 evicted
+Memory: [ 0 7 8 9 ]   Page Referenced: 9 | Page 1 evicted
+Memory: [ 0 7 8 9 ]   Page Referenced: 7 | No eviction
+Memory: [ 0 7 8 9 ]   Page Referenced: 8 | No eviction
+Memory: [ 0 7 8 9 ]   Page Referenced: 8 | No eviction
+Memory: [ 7 8 9 1 ]   Page Referenced: 1 | Page 0 evicted
+Memory: [ 7 8 9 1 ]   Page Referenced: 9 | No eviction
+Memory: [ 8 9 1 0 ]   Page Referenced: 0 | Page 7 evicted
+Memory: [ 9 1 0 5 ]   Page Referenced: 5 | Page 8 evicted
+Memory: [ 1 0 5 2 ]   Page Referenced: 2 | Page 9 evicted
+Memory: [ 1 0 5 2 ]   Page Referenced: 1 | No eviction
+Memory: [ 1 0 5 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 0 5 2 8 ]   Page Referenced: 8 | Page 1 evicted
+Memory: [ 5 2 8 9 ]   Page Referenced: 9 | Page 0 evicted
+Memory: [ 2 8 9 1 ]   Page Referenced: 1 | Page 5 evicted
+Memory: [ 2 8 9 1 ]   Page Referenced: 2 | No eviction
+Memory: [ 8 9 1 3 ]   Page Referenced: 3 | Page 2 evicted
+Memory: [ 9 1 3 4 ]   Page Referenced: 4 | Page 8 evicted
+Memory: [ 9 1 3 4 ]   Page Referenced: 3 | No eviction
+Memory: [ 9 1 3 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 1 3 4 2 ]   Page Referenced: 2 | Page 9 evicted
+Memory: [ 1 3 4 2 ]   Page Referenced: 3 | No eviction
+Memory: [ 1 3 4 2 ]   Page Referenced: 4 | No eviction
+Memory: [ 3 4 2 5 ]   Page Referenced: 5 | Page 1 evicted
+Memory: [ 4 2 5 1 ]   Page Referenced: 1 | Page 3 evicted
+Memory: [ 4 2 5 1 ]   Page Referenced: 5 | No eviction
+Memory: [ 2 5 1 6 ]   Page Referenced: 6 | Page 4 evicted
+Memory: [ 5 1 6 0 ]   Page Referenced: 0 | Page 2 evicted
+Memory: [ 5 1 6 0 ]   Page Referenced: 6 | No eviction
+Memory: [ 1 6 0 9 ]   Page Referenced: 9 | Page 5 evicted
+Memory: [ 1 6 0 9 ]   Page Referenced: 0 | No eviction
+Memory: [ 1 6 0 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 1 6 0 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 1 6 0 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 6 0 9 3 ]   Page Referenced: 3 | Page 1 evicted
+Memory: [ 6 0 9 3 ]   Page Referenced: 6 | No eviction
+Memory: [ 6 0 9 3 ]   Page Referenced: 6 | No eviction
+Memory: [ 0 9 3 5 ]   Page Referenced: 5 | Page 6 evicted
+Memory: [ 0 9 3 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 9 3 5 4 ]   Page Referenced: 4 | Page 0 evicted
+Memory: [ 9 3 5 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 9 3 5 4 ]   Page Referenced: 3 | No eviction
+Memory: [ 9 3 5 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 9 3 5 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 3 5 4 6 ]   Page Referenced: 6 | Page 9 evicted
+Memory: [ 3 5 4 6 ]   Page Referenced: 5 | No eviction
+Memory: [ 3 5 4 6 ]   Page Referenced: 4 | No eviction
+Memory: [ 3 5 4 6 ]   Page Referenced: 3 | No eviction
+Memory: [ 3 5 4 6 ]   Page Referenced: 4 | No eviction
+Memory: [ 3 5 4 6 ]   Page Referenced: 4 | No eviction
+Memory: [ 3 5 4 6 ]   Page Referenced: 5 | No eviction
+Memory: [ 3 5 4 6 ]   Page Referenced: 5 | No eviction
+Memory: [ 3 5 4 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 3 5 4 6 ]   Page Referenced: 3 | No eviction
+Memory: [ 5 4 6 1 ]   Page Referenced: 1 | Page 3 evicted
+Memory: [ 4 6 1 2 ]   Page Referenced: 2 | Page 5 evicted
+Memory: [ 6 1 2 7 ]   Page Referenced: 7 | Page 4 evicted
+Memory: [ 6 1 2 7 ]   Page Referenced: 6 | No eviction
+Memory: [ 6 1 2 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 1 2 7 8 ]   Page Referenced: 8 | Page 6 evicted
+Memory: [ 2 7 8 9 ]   Page Referenced: 9 | Page 1 evicted
+Memory: [ 7 8 9 0 ]   Page Referenced: 0 | Page 2 evicted
+Memory: [ 8 9 0 1 ]   Page Referenced: 1 | Page 7 evicted
+Memory: [ 8 9 0 1 ]   Page Referenced: 9 | No eviction
+Memory: [ 8 9 0 1 ]   Page Referenced: 9 | No eviction
+Memory: [ 8 9 0 1 ]   Page Referenced: 0 | No eviction
+Memory: [ 9 0 1 3 ]   Page Referenced: 3 | Page 8 evicted
+Memory: [ 0 1 3 7 ]   Page Referenced: 7 | Page 9 evicted
+Memory: [ 0 1 3 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 1 3 7 6 ]   Page Referenced: 6 | Page 0 evicted
+Memory: [ 3 7 6 5 ]   Page Referenced: 5 | Page 1 evicted
+Memory: [ 3 7 6 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 7 6 5 4 ]   Page Referenced: 4 | Page 3 evicted
+Memory: [ 7 6 5 4 ]   Page Referenced: 5 | No eviction
+Memory: [ 6 5 4 8 ]   Page Referenced: 8 | Page 7 evicted
+Memory: [ 5 4 8 1 ]   Page Referenced: 1 | Page 6 evicted
+
+Run 3 Hit Ratio: 51%
+~~~~~ First In First Out ~~~~~
+Memory: [ 7 X X X ]   Page Referenced: 7 | No eviction
+Memory: [ 7 6 X X ]   Page Referenced: 6 | No eviction
+Memory: [ 7 6 X X ]   Page Referenced: 7 | No eviction
+Memory: [ 7 6 8 X ]   Page Referenced: 8 | No eviction
+Memory: [ 7 6 8 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 6 8 9 0 ]   Page Referenced: 0 | Page 7 evicted
+Memory: [ 8 9 0 1 ]   Page Referenced: 1 | Page 6 evicted
+Memory: [ 9 0 1 2 ]   Page Referenced: 2 | Page 8 evicted
+Memory: [ 0 1 2 7 ]   Page Referenced: 7 | Page 9 evicted
+Memory: [ 1 2 7 8 ]   Page Referenced: 8 | Page 0 evicted
+Memory: [ 1 2 7 8 ]   Page Referenced: 2 | No eviction
+Memory: [ 2 7 8 4 ]   Page Referenced: 4 | Page 1 evicted
+Memory: [ 7 8 4 5 ]   Page Referenced: 5 | Page 2 evicted
+Memory: [ 8 4 5 9 ]   Page Referenced: 9 | Page 7 evicted
+Memory: [ 8 4 5 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 4 5 9 2 ]   Page Referenced: 2 | Page 8 evicted
+Memory: [ 5 9 2 3 ]   Page Referenced: 3 | Page 4 evicted
+Memory: [ 9 2 3 4 ]   Page Referenced: 4 | Page 5 evicted
+Memory: [ 2 3 4 6 ]   Page Referenced: 6 | Page 9 evicted
+Memory: [ 3 4 6 7 ]   Page Referenced: 7 | Page 2 evicted
+Memory: [ 3 4 6 7 ]   Page Referenced: 6 | No eviction
+Memory: [ 3 4 6 7 ]   Page Referenced: 3 | No eviction
+Memory: [ 3 4 6 7 ]   Page Referenced: 4 | No eviction
+Memory: [ 4 6 7 5 ]   Page Referenced: 5 | Page 3 evicted
+Memory: [ 4 6 7 5 ]   Page Referenced: 6 | No eviction
+Memory: [ 4 6 7 5 ]   Page Referenced: 6 | No eviction
+Memory: [ 4 6 7 5 ]   Page Referenced: 6 | No eviction
+Memory: [ 6 7 5 0 ]   Page Referenced: 0 | Page 4 evicted
+Memory: [ 7 5 0 1 ]   Page Referenced: 1 | Page 6 evicted
+Memory: [ 7 5 0 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 5 0 1 9 ]   Page Referenced: 9 | Page 7 evicted
+Memory: [ 5 0 1 9 ]   Page Referenced: 0 | No eviction
+Memory: [ 0 1 9 2 ]   Page Referenced: 2 | Page 5 evicted
+Memory: [ 1 9 2 3 ]   Page Referenced: 3 | Page 0 evicted
+Memory: [ 1 9 2 3 ]   Page Referenced: 1 | No eviction
+Memory: [ 9 2 3 0 ]   Page Referenced: 0 | Page 1 evicted
+Memory: [ 2 3 0 1 ]   Page Referenced: 1 | Page 9 evicted
+Memory: [ 2 3 0 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 3 0 1 4 ]   Page Referenced: 4 | Page 2 evicted
+Memory: [ 3 0 1 4 ]   Page Referenced: 3 | No eviction
+Memory: [ 3 0 1 4 ]   Page Referenced: 3 | No eviction
+Memory: [ 3 0 1 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 3 0 1 4 ]   Page Referenced: 3 | No eviction
+Memory: [ 3 0 1 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 0 1 4 5 ]   Page Referenced: 5 | Page 3 evicted
+Memory: [ 0 1 4 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 1 4 5 9 ]   Page Referenced: 9 | Page 0 evicted
+Memory: [ 1 4 5 9 ]   Page Referenced: 1 | No eviction
+Memory: [ 4 5 9 2 ]   Page Referenced: 2 | Page 1 evicted
+Memory: [ 5 9 2 3 ]   Page Referenced: 3 | Page 4 evicted
+Memory: [ 9 2 3 4 ]   Page Referenced: 4 | Page 5 evicted
+Memory: [ 2 3 4 6 ]   Page Referenced: 6 | Page 9 evicted
+Memory: [ 3 4 6 9 ]   Page Referenced: 9 | Page 2 evicted
+Memory: [ 3 4 6 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 3 4 6 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 4 6 9 1 ]   Page Referenced: 1 | Page 3 evicted
+Memory: [ 4 6 9 1 ]   Page Referenced: 4 | No eviction
+Memory: [ 4 6 9 1 ]   Page Referenced: 4 | No eviction
+Memory: [ 4 6 9 1 ]   Page Referenced: 6 | No eviction
+Memory: [ 4 6 9 1 ]   Page Referenced: 6 | No eviction
+Memory: [ 4 6 9 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 6 9 1 2 ]   Page Referenced: 2 | Page 4 evicted
+Memory: [ 6 9 1 2 ]   Page Referenced: 9 | No eviction
+Memory: [ 9 1 2 3 ]   Page Referenced: 3 | Page 6 evicted
+Memory: [ 1 2 3 6 ]   Page Referenced: 6 | Page 9 evicted
+Memory: [ 2 3 6 5 ]   Page Referenced: 5 | Page 1 evicted
+Memory: [ 2 3 6 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 3 6 5 4 ]   Page Referenced: 4 | Page 2 evicted
+Memory: [ 3 6 5 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 3 6 5 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 6 5 4 7 ]   Page Referenced: 7 | Page 3 evicted
+Memory: [ 6 5 4 7 ]   Page Referenced: 6 | No eviction
+Memory: [ 6 5 4 7 ]   Page Referenced: 6 | No eviction
+Memory: [ 6 5 4 7 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 4 7 9 ]   Page Referenced: 9 | Page 6 evicted
+Memory: [ 5 4 7 9 ]   Page Referenced: 7 | No eviction
+Memory: [ 4 7 9 6 ]   Page Referenced: 6 | Page 5 evicted
+Memory: [ 4 7 9 6 ]   Page Referenced: 7 | No eviction
+Memory: [ 7 9 6 0 ]   Page Referenced: 0 | Page 4 evicted
+Memory: [ 7 9 6 0 ]   Page Referenced: 9 | No eviction
+Memory: [ 7 9 6 0 ]   Page Referenced: 9 | No eviction
+Memory: [ 9 6 0 4 ]   Page Referenced: 4 | Page 7 evicted
+Memory: [ 6 0 4 8 ]   Page Referenced: 8 | Page 9 evicted
+Memory: [ 0 4 8 9 ]   Page Referenced: 9 | Page 6 evicted
+Memory: [ 0 4 8 9 ]   Page Referenced: 0 | No eviction
+Memory: [ 0 4 8 9 ]   Page Referenced: 8 | No eviction
+Memory: [ 4 8 9 7 ]   Page Referenced: 7 | Page 0 evicted
+Memory: [ 4 8 9 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 8 9 7 2 ]   Page Referenced: 2 | Page 4 evicted
+Memory: [ 8 9 7 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 8 9 7 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 9 7 2 4 ]   Page Referenced: 4 | Page 8 evicted
+Memory: [ 7 2 4 0 ]   Page Referenced: 0 | Page 9 evicted
+Memory: [ 2 4 0 1 ]   Page Referenced: 1 | Page 7 evicted
+Memory: [ 2 4 0 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 2 4 0 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 2 4 0 1 ]   Page Referenced: 2 | No eviction
+Memory: [ 2 4 0 1 ]   Page Referenced: 2 | No eviction
+Memory: [ 4 0 1 9 ]   Page Referenced: 9 | Page 2 evicted
+Memory: [ 0 1 9 8 ]   Page Referenced: 8 | Page 4 evicted
+
+Run 4 Hit Ratio: 47%
+~~~~~ First In First Out ~~~~~
+Memory: [ 0 X X X ]   Page Referenced: 0 | No eviction
+Memory: [ 0 2 X X ]   Page Referenced: 2 | No eviction
+Memory: [ 0 2 9 X ]   Page Referenced: 9 | No eviction
+Memory: [ 0 2 9 X ]   Page Referenced: 2 | No eviction
+Memory: [ 0 2 9 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 2 9 3 4 ]   Page Referenced: 4 | Page 0 evicted
+Memory: [ 2 9 3 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 2 9 3 4 ]   Page Referenced: 3 | No eviction
+Memory: [ 2 9 3 4 ]   Page Referenced: 3 | No eviction
+Memory: [ 2 9 3 4 ]   Page Referenced: 2 | No eviction
+Memory: [ 2 9 3 4 ]   Page Referenced: 2 | No eviction
+Memory: [ 2 9 3 4 ]   Page Referenced: 2 | No eviction
+Memory: [ 9 3 4 1 ]   Page Referenced: 1 | Page 2 evicted
+Memory: [ 9 3 4 1 ]   Page Referenced: 4 | No eviction
+Memory: [ 9 3 4 1 ]   Page Referenced: 4 | No eviction
+Memory: [ 9 3 4 1 ]   Page Referenced: 3 | No eviction
+Memory: [ 9 3 4 1 ]   Page Referenced: 4 | No eviction
+Memory: [ 3 4 1 2 ]   Page Referenced: 2 | Page 9 evicted
+Memory: [ 3 4 1 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 3 4 1 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 3 4 1 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 3 4 1 2 ]   Page Referenced: 3 | No eviction
+Memory: [ 3 4 1 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 4 1 2 7 ]   Page Referenced: 7 | Page 3 evicted
+Memory: [ 1 2 7 8 ]   Page Referenced: 8 | Page 4 evicted
+Memory: [ 2 7 8 9 ]   Page Referenced: 9 | Page 1 evicted
+Memory: [ 2 7 8 9 ]   Page Referenced: 8 | No eviction
+Memory: [ 2 7 8 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 2 7 8 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 2 7 8 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 2 7 8 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 7 8 9 4 ]   Page Referenced: 4 | Page 2 evicted
+Memory: [ 8 9 4 5 ]   Page Referenced: 5 | Page 7 evicted
+Memory: [ 8 9 4 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 9 4 5 6 ]   Page Referenced: 6 | Page 8 evicted
+Memory: [ 4 5 6 2 ]   Page Referenced: 2 | Page 9 evicted
+Memory: [ 5 6 2 3 ]   Page Referenced: 3 | Page 4 evicted
+Memory: [ 5 6 2 3 ]   Page Referenced: 2 | No eviction
+Memory: [ 5 6 2 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 5 6 2 3 ]   Page Referenced: 2 | No eviction
+Memory: [ 6 2 3 8 ]   Page Referenced: 8 | Page 5 evicted
+Memory: [ 2 3 8 7 ]   Page Referenced: 7 | Page 6 evicted
+Memory: [ 3 8 7 4 ]   Page Referenced: 4 | Page 2 evicted
+Memory: [ 3 8 7 4 ]   Page Referenced: 3 | No eviction
+Memory: [ 8 7 4 9 ]   Page Referenced: 9 | Page 3 evicted
+Memory: [ 7 4 9 5 ]   Page Referenced: 5 | Page 8 evicted
+Memory: [ 7 4 9 5 ]   Page Referenced: 4 | No eviction
+Memory: [ 7 4 9 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 7 4 9 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 7 4 9 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 7 4 9 5 ]   Page Referenced: 7 | No eviction
+Memory: [ 7 4 9 5 ]   Page Referenced: 4 | No eviction
+Memory: [ 7 4 9 5 ]   Page Referenced: 4 | No eviction
+Memory: [ 7 4 9 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 7 4 9 5 ]   Page Referenced: 4 | No eviction
+Memory: [ 7 4 9 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 4 9 5 6 ]   Page Referenced: 6 | Page 7 evicted
+Memory: [ 4 9 5 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 4 9 5 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 9 5 6 7 ]   Page Referenced: 7 | Page 4 evicted
+Memory: [ 5 6 7 8 ]   Page Referenced: 8 | Page 9 evicted
+Memory: [ 5 6 7 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 5 6 7 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 6 7 8 4 ]   Page Referenced: 4 | Page 5 evicted
+Memory: [ 6 7 8 4 ]   Page Referenced: 6 | No eviction
+Memory: [ 7 8 4 5 ]   Page Referenced: 5 | Page 6 evicted
+Memory: [ 7 8 4 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 7 8 4 5 ]   Page Referenced: 4 | No eviction
+Memory: [ 7 8 4 5 ]   Page Referenced: 4 | No eviction
+Memory: [ 8 4 5 3 ]   Page Referenced: 3 | Page 7 evicted
+Memory: [ 4 5 3 7 ]   Page Referenced: 7 | Page 8 evicted
+Memory: [ 5 3 7 6 ]   Page Referenced: 6 | Page 4 evicted
+Memory: [ 3 7 6 8 ]   Page Referenced: 8 | Page 5 evicted
+Memory: [ 7 6 8 9 ]   Page Referenced: 9 | Page 3 evicted
+Memory: [ 6 8 9 0 ]   Page Referenced: 0 | Page 7 evicted
+Memory: [ 6 8 9 0 ]   Page Referenced: 6 | No eviction
+Memory: [ 6 8 9 0 ]   Page Referenced: 6 | No eviction
+Memory: [ 6 8 9 0 ]   Page Referenced: 6 | No eviction
+Memory: [ 6 8 9 0 ]   Page Referenced: 6 | No eviction
+Memory: [ 8 9 0 2 ]   Page Referenced: 2 | Page 6 evicted
+Memory: [ 9 0 2 3 ]   Page Referenced: 3 | Page 8 evicted
+Memory: [ 0 2 3 4 ]   Page Referenced: 4 | Page 9 evicted
+Memory: [ 2 3 4 5 ]   Page Referenced: 5 | Page 0 evicted
+Memory: [ 2 3 4 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 2 3 4 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 2 3 4 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 3 4 5 6 ]   Page Referenced: 6 | Page 2 evicted
+Memory: [ 4 5 6 7 ]   Page Referenced: 7 | Page 3 evicted
+Memory: [ 5 6 7 8 ]   Page Referenced: 8 | Page 4 evicted
+Memory: [ 6 7 8 4 ]   Page Referenced: 4 | Page 5 evicted
+Memory: [ 7 8 4 5 ]   Page Referenced: 5 | Page 6 evicted
+Memory: [ 8 4 5 6 ]   Page Referenced: 6 | Page 7 evicted
+Memory: [ 8 4 5 6 ]   Page Referenced: 8 | No eviction
+Memory: [ 4 5 6 9 ]   Page Referenced: 9 | Page 8 evicted
+Memory: [ 5 6 9 0 ]   Page Referenced: 0 | Page 4 evicted
+Memory: [ 5 6 9 0 ]   Page Referenced: 9 | No eviction
+Memory: [ 6 9 0 8 ]   Page Referenced: 8 | Page 5 evicted
+Memory: [ 6 9 0 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 6 9 0 8 ]   Page Referenced: 9 | No eviction
+Memory: [ 6 9 0 8 ]   Page Referenced: 9 | No eviction
+
+Run 5 Hit Ratio: 56%
+----------- LRU Start -----------
+~~~~~ Least Recently Used ~~~~~
+Memory: [ 2 X X X ]   Page Referenced: 2 | No eviction
+Memory: [ 2 9 X X ]   Page Referenced: 9 | No eviction
+Memory: [ 2 9 0 X ]   Page Referenced: 0 | No eviction
+Memory: [ 2 9 0 X ]   Page Referenced: 0 | No eviction
+Memory: [ 2 9 0 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 2 9 0 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 9 0 1 3 ]   Page Referenced: 3 | Page 2 evicted
+Memory: [ 0 1 3 4 ]   Page Referenced: 4 | Page 9 evicted
+Memory: [ 1 3 4 9 ]   Page Referenced: 9 | Page 0 evicted
+Memory: [ 1 3 4 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 3 4 9 5 ]   Page Referenced: 5 | Page 1 evicted
+Memory: [ 4 9 5 6 ]   Page Referenced: 6 | Page 3 evicted
+Memory: [ 4 9 5 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 9 5 6 7 ]   Page Referenced: 7 | Page 4 evicted
+Memory: [ 5 6 7 8 ]   Page Referenced: 8 | Page 9 evicted
+Memory: [ 6 7 8 9 ]   Page Referenced: 9 | Page 5 evicted
+Memory: [ 6 7 8 3 ]   Page Referenced: 3 | Page 9 evicted
+Memory: [ 6 7 8 4 ]   Page Referenced: 4 | Page 3 evicted
+Memory: [ 6 7 8 5 ]   Page Referenced: 5 | Page 4 evicted
+Memory: [ 7 5 8 4 ]   Page Referenced: 4 | Page 6 evicted
+Memory: [ 7 5 8 0 ]   Page Referenced: 0 | Page 4 evicted
+Memory: [ 7 5 8 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 5 8 0 4 ]   Page Referenced: 4 | Page 7 evicted
+Memory: [ 5 8 0 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 8 0 4 9 ]   Page Referenced: 9 | Page 5 evicted
+Memory: [ 8 0 4 9 ]   Page Referenced: 0 | No eviction
+Memory: [ 8 0 4 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 8 0 4 9 ]   Page Referenced: 0 | No eviction
+Memory: [ 8 0 4 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 8 0 4 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 8 0 4 9 ]   Page Referenced: 8 | No eviction
+Memory: [ 8 0 4 9 ]   Page Referenced: 8 | No eviction
+Memory: [ 0 9 8 7 ]   Page Referenced: 7 | Page 4 evicted
+Memory: [ 0 9 8 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 9 8 7 6 ]   Page Referenced: 6 | Page 0 evicted
+Memory: [ 9 8 7 6 ]   Page Referenced: 8 | No eviction
+Memory: [ 9 8 7 6 ]   Page Referenced: 9 | No eviction
+Memory: [ 7 8 9 0 ]   Page Referenced: 0 | Page 6 evicted
+Memory: [ 7 8 9 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 8 9 0 1 ]   Page Referenced: 1 | Page 7 evicted
+Memory: [ 8 9 0 2 ]   Page Referenced: 2 | Page 1 evicted
+Memory: [ 8 9 0 2 ]   Page Referenced: 9 | No eviction
+Memory: [ 8 9 0 2 ]   Page Referenced: 8 | No eviction
+Memory: [ 8 9 0 2 ]   Page Referenced: 8 | No eviction
+Memory: [ 8 9 0 2 ]   Page Referenced: 8 | No eviction
+Memory: [ 0 9 8 7 ]   Page Referenced: 7 | Page 2 evicted
+Memory: [ 7 9 8 6 ]   Page Referenced: 6 | Page 0 evicted
+Memory: [ 7 9 8 5 ]   Page Referenced: 5 | Page 6 evicted
+Memory: [ 7 9 8 6 ]   Page Referenced: 6 | Page 5 evicted
+Memory: [ 7 9 8 5 ]   Page Referenced: 5 | Page 6 evicted
+Memory: [ 7 9 8 4 ]   Page Referenced: 4 | Page 5 evicted
+Memory: [ 9 4 8 5 ]   Page Referenced: 5 | Page 7 evicted
+Memory: [ 9 4 8 5 ]   Page Referenced: 4 | No eviction
+Memory: [ 9 4 8 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 9 4 8 5 ]   Page Referenced: 4 | No eviction
+Memory: [ 9 4 8 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 9 4 8 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 9 4 8 5 ]   Page Referenced: 4 | No eviction
+Memory: [ 9 4 8 5 ]   Page Referenced: 4 | No eviction
+Memory: [ 8 5 4 6 ]   Page Referenced: 6 | Page 9 evicted
+Memory: [ 8 5 4 6 ]   Page Referenced: 8 | No eviction
+Memory: [ 5 4 8 0 ]   Page Referenced: 0 | Page 6 evicted
+Memory: [ 5 4 8 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 4 8 0 1 ]   Page Referenced: 1 | Page 5 evicted
+Memory: [ 4 8 0 2 ]   Page Referenced: 2 | Page 1 evicted
+Memory: [ 4 8 0 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 8 0 2 3 ]   Page Referenced: 3 | Page 4 evicted
+Memory: [ 3 0 2 1 ]   Page Referenced: 1 | Page 8 evicted
+Memory: [ 3 0 2 1 ]   Page Referenced: 2 | No eviction
+Memory: [ 3 0 2 1 ]   Page Referenced: 0 | No eviction
+Memory: [ 1 2 0 9 ]   Page Referenced: 9 | Page 3 evicted
+Memory: [ 1 2 0 8 ]   Page Referenced: 8 | Page 9 evicted
+Memory: [ 8 2 0 3 ]   Page Referenced: 3 | Page 1 evicted
+Memory: [ 8 2 0 6 ]   Page Referenced: 6 | Page 3 evicted
+Memory: [ 8 2 0 5 ]   Page Referenced: 5 | Page 6 evicted
+Memory: [ 5 2 0 6 ]   Page Referenced: 6 | Page 8 evicted
+Memory: [ 5 2 0 7 ]   Page Referenced: 7 | Page 6 evicted
+Memory: [ 5 2 0 6 ]   Page Referenced: 6 | Page 7 evicted
+Memory: [ 5 2 0 7 ]   Page Referenced: 7 | Page 6 evicted
+Memory: [ 5 2 0 8 ]   Page Referenced: 8 | Page 7 evicted
+Memory: [ 2 8 0 7 ]   Page Referenced: 7 | Page 5 evicted
+Memory: [ 2 8 0 7 ]   Page Referenced: 8 | No eviction
+Memory: [ 2 8 0 7 ]   Page Referenced: 8 | No eviction
+Memory: [ 2 0 8 5 ]   Page Referenced: 5 | Page 7 evicted
+Memory: [ 0 5 8 6 ]   Page Referenced: 6 | Page 2 evicted
+Memory: [ 0 5 8 7 ]   Page Referenced: 7 | Page 6 evicted
+Memory: [ 0 5 8 6 ]   Page Referenced: 6 | Page 7 evicted
+Memory: [ 0 5 8 3 ]   Page Referenced: 3 | Page 6 evicted
+Memory: [ 5 3 8 7 ]   Page Referenced: 7 | Page 0 evicted
+Memory: [ 5 3 8 7 ]   Page Referenced: 8 | No eviction
+Memory: [ 7 3 8 9 ]   Page Referenced: 9 | Page 5 evicted
+Memory: [ 7 3 8 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 7 3 8 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 3 8 9 5 ]   Page Referenced: 5 | Page 7 evicted
+Memory: [ 3 8 9 2 ]   Page Referenced: 2 | Page 5 evicted
+Memory: [ 2 8 9 1 ]   Page Referenced: 1 | Page 3 evicted
+Memory: [ 2 8 9 1 ]   Page Referenced: 2 | No eviction
+Memory: [ 2 8 9 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 9 2 1 0 ]   Page Referenced: 0 | Page 8 evicted
+Memory: [ 9 2 1 0 ]   Page Referenced: 9 | No eviction
+
+Run 1 Hit Ratio: 41%
+~~~~~ Least Recently Used ~~~~~
+Memory: [ 3 X X X ]   Page Referenced: 3 | No eviction
+Memory: [ 3 9 X X ]   Page Referenced: 9 | No eviction
+Memory: [ 3 9 0 X ]   Page Referenced: 0 | No eviction
+Memory: [ 3 9 0 X ]   Page Referenced: 9 | No eviction
+Memory: [ 3 9 0 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 3 9 0 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 3 9 0 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 0 9 6 7 ]   Page Referenced: 7 | Page 3 evicted
+Memory: [ 0 9 6 7 ]   Page Referenced: 9 | No eviction
+Memory: [ 6 7 9 8 ]   Page Referenced: 8 | Page 0 evicted
+Memory: [ 7 9 8 3 ]   Page Referenced: 3 | Page 6 evicted
+Memory: [ 7 9 8 5 ]   Page Referenced: 5 | Page 3 evicted
+Memory: [ 9 8 5 6 ]   Page Referenced: 6 | Page 7 evicted
+Memory: [ 6 8 5 7 ]   Page Referenced: 7 | Page 9 evicted
+Memory: [ 6 8 5 7 ]   Page Referenced: 8 | No eviction
+Memory: [ 7 5 8 9 ]   Page Referenced: 9 | Page 6 evicted
+Memory: [ 7 5 8 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 7 5 8 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 7 5 8 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 7 5 8 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 5 8 9 3 ]   Page Referenced: 3 | Page 7 evicted
+Memory: [ 5 8 9 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 5 8 9 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 8 9 3 2 ]   Page Referenced: 2 | Page 5 evicted
+Memory: [ 8 9 3 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 9 3 2 7 ]   Page Referenced: 7 | Page 8 evicted
+Memory: [ 9 3 2 8 ]   Page Referenced: 8 | Page 7 evicted
+Memory: [ 9 3 2 7 ]   Page Referenced: 7 | Page 8 evicted
+Memory: [ 9 3 2 0 ]   Page Referenced: 0 | Page 7 evicted
+Memory: [ 0 3 2 1 ]   Page Referenced: 1 | Page 9 evicted
+Memory: [ 0 3 2 1 ]   Page Referenced: 2 | No eviction
+Memory: [ 0 3 2 1 ]   Page Referenced: 3 | No eviction
+Memory: [ 0 3 2 1 ]   Page Referenced: 2 | No eviction
+Memory: [ 0 3 2 1 ]   Page Referenced: 0 | No eviction
+Memory: [ 3 2 0 7 ]   Page Referenced: 7 | Page 1 evicted
+Memory: [ 3 2 0 8 ]   Page Referenced: 8 | Page 7 evicted
+Memory: [ 3 2 0 9 ]   Page Referenced: 9 | Page 8 evicted
+Memory: [ 3 2 0 1 ]   Page Referenced: 1 | Page 9 evicted
+Memory: [ 3 2 0 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 3 2 0 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 3 2 0 1 ]   Page Referenced: 2 | No eviction
+Memory: [ 3 2 0 1 ]   Page Referenced: 2 | No eviction
+Memory: [ 0 1 2 7 ]   Page Referenced: 7 | Page 3 evicted
+Memory: [ 0 1 2 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 1 2 7 4 ]   Page Referenced: 4 | Page 0 evicted
+Memory: [ 1 2 7 4 ]   Page Referenced: 2 | No eviction
+Memory: [ 1 2 7 4 ]   Page Referenced: 1 | No eviction
+Memory: [ 4 2 1 3 ]   Page Referenced: 3 | Page 7 evicted
+Memory: [ 4 2 1 3 ]   Page Referenced: 2 | No eviction
+Memory: [ 4 1 2 6 ]   Page Referenced: 6 | Page 3 evicted
+Memory: [ 4 1 2 7 ]   Page Referenced: 7 | Page 6 evicted
+Memory: [ 1 7 2 8 ]   Page Referenced: 8 | Page 4 evicted
+Memory: [ 1 7 2 8 ]   Page Referenced: 7 | No eviction
+Memory: [ 1 7 2 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 1 7 2 8 ]   Page Referenced: 1 | No eviction
+Memory: [ 1 7 2 8 ]   Page Referenced: 1 | No eviction
+Memory: [ 7 8 1 3 ]   Page Referenced: 3 | Page 2 evicted
+Memory: [ 7 8 1 4 ]   Page Referenced: 4 | Page 3 evicted
+Memory: [ 7 8 1 3 ]   Page Referenced: 3 | Page 4 evicted
+Memory: [ 7 8 1 5 ]   Page Referenced: 5 | Page 3 evicted
+Memory: [ 7 8 1 4 ]   Page Referenced: 4 | Page 5 evicted
+Memory: [ 4 8 1 3 ]   Page Referenced: 3 | Page 7 evicted
+Memory: [ 4 8 1 7 ]   Page Referenced: 7 | Page 3 evicted
+Memory: [ 8 7 1 2 ]   Page Referenced: 2 | Page 4 evicted
+Memory: [ 7 1 2 3 ]   Page Referenced: 3 | Page 8 evicted
+Memory: [ 7 1 2 3 ]   Page Referenced: 2 | No eviction
+Memory: [ 7 1 2 3 ]   Page Referenced: 1 | No eviction
+Memory: [ 7 2 1 0 ]   Page Referenced: 0 | Page 3 evicted
+Memory: [ 0 2 1 8 ]   Page Referenced: 8 | Page 7 evicted
+Memory: [ 8 2 1 7 ]   Page Referenced: 7 | Page 0 evicted
+Memory: [ 8 2 1 5 ]   Page Referenced: 5 | Page 7 evicted
+Memory: [ 8 2 1 5 ]   Page Referenced: 8 | No eviction
+Memory: [ 8 2 1 5 ]   Page Referenced: 8 | No eviction
+Memory: [ 2 1 8 9 ]   Page Referenced: 9 | Page 5 evicted
+Memory: [ 2 1 8 0 ]   Page Referenced: 0 | Page 9 evicted
+Memory: [ 2 1 8 3 ]   Page Referenced: 3 | Page 0 evicted
+Memory: [ 2 1 8 0 ]   Page Referenced: 0 | Page 3 evicted
+Memory: [ 2 1 8 4 ]   Page Referenced: 4 | Page 0 evicted
+Memory: [ 1 4 8 5 ]   Page Referenced: 5 | Page 2 evicted
+Memory: [ 1 4 8 5 ]   Page Referenced: 4 | No eviction
+Memory: [ 1 4 8 5 ]   Page Referenced: 4 | No eviction
+Memory: [ 1 4 8 5 ]   Page Referenced: 4 | No eviction
+Memory: [ 1 8 4 3 ]   Page Referenced: 3 | Page 5 evicted
+Memory: [ 1 8 4 2 ]   Page Referenced: 2 | Page 3 evicted
+Memory: [ 1 8 4 2 ]   Page Referenced: 1 | No eviction
+Memory: [ 8 4 1 0 ]   Page Referenced: 0 | Page 2 evicted
+Memory: [ 8 4 1 2 ]   Page Referenced: 2 | Page 0 evicted
+Memory: [ 8 4 1 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 4 1 2 5 ]   Page Referenced: 5 | Page 8 evicted
+Memory: [ 4 1 2 5 ]   Page Referenced: 4 | No eviction
+Memory: [ 4 1 2 5 ]   Page Referenced: 4 | No eviction
+Memory: [ 1 2 4 8 ]   Page Referenced: 8 | Page 5 evicted
+Memory: [ 1 2 4 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 2 4 8 7 ]   Page Referenced: 7 | Page 1 evicted
+Memory: [ 2 4 8 1 ]   Page Referenced: 1 | Page 7 evicted
+Memory: [ 2 4 8 3 ]   Page Referenced: 3 | Page 1 evicted
+Memory: [ 2 4 8 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 2 4 8 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 2 4 8 3 ]   Page Referenced: 4 | No eviction
+Memory: [ 8 3 4 5 ]   Page Referenced: 5 | Page 2 evicted
+
+Run 2 Hit Ratio: 43%
+~~~~~ Least Recently Used ~~~~~
+Memory: [ 1 X X X ]   Page Referenced: 1 | No eviction
+Memory: [ 1 2 X X ]   Page Referenced: 2 | No eviction
+Memory: [ 1 2 3 X ]   Page Referenced: 3 | No eviction
+Memory: [ 1 2 3 X ]   Page Referenced: 3 | No eviction
+Memory: [ 1 2 3 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 1 2 3 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 2 3 4 0 ]   Page Referenced: 0 | Page 1 evicted
+Memory: [ 3 4 0 1 ]   Page Referenced: 1 | Page 2 evicted
+Memory: [ 3 4 0 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 3 4 0 1 ]   Page Referenced: 3 | No eviction
+Memory: [ 0 1 3 2 ]   Page Referenced: 2 | Page 4 evicted
+Memory: [ 0 1 3 2 ]   Page Referenced: 1 | No eviction
+Memory: [ 0 3 1 6 ]   Page Referenced: 6 | Page 2 evicted
+Memory: [ 3 1 6 2 ]   Page Referenced: 2 | Page 0 evicted
+Memory: [ 3 1 6 8 ]   Page Referenced: 8 | Page 2 evicted
+Memory: [ 3 1 6 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 1 6 8 9 ]   Page Referenced: 9 | Page 3 evicted
+Memory: [ 6 8 9 0 ]   Page Referenced: 0 | Page 1 evicted
+Memory: [ 6 8 9 0 ]   Page Referenced: 9 | No eviction
+Memory: [ 6 8 9 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 6 8 9 0 ]   Page Referenced: 9 | No eviction
+Memory: [ 6 8 9 0 ]   Page Referenced: 8 | No eviction
+Memory: [ 0 9 8 5 ]   Page Referenced: 5 | Page 6 evicted
+Memory: [ 9 8 5 6 ]   Page Referenced: 6 | Page 0 evicted
+Memory: [ 9 8 5 7 ]   Page Referenced: 7 | Page 6 evicted
+Memory: [ 9 8 5 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 8 5 7 4 ]   Page Referenced: 4 | Page 9 evicted
+Memory: [ 4 5 7 3 ]   Page Referenced: 3 | Page 8 evicted
+Memory: [ 4 5 7 3 ]   Page Referenced: 4 | No eviction
+Memory: [ 5 7 4 1 ]   Page Referenced: 1 | Page 3 evicted
+Memory: [ 5 7 4 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 7 4 1 2 ]   Page Referenced: 2 | Page 5 evicted
+Memory: [ 7 4 1 2 ]   Page Referenced: 1 | No eviction
+Memory: [ 7 4 1 9 ]   Page Referenced: 9 | Page 2 evicted
+Memory: [ 9 4 1 8 ]   Page Referenced: 8 | Page 7 evicted
+Memory: [ 4 8 1 7 ]   Page Referenced: 7 | Page 9 evicted
+Memory: [ 4 8 1 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 4 8 1 7 ]   Page Referenced: 8 | No eviction
+Memory: [ 4 8 1 7 ]   Page Referenced: 8 | No eviction
+Memory: [ 4 8 1 7 ]   Page Referenced: 8 | No eviction
+Memory: [ 4 8 1 7 ]   Page Referenced: 1 | No eviction
+Memory: [ 7 8 1 9 ]   Page Referenced: 9 | Page 4 evicted
+Memory: [ 7 8 1 9 ]   Page Referenced: 7 | No eviction
+Memory: [ 8 1 7 2 ]   Page Referenced: 2 | Page 9 evicted
+Memory: [ 8 1 7 3 ]   Page Referenced: 3 | Page 2 evicted
+Memory: [ 8 1 7 5 ]   Page Referenced: 5 | Page 3 evicted
+Memory: [ 8 1 7 6 ]   Page Referenced: 6 | Page 5 evicted
+Memory: [ 8 1 7 6 ]   Page Referenced: 7 | No eviction
+Memory: [ 8 1 7 2 ]   Page Referenced: 2 | Page 6 evicted
+Memory: [ 8 1 7 2 ]   Page Referenced: 1 | No eviction
+Memory: [ 8 7 1 3 ]   Page Referenced: 3 | Page 2 evicted
+Memory: [ 3 7 1 2 ]   Page Referenced: 2 | Page 8 evicted
+Memory: [ 3 7 1 8 ]   Page Referenced: 8 | Page 2 evicted
+Memory: [ 3 7 1 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 3 7 1 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 3 7 1 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 3 7 1 8 ]   Page Referenced: 7 | No eviction
+Memory: [ 3 7 1 8 ]   Page Referenced: 7 | No eviction
+Memory: [ 3 7 1 8 ]   Page Referenced: 7 | No eviction
+Memory: [ 1 8 7 0 ]   Page Referenced: 0 | Page 3 evicted
+Memory: [ 8 0 7 6 ]   Page Referenced: 6 | Page 1 evicted
+Memory: [ 8 0 7 2 ]   Page Referenced: 2 | Page 6 evicted
+Memory: [ 8 0 7 4 ]   Page Referenced: 4 | Page 2 evicted
+Memory: [ 8 0 7 3 ]   Page Referenced: 3 | Page 4 evicted
+Memory: [ 8 0 7 2 ]   Page Referenced: 2 | Page 3 evicted
+Memory: [ 8 0 7 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 8 0 7 2 ]   Page Referenced: 7 | No eviction
+Memory: [ 8 0 7 2 ]   Page Referenced: 8 | No eviction
+Memory: [ 8 0 7 2 ]   Page Referenced: 7 | No eviction
+Memory: [ 2 8 7 4 ]   Page Referenced: 4 | Page 0 evicted
+Memory: [ 2 8 7 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 8 7 4 3 ]   Page Referenced: 3 | Page 2 evicted
+Memory: [ 8 7 4 0 ]   Page Referenced: 0 | Page 3 evicted
+Memory: [ 8 7 4 1 ]   Page Referenced: 1 | Page 0 evicted
+Memory: [ 8 7 4 1 ]   Page Referenced: 8 | No eviction
+Memory: [ 8 7 4 1 ]   Page Referenced: 7 | No eviction
+Memory: [ 8 7 4 1 ]   Page Referenced: 7 | No eviction
+Memory: [ 8 7 4 1 ]   Page Referenced: 8 | No eviction
+Memory: [ 4 7 8 9 ]   Page Referenced: 9 | Page 1 evicted
+Memory: [ 4 7 8 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 4 7 8 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 7 8 9 5 ]   Page Referenced: 5 | Page 4 evicted
+Memory: [ 7 8 9 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 7 8 9 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 8 9 5 0 ]   Page Referenced: 0 | Page 7 evicted
+Memory: [ 8 9 5 7 ]   Page Referenced: 7 | Page 0 evicted
+Memory: [ 8 9 5 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 9 5 7 6 ]   Page Referenced: 6 | Page 8 evicted
+Memory: [ 9 5 7 6 ]   Page Referenced: 5 | No eviction
+Memory: [ 9 7 5 0 ]   Page Referenced: 0 | Page 6 evicted
+Memory: [ 9 7 5 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 9 7 5 0 ]   Page Referenced: 9 | No eviction
+Memory: [ 5 0 9 1 ]   Page Referenced: 1 | Page 7 evicted
+Memory: [ 5 0 9 2 ]   Page Referenced: 2 | Page 1 evicted
+Memory: [ 5 0 9 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 0 9 2 1 ]   Page Referenced: 1 | Page 5 evicted
+Memory: [ 0 9 2 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 9 2 1 3 ]   Page Referenced: 3 | Page 0 evicted
+Memory: [ 9 2 1 0 ]   Page Referenced: 0 | Page 3 evicted
+Memory: [ 0 2 1 8 ]   Page Referenced: 8 | Page 9 evicted
+
+Run 3 Hit Ratio: 47%
+~~~~~ Least Recently Used ~~~~~
+Memory: [ 0 X X X ]   Page Referenced: 0 | No eviction
+Memory: [ 0 7 X X ]   Page Referenced: 7 | No eviction
+Memory: [ 0 7 8 X ]   Page Referenced: 8 | No eviction
+Memory: [ 0 7 8 X ]   Page Referenced: 7 | No eviction
+Memory: [ 0 7 8 X ]   Page Referenced: 8 | No eviction
+Memory: [ 0 7 8 X ]   Page Referenced: 8 | No eviction
+Memory: [ 0 7 8 X ]   Page Referenced: 7 | No eviction
+Memory: [ 0 7 8 X ]   Page Referenced: 7 | No eviction
+Memory: [ 0 7 8 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 8 7 4 3 ]   Page Referenced: 3 | Page 0 evicted
+Memory: [ 8 7 4 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 7 4 3 2 ]   Page Referenced: 2 | Page 8 evicted
+Memory: [ 7 4 3 2 ]   Page Referenced: 3 | No eviction
+Memory: [ 7 4 3 2 ]   Page Referenced: 3 | No eviction
+Memory: [ 7 4 3 2 ]   Page Referenced: 4 | No eviction
+Memory: [ 2 3 4 1 ]   Page Referenced: 1 | Page 7 evicted
+Memory: [ 3 4 1 0 ]   Page Referenced: 0 | Page 2 evicted
+Memory: [ 3 4 1 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 4 1 0 6 ]   Page Referenced: 6 | Page 3 evicted
+Memory: [ 4 1 0 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 1 0 6 7 ]   Page Referenced: 7 | Page 4 evicted
+Memory: [ 1 0 6 7 ]   Page Referenced: 6 | No eviction
+Memory: [ 1 0 6 7 ]   Page Referenced: 6 | No eviction
+Memory: [ 1 0 6 7 ]   Page Referenced: 6 | No eviction
+Memory: [ 1 0 6 2 ]   Page Referenced: 2 | Page 7 evicted
+Memory: [ 1 0 6 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 0 6 2 5 ]   Page Referenced: 5 | Page 1 evicted
+Memory: [ 0 6 2 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 0 6 2 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 6 2 5 4 ]   Page Referenced: 4 | Page 0 evicted
+Memory: [ 4 2 5 8 ]   Page Referenced: 8 | Page 6 evicted
+Memory: [ 8 2 5 9 ]   Page Referenced: 9 | Page 4 evicted
+Memory: [ 8 2 5 9 ]   Page Referenced: 8 | No eviction
+Memory: [ 8 2 5 9 ]   Page Referenced: 8 | No eviction
+Memory: [ 8 2 5 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 8 2 5 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 5 8 9 0 ]   Page Referenced: 0 | Page 2 evicted
+Memory: [ 5 8 9 1 ]   Page Referenced: 1 | Page 0 evicted
+Memory: [ 5 8 9 2 ]   Page Referenced: 2 | Page 1 evicted
+Memory: [ 5 8 9 2 ]   Page Referenced: 9 | No eviction
+Memory: [ 5 8 9 0 ]   Page Referenced: 0 | Page 2 evicted
+Memory: [ 5 8 9 1 ]   Page Referenced: 1 | Page 0 evicted
+Memory: [ 1 8 9 2 ]   Page Referenced: 2 | Page 5 evicted
+Memory: [ 1 8 9 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 1 8 9 2 ]   Page Referenced: 1 | No eviction
+Memory: [ 9 2 1 0 ]   Page Referenced: 0 | Page 8 evicted
+Memory: [ 9 2 1 0 ]   Page Referenced: 1 | No eviction
+Memory: [ 9 2 1 8 ]   Page Referenced: 8 | Page 0 evicted
+Memory: [ 9 2 1 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 9 2 1 8 ]   Page Referenced: 9 | No eviction
+Memory: [ 1 8 9 0 ]   Page Referenced: 0 | Page 2 evicted
+Memory: [ 1 8 9 0 ]   Page Referenced: 9 | No eviction
+Memory: [ 1 8 9 0 ]   Page Referenced: 9 | No eviction
+Memory: [ 1 8 9 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 8 9 0 5 ]   Page Referenced: 5 | Page 1 evicted
+Memory: [ 8 9 0 6 ]   Page Referenced: 6 | Page 5 evicted
+Memory: [ 6 9 0 7 ]   Page Referenced: 7 | Page 8 evicted
+Memory: [ 6 9 0 7 ]   Page Referenced: 6 | No eviction
+Memory: [ 9 0 6 5 ]   Page Referenced: 5 | Page 7 evicted
+Memory: [ 9 0 6 4 ]   Page Referenced: 4 | Page 5 evicted
+Memory: [ 9 0 6 5 ]   Page Referenced: 5 | Page 4 evicted
+Memory: [ 9 0 6 5 ]   Page Referenced: 6 | No eviction
+Memory: [ 9 0 6 7 ]   Page Referenced: 7 | Page 5 evicted
+Memory: [ 9 0 6 7 ]   Page Referenced: 6 | No eviction
+Memory: [ 9 0 6 7 ]   Page Referenced: 9 | No eviction
+Memory: [ 0 6 9 5 ]   Page Referenced: 5 | Page 7 evicted
+Memory: [ 0 6 9 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 0 6 9 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 0 6 9 5 ]   Page Referenced: 0 | No eviction
+Memory: [ 0 6 9 5 ]   Page Referenced: 9 | No eviction
+Memory: [ 0 6 9 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 0 9 5 4 ]   Page Referenced: 4 | Page 6 evicted
+Memory: [ 0 9 5 4 ]   Page Referenced: 5 | No eviction
+Memory: [ 0 9 5 4 ]   Page Referenced: 5 | No eviction
+Memory: [ 0 9 5 7 ]   Page Referenced: 7 | Page 4 evicted
+Memory: [ 0 9 5 6 ]   Page Referenced: 6 | Page 7 evicted
+Memory: [ 0 9 5 7 ]   Page Referenced: 7 | Page 6 evicted
+Memory: [ 0 9 5 2 ]   Page Referenced: 2 | Page 7 evicted
+Memory: [ 9 2 5 8 ]   Page Referenced: 8 | Page 0 evicted
+Memory: [ 2 8 5 1 ]   Page Referenced: 1 | Page 9 evicted
+Memory: [ 8 1 5 9 ]   Page Referenced: 9 | Page 2 evicted
+Memory: [ 9 1 5 0 ]   Page Referenced: 0 | Page 8 evicted
+Memory: [ 1 0 5 8 ]   Page Referenced: 8 | Page 9 evicted
+Memory: [ 1 0 5 8 ]   Page Referenced: 1 | No eviction
+Memory: [ 8 5 1 2 ]   Page Referenced: 2 | Page 0 evicted
+Memory: [ 8 5 1 2 ]   Page Referenced: 1 | No eviction
+Memory: [ 8 5 1 2 ]   Page Referenced: 1 | No eviction
+Memory: [ 8 5 1 2 ]   Page Referenced: 1 | No eviction
+Memory: [ 8 5 1 2 ]   Page Referenced: 5 | No eviction
+Memory: [ 8 5 1 2 ]   Page Referenced: 1 | No eviction
+Memory: [ 8 5 1 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 5 1 2 0 ]   Page Referenced: 0 | Page 8 evicted
+Memory: [ 5 1 2 0 ]   Page Referenced: 1 | No eviction
+Memory: [ 5 1 2 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 5 1 2 0 ]   Page Referenced: 1 | No eviction
+Memory: [ 5 1 2 0 ]   Page Referenced: 1 | No eviction
+Memory: [ 2 0 1 4 ]   Page Referenced: 4 | Page 5 evicted
+Memory: [ 2 0 1 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 0 1 4 5 ]   Page Referenced: 5 | Page 2 evicted
+Memory: [ 0 1 4 5 ]   Page Referenced: 5 | No eviction
+
+Run 4 Hit Ratio: 54%
+~~~~~ Least Recently Used ~~~~~
+Memory: [ 4 X X X ]   Page Referenced: 4 | No eviction
+Memory: [ 4 3 X X ]   Page Referenced: 3 | No eviction
+Memory: [ 4 3 X X ]   Page Referenced: 3 | No eviction
+Memory: [ 4 3 X X ]   Page Referenced: 4 | No eviction
+Memory: [ 4 3 5 X ]   Page Referenced: 5 | No eviction
+Memory: [ 4 3 5 X ]   Page Referenced: 4 | No eviction
+Memory: [ 4 3 5 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 5 4 1 0 ]   Page Referenced: 0 | Page 3 evicted
+Memory: [ 4 1 0 3 ]   Page Referenced: 3 | Page 5 evicted
+Memory: [ 4 1 0 2 ]   Page Referenced: 2 | Page 3 evicted
+Memory: [ 4 1 0 2 ]   Page Referenced: 1 | No eviction
+Memory: [ 4 1 0 2 ]   Page Referenced: 4 | No eviction
+Memory: [ 2 1 4 3 ]   Page Referenced: 3 | Page 0 evicted
+Memory: [ 2 1 4 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 1 4 3 8 ]   Page Referenced: 8 | Page 2 evicted
+Memory: [ 1 4 3 8 ]   Page Referenced: 1 | No eviction
+Memory: [ 3 8 1 7 ]   Page Referenced: 7 | Page 4 evicted
+Memory: [ 3 8 1 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 8 1 7 6 ]   Page Referenced: 6 | Page 3 evicted
+Memory: [ 1 7 6 4 ]   Page Referenced: 4 | Page 8 evicted
+Memory: [ 1 7 6 5 ]   Page Referenced: 5 | Page 4 evicted
+Memory: [ 5 7 6 3 ]   Page Referenced: 3 | Page 1 evicted
+Memory: [ 5 7 6 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 5 7 6 3 ]   Page Referenced: 7 | No eviction
+Memory: [ 5 7 6 3 ]   Page Referenced: 7 | No eviction
+Memory: [ 5 7 6 3 ]   Page Referenced: 7 | No eviction
+Memory: [ 5 7 6 3 ]   Page Referenced: 6 | No eviction
+Memory: [ 3 7 6 2 ]   Page Referenced: 2 | Page 5 evicted
+Memory: [ 3 7 6 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 7 6 2 0 ]   Page Referenced: 0 | Page 3 evicted
+Memory: [ 7 6 2 9 ]   Page Referenced: 9 | Page 0 evicted
+Memory: [ 7 6 2 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 6 2 9 0 ]   Page Referenced: 0 | Page 7 evicted
+Memory: [ 0 2 9 7 ]   Page Referenced: 7 | Page 6 evicted
+Memory: [ 7 2 9 8 ]   Page Referenced: 8 | Page 0 evicted
+Memory: [ 2 8 9 6 ]   Page Referenced: 6 | Page 7 evicted
+Memory: [ 6 8 9 3 ]   Page Referenced: 3 | Page 2 evicted
+Memory: [ 6 8 9 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 6 8 9 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 6 8 9 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 8 9 3 2 ]   Page Referenced: 2 | Page 6 evicted
+Memory: [ 9 2 3 1 ]   Page Referenced: 1 | Page 8 evicted
+Memory: [ 9 2 3 1 ]   Page Referenced: 3 | No eviction
+Memory: [ 2 1 3 4 ]   Page Referenced: 4 | Page 9 evicted
+Memory: [ 2 1 3 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 2 1 3 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 1 3 4 6 ]   Page Referenced: 6 | Page 2 evicted
+Memory: [ 1 3 4 7 ]   Page Referenced: 7 | Page 6 evicted
+Memory: [ 7 3 4 8 ]   Page Referenced: 8 | Page 1 evicted
+Memory: [ 7 3 4 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 3 4 8 9 ]   Page Referenced: 9 | Page 7 evicted
+Memory: [ 3 4 8 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 4 8 9 0 ]   Page Referenced: 0 | Page 3 evicted
+Memory: [ 4 8 9 5 ]   Page Referenced: 5 | Page 0 evicted
+Memory: [ 4 8 9 5 ]   Page Referenced: 4 | No eviction
+Memory: [ 8 9 4 3 ]   Page Referenced: 3 | Page 5 evicted
+Memory: [ 8 9 4 3 ]   Page Referenced: 4 | No eviction
+Memory: [ 8 9 4 3 ]   Page Referenced: 4 | No eviction
+Memory: [ 8 9 4 3 ]   Page Referenced: 4 | No eviction
+Memory: [ 8 9 4 3 ]   Page Referenced: 4 | No eviction
+Memory: [ 8 9 4 6 ]   Page Referenced: 6 | Page 3 evicted
+Memory: [ 8 9 4 1 ]   Page Referenced: 1 | Page 6 evicted
+Memory: [ 8 9 4 1 ]   Page Referenced: 9 | No eviction
+Memory: [ 8 9 4 1 ]   Page Referenced: 4 | No eviction
+Memory: [ 8 9 4 5 ]   Page Referenced: 5 | Page 1 evicted
+Memory: [ 5 9 4 7 ]   Page Referenced: 7 | Page 8 evicted
+Memory: [ 7 9 4 8 ]   Page Referenced: 8 | Page 5 evicted
+Memory: [ 7 9 4 8 ]   Page Referenced: 9 | No eviction
+Memory: [ 7 9 4 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 7 9 4 8 ]   Page Referenced: 4 | No eviction
+Memory: [ 7 9 4 8 ]   Page Referenced: 4 | No eviction
+Memory: [ 9 8 4 5 ]   Page Referenced: 5 | Page 7 evicted
+Memory: [ 9 8 4 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 9 8 4 5 ]   Page Referenced: 8 | No eviction
+Memory: [ 4 5 8 1 ]   Page Referenced: 1 | Page 9 evicted
+Memory: [ 4 5 8 0 ]   Page Referenced: 0 | Page 1 evicted
+Memory: [ 4 5 8 3 ]   Page Referenced: 3 | Page 0 evicted
+Memory: [ 4 5 8 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 4 5 8 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 4 5 8 3 ]   Page Referenced: 4 | No eviction
+Memory: [ 4 5 8 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 4 5 8 3 ]   Page Referenced: 4 | No eviction
+Memory: [ 4 5 8 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 4 5 8 3 ]   Page Referenced: 4 | No eviction
+Memory: [ 8 3 4 2 ]   Page Referenced: 2 | Page 5 evicted
+Memory: [ 8 3 4 2 ]   Page Referenced: 3 | No eviction
+Memory: [ 8 3 4 2 ]   Page Referenced: 3 | No eviction
+Memory: [ 8 3 4 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 4 3 2 1 ]   Page Referenced: 1 | Page 8 evicted
+Memory: [ 4 3 2 1 ]   Page Referenced: 2 | No eviction
+Memory: [ 4 3 2 1 ]   Page Referenced: 2 | No eviction
+Memory: [ 4 3 2 1 ]   Page Referenced: 2 | No eviction
+Memory: [ 4 3 2 1 ]   Page Referenced: 3 | No eviction
+Memory: [ 4 3 2 1 ]   Page Referenced: 2 | No eviction
+Memory: [ 4 3 2 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 3 2 1 0 ]   Page Referenced: 0 | Page 4 evicted
+Memory: [ 3 2 1 9 ]   Page Referenced: 9 | Page 0 evicted
+Memory: [ 3 2 1 0 ]   Page Referenced: 0 | Page 9 evicted
+Memory: [ 3 2 1 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 3 2 1 0 ]   Page Referenced: 1 | No eviction
+
+Run 5 Hit Ratio: 54%
+----------- LFU Start -----------
+~~~~~ Least Frequently Used ~~~~~
+Memory: [ 1 X X X ]   Page Referenced: 1 | No eviction
+Memory: [ 1 9 X X ]   Page Referenced: 9 | No eviction
+Memory: [ 1 9 8 X ]   Page Referenced: 8 | No eviction
+Memory: [ 1 9 8 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 1 9 8 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 9 8 4 5 ]   Page Referenced: 5 | Page 1 evicted
+Memory: [ 9 8 4 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 8 4 5 6 ]   Page Referenced: 6 | Page 9 evicted
+Memory: [ 6 4 5 7 ]   Page Referenced: 7 | Page 8 evicted
+Memory: [ 7 4 5 8 ]   Page Referenced: 8 | Page 6 evicted
+Memory: [ 7 4 5 8 ]   Page Referenced: 7 | No eviction
+Memory: [ 7 4 5 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 4 5 8 9 ]   Page Referenced: 9 | Page 7 evicted
+Memory: [ 4 5 8 9 ]   Page Referenced: 5 | No eviction
+Memory: [ 4 5 8 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 4 5 8 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 4 5 8 9 ]   Page Referenced: 8 | No eviction
+Memory: [ 4 5 8 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 4 5 8 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 4 5 8 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 4 5 8 9 ]   Page Referenced: 8 | No eviction
+Memory: [ 4 5 8 9 ]   Page Referenced: 8 | No eviction
+Memory: [ 4 5 8 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 5 8 9 3 ]   Page Referenced: 3 | Page 4 evicted
+Memory: [ 5 8 9 2 ]   Page Referenced: 2 | Page 3 evicted
+Memory: [ 5 8 9 3 ]   Page Referenced: 3 | Page 2 evicted
+Memory: [ 5 8 9 2 ]   Page Referenced: 2 | Page 3 evicted
+Memory: [ 5 8 9 6 ]   Page Referenced: 6 | Page 2 evicted
+Memory: [ 5 8 9 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 5 8 9 7 ]   Page Referenced: 7 | Page 6 evicted
+Memory: [ 5 8 9 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 5 8 9 6 ]   Page Referenced: 6 | Page 7 evicted
+Memory: [ 5 8 9 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 5 8 9 3 ]   Page Referenced: 3 | Page 6 evicted
+Memory: [ 5 8 9 0 ]   Page Referenced: 0 | Page 3 evicted
+Memory: [ 5 8 9 0 ]   Page Referenced: 8 | No eviction
+Memory: [ 5 8 9 7 ]   Page Referenced: 7 | Page 0 evicted
+Memory: [ 5 8 9 3 ]   Page Referenced: 3 | Page 7 evicted
+Memory: [ 5 8 9 4 ]   Page Referenced: 4 | Page 3 evicted
+Memory: [ 5 8 9 4 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 8 9 4 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 8 9 1 ]   Page Referenced: 1 | Page 4 evicted
+Memory: [ 5 8 9 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 5 8 9 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 5 8 9 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 5 8 9 0 ]   Page Referenced: 0 | Page 1 evicted
+Memory: [ 5 8 9 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 5 8 9 0 ]   Page Referenced: 8 | No eviction
+Memory: [ 5 8 9 7 ]   Page Referenced: 7 | Page 0 evicted
+Memory: [ 5 8 9 0 ]   Page Referenced: 0 | Page 7 evicted
+Memory: [ 5 8 9 4 ]   Page Referenced: 4 | Page 0 evicted
+Memory: [ 5 8 9 4 ]   Page Referenced: 9 | No eviction
+Memory: [ 5 8 9 4 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 8 9 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 5 8 9 4 ]   Page Referenced: 9 | No eviction
+Memory: [ 5 8 9 0 ]   Page Referenced: 0 | Page 4 evicted
+Memory: [ 5 8 9 3 ]   Page Referenced: 3 | Page 0 evicted
+Memory: [ 5 8 9 7 ]   Page Referenced: 7 | Page 3 evicted
+Memory: [ 5 8 9 6 ]   Page Referenced: 6 | Page 7 evicted
+Memory: [ 5 8 9 7 ]   Page Referenced: 7 | Page 6 evicted
+Memory: [ 5 8 9 3 ]   Page Referenced: 3 | Page 7 evicted
+Memory: [ 5 8 9 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 5 8 9 3 ]   Page Referenced: 9 | No eviction
+Memory: [ 5 8 9 3 ]   Page Referenced: 9 | No eviction
+Memory: [ 5 8 9 3 ]   Page Referenced: 8 | No eviction
+Memory: [ 5 8 9 3 ]   Page Referenced: 8 | No eviction
+Memory: [ 5 8 9 0 ]   Page Referenced: 0 | Page 3 evicted
+Memory: [ 5 8 9 0 ]   Page Referenced: 9 | No eviction
+Memory: [ 5 8 9 2 ]   Page Referenced: 2 | Page 0 evicted
+Memory: [ 5 8 9 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 5 8 9 3 ]   Page Referenced: 3 | Page 2 evicted
+Memory: [ 5 8 9 4 ]   Page Referenced: 4 | Page 3 evicted
+Memory: [ 5 8 9 3 ]   Page Referenced: 3 | Page 4 evicted
+Memory: [ 5 8 9 1 ]   Page Referenced: 1 | Page 3 evicted
+Memory: [ 5 8 9 2 ]   Page Referenced: 2 | Page 1 evicted
+Memory: [ 5 8 9 1 ]   Page Referenced: 1 | Page 2 evicted
+Memory: [ 5 8 9 0 ]   Page Referenced: 0 | Page 1 evicted
+Memory: [ 5 8 9 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 5 8 9 0 ]   Page Referenced: 9 | No eviction
+Memory: [ 5 8 9 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 5 8 9 0 ]   Page Referenced: 9 | No eviction
+Memory: [ 5 8 9 0 ]   Page Referenced: 8 | No eviction
+Memory: [ 5 8 9 0 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 8 9 4 ]   Page Referenced: 4 | Page 0 evicted
+Memory: [ 5 8 9 3 ]   Page Referenced: 3 | Page 4 evicted
+Memory: [ 5 8 9 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 5 8 9 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 5 8 9 3 ]   Page Referenced: 9 | No eviction
+Memory: [ 5 8 9 3 ]   Page Referenced: 8 | No eviction
+Memory: [ 5 8 9 3 ]   Page Referenced: 9 | No eviction
+Memory: [ 5 8 9 0 ]   Page Referenced: 0 | Page 3 evicted
+Memory: [ 5 8 9 1 ]   Page Referenced: 1 | Page 0 evicted
+Memory: [ 5 8 9 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 5 8 9 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 5 8 9 2 ]   Page Referenced: 2 | Page 1 evicted
+Memory: [ 5 8 9 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 5 8 9 3 ]   Page Referenced: 3 | Page 2 evicted
+Memory: [ 5 8 9 2 ]   Page Referenced: 2 | Page 3 evicted
+Memory: [ 5 8 9 7 ]   Page Referenced: 7 | Page 2 evicted
+Memory: [ 5 8 9 6 ]   Page Referenced: 6 | Page 7 evicted
+
+Run 1 Hit Ratio: 50%
+~~~~~ Least Frequently Used ~~~~~
+Memory: [ 1 X X X ]   Page Referenced: 1 | No eviction
+Memory: [ 1 X X X ]   Page Referenced: 1 | No eviction
+Memory: [ 1 X X X ]   Page Referenced: 1 | No eviction
+Memory: [ 1 4 X X ]   Page Referenced: 4 | No eviction
+Memory: [ 1 4 3 X ]   Page Referenced: 3 | No eviction
+Memory: [ 1 4 3 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 1 4 3 2 ]   Page Referenced: 3 | No eviction
+Memory: [ 1 4 3 2 ]   Page Referenced: 4 | No eviction
+Memory: [ 4 3 1 8 ]   Page Referenced: 8 | Page 2 evicted
+Memory: [ 4 3 1 7 ]   Page Referenced: 7 | Page 8 evicted
+Memory: [ 4 3 1 8 ]   Page Referenced: 8 | Page 7 evicted
+Memory: [ 4 3 1 7 ]   Page Referenced: 7 | Page 8 evicted
+Memory: [ 4 3 1 6 ]   Page Referenced: 6 | Page 7 evicted
+Memory: [ 4 3 1 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 3 6 1 5 ]   Page Referenced: 5 | Page 4 evicted
+Memory: [ 3 6 1 5 ]   Page Referenced: 6 | No eviction
+Memory: [ 3 6 1 7 ]   Page Referenced: 7 | Page 5 evicted
+Memory: [ 3 6 1 8 ]   Page Referenced: 8 | Page 7 evicted
+Memory: [ 3 6 1 9 ]   Page Referenced: 9 | Page 8 evicted
+Memory: [ 3 6 1 9 ]   Page Referenced: 1 | No eviction
+Memory: [ 3 6 1 5 ]   Page Referenced: 5 | Page 9 evicted
+Memory: [ 3 6 1 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 6 1 0 ]   Page Referenced: 0 | Page 3 evicted
+Memory: [ 5 6 1 4 ]   Page Referenced: 4 | Page 0 evicted
+Memory: [ 5 6 1 8 ]   Page Referenced: 8 | Page 4 evicted
+Memory: [ 5 6 1 7 ]   Page Referenced: 7 | Page 8 evicted
+Memory: [ 5 6 1 2 ]   Page Referenced: 2 | Page 7 evicted
+Memory: [ 5 6 1 2 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 6 1 2 ]   Page Referenced: 5 | No eviction
+Memory: [ 6 5 1 3 ]   Page Referenced: 3 | Page 2 evicted
+Memory: [ 6 5 1 8 ]   Page Referenced: 8 | Page 3 evicted
+Memory: [ 6 5 1 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 6 5 1 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 8 5 1 9 ]   Page Referenced: 9 | Page 6 evicted
+Memory: [ 8 5 1 9 ]   Page Referenced: 8 | No eviction
+Memory: [ 8 5 1 4 ]   Page Referenced: 4 | Page 9 evicted
+Memory: [ 8 5 1 2 ]   Page Referenced: 2 | Page 4 evicted
+Memory: [ 8 5 1 0 ]   Page Referenced: 0 | Page 2 evicted
+Memory: [ 8 5 1 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 8 5 1 9 ]   Page Referenced: 9 | Page 0 evicted
+Memory: [ 8 5 1 6 ]   Page Referenced: 6 | Page 9 evicted
+Memory: [ 8 5 1 2 ]   Page Referenced: 2 | Page 6 evicted
+Memory: [ 8 5 1 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 8 5 1 3 ]   Page Referenced: 3 | Page 2 evicted
+Memory: [ 8 5 1 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 8 5 1 2 ]   Page Referenced: 2 | Page 3 evicted
+Memory: [ 8 5 1 2 ]   Page Referenced: 1 | No eviction
+Memory: [ 8 5 1 7 ]   Page Referenced: 7 | Page 2 evicted
+Memory: [ 8 5 1 6 ]   Page Referenced: 6 | Page 7 evicted
+Memory: [ 8 5 1 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 8 5 1 7 ]   Page Referenced: 7 | Page 6 evicted
+Memory: [ 8 5 1 6 ]   Page Referenced: 6 | Page 7 evicted
+Memory: [ 8 5 1 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 8 5 1 7 ]   Page Referenced: 7 | Page 6 evicted
+Memory: [ 8 5 1 7 ]   Page Referenced: 8 | No eviction
+Memory: [ 5 8 1 9 ]   Page Referenced: 9 | Page 7 evicted
+Memory: [ 5 8 1 6 ]   Page Referenced: 6 | Page 9 evicted
+Memory: [ 5 8 1 6 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 8 1 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 5 8 1 7 ]   Page Referenced: 7 | Page 6 evicted
+Memory: [ 5 8 1 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 5 8 1 6 ]   Page Referenced: 6 | Page 7 evicted
+Memory: [ 5 8 1 7 ]   Page Referenced: 7 | Page 6 evicted
+Memory: [ 5 8 1 3 ]   Page Referenced: 3 | Page 7 evicted
+Memory: [ 5 8 1 4 ]   Page Referenced: 4 | Page 3 evicted
+Memory: [ 5 8 1 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 5 8 1 7 ]   Page Referenced: 7 | Page 4 evicted
+Memory: [ 5 8 1 7 ]   Page Referenced: 1 | No eviction
+Memory: [ 5 8 1 7 ]   Page Referenced: 1 | No eviction
+Memory: [ 5 8 1 0 ]   Page Referenced: 0 | Page 7 evicted
+Memory: [ 5 8 1 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 5 8 1 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 5 8 1 0 ]   Page Referenced: 1 | No eviction
+Memory: [ 5 8 1 2 ]   Page Referenced: 2 | Page 0 evicted
+Memory: [ 5 8 1 2 ]   Page Referenced: 8 | No eviction
+Memory: [ 5 8 1 9 ]   Page Referenced: 9 | Page 2 evicted
+Memory: [ 5 8 1 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 5 8 1 9 ]   Page Referenced: 1 | No eviction
+Memory: [ 5 8 1 2 ]   Page Referenced: 2 | Page 9 evicted
+Memory: [ 5 8 1 7 ]   Page Referenced: 7 | Page 2 evicted
+Memory: [ 5 8 1 7 ]   Page Referenced: 8 | No eviction
+Memory: [ 5 8 1 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 5 8 1 7 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 8 1 9 ]   Page Referenced: 9 | Page 7 evicted
+Memory: [ 5 8 1 0 ]   Page Referenced: 0 | Page 9 evicted
+Memory: [ 5 8 1 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 5 8 1 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 5 8 1 0 ]   Page Referenced: 1 | No eviction
+Memory: [ 5 8 1 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 5 8 1 9 ]   Page Referenced: 9 | Page 0 evicted
+Memory: [ 5 8 1 9 ]   Page Referenced: 8 | No eviction
+Memory: [ 5 8 1 7 ]   Page Referenced: 7 | Page 9 evicted
+Memory: [ 5 8 1 6 ]   Page Referenced: 6 | Page 7 evicted
+Memory: [ 5 8 1 6 ]   Page Referenced: 8 | No eviction
+Memory: [ 5 8 1 7 ]   Page Referenced: 7 | Page 6 evicted
+Memory: [ 5 8 1 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 5 8 1 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 5 8 1 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 5 8 1 7 ]   Page Referenced: 8 | No eviction
+Memory: [ 5 8 1 9 ]   Page Referenced: 9 | Page 7 evicted
+
+Run 2 Hit Ratio: 45%
+~~~~~ Least Frequently Used ~~~~~
+Memory: [ 5 X X X ]   Page Referenced: 5 | No eviction
+Memory: [ 5 0 X X ]   Page Referenced: 0 | No eviction
+Memory: [ 5 0 X X ]   Page Referenced: 5 | No eviction
+Memory: [ 5 0 2 X ]   Page Referenced: 2 | No eviction
+Memory: [ 5 0 2 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 2 3 5 4 ]   Page Referenced: 4 | Page 0 evicted
+Memory: [ 2 3 5 4 ]   Page Referenced: 3 | No eviction
+Memory: [ 2 3 5 4 ]   Page Referenced: 3 | No eviction
+Memory: [ 2 3 5 4 ]   Page Referenced: 2 | No eviction
+Memory: [ 2 3 5 4 ]   Page Referenced: 2 | No eviction
+Memory: [ 5 2 3 1 ]   Page Referenced: 1 | Page 4 evicted
+Memory: [ 5 2 3 1 ]   Page Referenced: 2 | No eviction
+Memory: [ 5 2 3 1 ]   Page Referenced: 3 | No eviction
+Memory: [ 5 2 3 1 ]   Page Referenced: 3 | No eviction
+Memory: [ 5 2 3 1 ]   Page Referenced: 3 | No eviction
+Memory: [ 5 2 3 1 ]   Page Referenced: 2 | No eviction
+Memory: [ 5 2 3 9 ]   Page Referenced: 9 | Page 1 evicted
+Memory: [ 5 2 3 9 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 2 3 4 ]   Page Referenced: 4 | Page 9 evicted
+Memory: [ 5 2 3 6 ]   Page Referenced: 6 | Page 4 evicted
+Memory: [ 5 2 3 6 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 2 3 4 ]   Page Referenced: 4 | Page 6 evicted
+Memory: [ 5 2 3 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 5 2 3 9 ]   Page Referenced: 9 | Page 4 evicted
+Memory: [ 5 2 3 0 ]   Page Referenced: 0 | Page 9 evicted
+Memory: [ 5 2 3 8 ]   Page Referenced: 8 | Page 0 evicted
+Memory: [ 5 2 3 7 ]   Page Referenced: 7 | Page 8 evicted
+Memory: [ 5 2 3 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 5 2 3 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 5 2 3 6 ]   Page Referenced: 6 | Page 7 evicted
+Memory: [ 5 2 3 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 5 2 3 1 ]   Page Referenced: 1 | Page 6 evicted
+Memory: [ 5 2 3 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 5 2 3 1 ]   Page Referenced: 2 | No eviction
+Memory: [ 5 2 3 1 ]   Page Referenced: 2 | No eviction
+Memory: [ 5 3 2 8 ]   Page Referenced: 8 | Page 1 evicted
+Memory: [ 5 3 2 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 5 3 2 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 5 3 2 9 ]   Page Referenced: 9 | Page 8 evicted
+Memory: [ 5 3 2 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 5 3 2 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 5 3 2 0 ]   Page Referenced: 0 | Page 9 evicted
+Memory: [ 5 3 2 9 ]   Page Referenced: 9 | Page 0 evicted
+Memory: [ 5 3 2 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 5 3 2 9 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 3 2 4 ]   Page Referenced: 4 | Page 9 evicted
+Memory: [ 5 3 2 4 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 3 2 4 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 3 2 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 3 5 2 9 ]   Page Referenced: 9 | Page 4 evicted
+Memory: [ 3 5 2 9 ]   Page Referenced: 5 | No eviction
+Memory: [ 3 2 5 6 ]   Page Referenced: 6 | Page 9 evicted
+Memory: [ 3 2 5 6 ]   Page Referenced: 5 | No eviction
+Memory: [ 3 2 5 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 3 2 5 6 ]   Page Referenced: 5 | No eviction
+Memory: [ 3 2 5 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 3 2 5 6 ]   Page Referenced: 3 | No eviction
+Memory: [ 3 2 5 4 ]   Page Referenced: 4 | Page 6 evicted
+Memory: [ 3 2 5 9 ]   Page Referenced: 9 | Page 4 evicted
+Memory: [ 3 2 5 0 ]   Page Referenced: 0 | Page 9 evicted
+Memory: [ 3 2 5 8 ]   Page Referenced: 8 | Page 0 evicted
+Memory: [ 3 2 5 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 3 2 5 0 ]   Page Referenced: 0 | Page 8 evicted
+Memory: [ 3 2 5 0 ]   Page Referenced: 5 | No eviction
+Memory: [ 3 2 5 4 ]   Page Referenced: 4 | Page 0 evicted
+Memory: [ 3 2 5 4 ]   Page Referenced: 3 | No eviction
+Memory: [ 3 2 5 4 ]   Page Referenced: 2 | No eviction
+Memory: [ 3 2 5 1 ]   Page Referenced: 1 | Page 4 evicted
+Memory: [ 3 2 5 0 ]   Page Referenced: 0 | Page 1 evicted
+Memory: [ 3 2 5 0 ]   Page Referenced: 5 | No eviction
+Memory: [ 3 2 5 7 ]   Page Referenced: 7 | Page 0 evicted
+Memory: [ 3 2 5 6 ]   Page Referenced: 6 | Page 7 evicted
+Memory: [ 3 2 5 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 3 2 5 1 ]   Page Referenced: 1 | Page 6 evicted
+Memory: [ 3 2 5 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 3 2 5 0 ]   Page Referenced: 0 | Page 1 evicted
+Memory: [ 3 2 5 1 ]   Page Referenced: 1 | Page 0 evicted
+Memory: [ 3 2 5 0 ]   Page Referenced: 0 | Page 1 evicted
+Memory: [ 3 2 5 6 ]   Page Referenced: 6 | Page 0 evicted
+Memory: [ 3 2 5 6 ]   Page Referenced: 2 | No eviction
+Memory: [ 3 2 5 6 ]   Page Referenced: 3 | No eviction
+Memory: [ 3 2 5 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 3 2 5 4 ]   Page Referenced: 4 | Page 6 evicted
+Memory: [ 3 2 5 4 ]   Page Referenced: 5 | No eviction
+Memory: [ 3 2 5 6 ]   Page Referenced: 6 | Page 4 evicted
+Memory: [ 3 2 5 6 ]   Page Referenced: 5 | No eviction
+Memory: [ 3 2 5 6 ]   Page Referenced: 5 | No eviction
+Memory: [ 3 2 5 4 ]   Page Referenced: 4 | Page 6 evicted
+Memory: [ 3 2 5 4 ]   Page Referenced: 3 | No eviction
+Memory: [ 3 2 5 4 ]   Page Referenced: 3 | No eviction
+Memory: [ 3 2 5 4 ]   Page Referenced: 2 | No eviction
+Memory: [ 2 3 5 0 ]   Page Referenced: 0 | Page 4 evicted
+Memory: [ 2 3 5 9 ]   Page Referenced: 9 | Page 0 evicted
+Memory: [ 2 3 5 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 2 3 5 0 ]   Page Referenced: 0 | Page 9 evicted
+Memory: [ 2 3 5 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 2 3 5 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 2 3 5 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 2 3 5 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 2 3 5 0 ]   Page Referenced: 5 | No eviction
+
+Run 3 Hit Ratio: 56%
+~~~~~ Least Frequently Used ~~~~~
+Memory: [ 2 X X X ]   Page Referenced: 2 | No eviction
+Memory: [ 2 1 X X ]   Page Referenced: 1 | No eviction
+Memory: [ 2 1 X X ]   Page Referenced: 2 | No eviction
+Memory: [ 2 1 X X ]   Page Referenced: 1 | No eviction
+Memory: [ 2 1 0 X ]   Page Referenced: 0 | No eviction
+Memory: [ 2 1 0 X ]   Page Referenced: 1 | No eviction
+Memory: [ 2 1 0 X ]   Page Referenced: 2 | No eviction
+Memory: [ 2 1 0 X ]   Page Referenced: 1 | No eviction
+Memory: [ 2 1 0 X ]   Page Referenced: 1 | No eviction
+Memory: [ 2 1 0 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 7 2 1 8 ]   Page Referenced: 8 | Page 0 evicted
+Memory: [ 8 2 1 9 ]   Page Referenced: 9 | Page 7 evicted
+Memory: [ 8 2 1 9 ]   Page Referenced: 1 | No eviction
+Memory: [ 8 2 1 9 ]   Page Referenced: 1 | No eviction
+Memory: [ 8 2 1 9 ]   Page Referenced: 2 | No eviction
+Memory: [ 9 2 1 0 ]   Page Referenced: 0 | Page 8 evicted
+Memory: [ 9 2 1 0 ]   Page Referenced: 1 | No eviction
+Memory: [ 9 2 1 0 ]   Page Referenced: 2 | No eviction
+Memory: [ 0 2 1 3 ]   Page Referenced: 3 | Page 9 evicted
+Memory: [ 0 2 1 3 ]   Page Referenced: 2 | No eviction
+Memory: [ 0 2 1 3 ]   Page Referenced: 1 | No eviction
+Memory: [ 0 2 1 3 ]   Page Referenced: 0 | No eviction
+Memory: [ 0 2 1 3 ]   Page Referenced: 0 | No eviction
+Memory: [ 0 2 1 4 ]   Page Referenced: 4 | Page 3 evicted
+Memory: [ 0 2 1 7 ]   Page Referenced: 7 | Page 4 evicted
+Memory: [ 0 2 1 8 ]   Page Referenced: 8 | Page 7 evicted
+Memory: [ 0 2 1 9 ]   Page Referenced: 9 | Page 8 evicted
+Memory: [ 0 2 1 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 0 2 1 9 ]   Page Referenced: 0 | No eviction
+Memory: [ 0 2 1 9 ]   Page Referenced: 0 | No eviction
+Memory: [ 0 2 1 6 ]   Page Referenced: 6 | Page 9 evicted
+Memory: [ 0 2 1 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 0 2 1 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 0 2 1 5 ]   Page Referenced: 5 | Page 6 evicted
+Memory: [ 0 2 1 4 ]   Page Referenced: 4 | Page 5 evicted
+Memory: [ 0 2 1 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 0 2 1 6 ]   Page Referenced: 6 | Page 4 evicted
+Memory: [ 0 2 1 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 0 2 1 5 ]   Page Referenced: 5 | Page 6 evicted
+Memory: [ 0 2 1 6 ]   Page Referenced: 6 | Page 5 evicted
+Memory: [ 0 2 1 5 ]   Page Referenced: 5 | Page 6 evicted
+Memory: [ 0 2 1 5 ]   Page Referenced: 0 | No eviction
+Memory: [ 0 2 1 9 ]   Page Referenced: 9 | Page 5 evicted
+Memory: [ 0 2 1 4 ]   Page Referenced: 4 | Page 9 evicted
+Memory: [ 0 2 1 4 ]   Page Referenced: 0 | No eviction
+Memory: [ 2 0 1 3 ]   Page Referenced: 3 | Page 4 evicted
+Memory: [ 2 0 1 3 ]   Page Referenced: 2 | No eviction
+Memory: [ 2 0 1 3 ]   Page Referenced: 2 | No eviction
+Memory: [ 2 0 1 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 2 0 1 3 ]   Page Referenced: 1 | No eviction
+Memory: [ 2 0 1 3 ]   Page Referenced: 1 | No eviction
+Memory: [ 0 2 1 4 ]   Page Referenced: 4 | Page 3 evicted
+Memory: [ 0 2 1 6 ]   Page Referenced: 6 | Page 4 evicted
+Memory: [ 0 2 1 3 ]   Page Referenced: 3 | Page 6 evicted
+Memory: [ 0 2 1 4 ]   Page Referenced: 4 | Page 3 evicted
+Memory: [ 0 2 1 5 ]   Page Referenced: 5 | Page 4 evicted
+Memory: [ 0 2 1 6 ]   Page Referenced: 6 | Page 5 evicted
+Memory: [ 0 2 1 5 ]   Page Referenced: 5 | Page 6 evicted
+Memory: [ 0 2 1 6 ]   Page Referenced: 6 | Page 5 evicted
+Memory: [ 0 2 1 6 ]   Page Referenced: 2 | No eviction
+Memory: [ 0 2 1 7 ]   Page Referenced: 7 | Page 6 evicted
+Memory: [ 0 2 1 8 ]   Page Referenced: 8 | Page 7 evicted
+Memory: [ 0 2 1 9 ]   Page Referenced: 9 | Page 8 evicted
+Memory: [ 0 2 1 8 ]   Page Referenced: 8 | Page 9 evicted
+Memory: [ 0 2 1 9 ]   Page Referenced: 9 | Page 8 evicted
+Memory: [ 0 2 1 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 0 2 1 3 ]   Page Referenced: 3 | Page 9 evicted
+Memory: [ 0 2 1 5 ]   Page Referenced: 5 | Page 3 evicted
+Memory: [ 0 2 1 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 0 2 1 6 ]   Page Referenced: 6 | Page 5 evicted
+Memory: [ 0 2 1 5 ]   Page Referenced: 5 | Page 6 evicted
+Memory: [ 0 2 1 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 0 2 1 4 ]   Page Referenced: 4 | Page 5 evicted
+Memory: [ 0 2 1 3 ]   Page Referenced: 3 | Page 4 evicted
+Memory: [ 0 2 1 4 ]   Page Referenced: 4 | Page 3 evicted
+Memory: [ 0 2 1 5 ]   Page Referenced: 5 | Page 4 evicted
+Memory: [ 0 2 1 5 ]   Page Referenced: 0 | No eviction
+Memory: [ 0 2 1 5 ]   Page Referenced: 0 | No eviction
+Memory: [ 0 2 1 9 ]   Page Referenced: 9 | Page 5 evicted
+Memory: [ 0 2 1 6 ]   Page Referenced: 6 | Page 9 evicted
+Memory: [ 0 2 1 5 ]   Page Referenced: 5 | Page 6 evicted
+Memory: [ 0 2 1 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 0 2 1 6 ]   Page Referenced: 6 | Page 5 evicted
+Memory: [ 0 2 1 6 ]   Page Referenced: 2 | No eviction
+Memory: [ 0 2 1 7 ]   Page Referenced: 7 | Page 6 evicted
+Memory: [ 0 2 1 6 ]   Page Referenced: 6 | Page 7 evicted
+Memory: [ 0 2 1 3 ]   Page Referenced: 3 | Page 6 evicted
+Memory: [ 0 2 1 4 ]   Page Referenced: 4 | Page 3 evicted
+Memory: [ 0 2 1 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 0 2 1 3 ]   Page Referenced: 3 | Page 4 evicted
+Memory: [ 0 2 1 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 0 2 1 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 0 2 1 6 ]   Page Referenced: 6 | Page 3 evicted
+Memory: [ 0 2 1 6 ]   Page Referenced: 2 | No eviction
+Memory: [ 0 2 1 6 ]   Page Referenced: 1 | No eviction
+Memory: [ 0 2 1 6 ]   Page Referenced: 0 | No eviction
+Memory: [ 0 2 1 3 ]   Page Referenced: 3 | Page 6 evicted
+Memory: [ 0 2 1 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 0 2 1 5 ]   Page Referenced: 5 | Page 3 evicted
+Memory: [ 0 2 1 6 ]   Page Referenced: 6 | Page 5 evicted
+
+Run 4 Hit Ratio: 44%
+~~~~~ Least Frequently Used ~~~~~
+Memory: [ 3 X X X ]   Page Referenced: 3 | No eviction
+Memory: [ 3 X X X ]   Page Referenced: 3 | No eviction
+Memory: [ 3 4 X X ]   Page Referenced: 4 | No eviction
+Memory: [ 3 4 0 X ]   Page Referenced: 0 | No eviction
+Memory: [ 3 4 0 X ]   Page Referenced: 0 | No eviction
+Memory: [ 3 4 0 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 3 4 0 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 3 0 9 8 ]   Page Referenced: 8 | Page 4 evicted
+Memory: [ 3 0 9 8 ]   Page Referenced: 9 | No eviction
+Memory: [ 3 0 9 8 ]   Page Referenced: 9 | No eviction
+Memory: [ 3 0 9 8 ]   Page Referenced: 0 | No eviction
+Memory: [ 3 0 9 6 ]   Page Referenced: 6 | Page 8 evicted
+Memory: [ 3 0 9 5 ]   Page Referenced: 5 | Page 6 evicted
+Memory: [ 3 0 9 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 0 9 4 ]   Page Referenced: 4 | Page 3 evicted
+Memory: [ 5 0 9 4 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 0 9 7 ]   Page Referenced: 7 | Page 4 evicted
+Memory: [ 5 0 9 8 ]   Page Referenced: 8 | Page 7 evicted
+Memory: [ 5 0 9 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 5 0 9 1 ]   Page Referenced: 1 | Page 8 evicted
+Memory: [ 5 0 9 1 ]   Page Referenced: 0 | No eviction
+Memory: [ 5 0 9 1 ]   Page Referenced: 9 | No eviction
+Memory: [ 5 0 9 1 ]   Page Referenced: 0 | No eviction
+Memory: [ 5 0 9 1 ]   Page Referenced: 0 | No eviction
+Memory: [ 5 0 9 1 ]   Page Referenced: 0 | No eviction
+Memory: [ 5 0 9 1 ]   Page Referenced: 9 | No eviction
+Memory: [ 5 9 0 7 ]   Page Referenced: 7 | Page 1 evicted
+Memory: [ 5 9 0 8 ]   Page Referenced: 8 | Page 7 evicted
+Memory: [ 5 9 0 8 ]   Page Referenced: 9 | No eviction
+Memory: [ 5 9 0 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 5 9 0 3 ]   Page Referenced: 3 | Page 8 evicted
+Memory: [ 5 9 0 3 ]   Page Referenced: 0 | No eviction
+Memory: [ 5 9 0 2 ]   Page Referenced: 2 | Page 3 evicted
+Memory: [ 5 9 0 4 ]   Page Referenced: 4 | Page 2 evicted
+Memory: [ 5 9 0 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 5 9 0 4 ]   Page Referenced: 9 | No eviction
+Memory: [ 5 9 0 3 ]   Page Referenced: 3 | Page 4 evicted
+Memory: [ 5 9 0 7 ]   Page Referenced: 7 | Page 3 evicted
+Memory: [ 5 9 0 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 5 9 0 6 ]   Page Referenced: 6 | Page 7 evicted
+Memory: [ 5 9 0 6 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 9 0 4 ]   Page Referenced: 4 | Page 6 evicted
+Memory: [ 5 9 0 4 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 9 0 6 ]   Page Referenced: 6 | Page 4 evicted
+Memory: [ 5 9 0 6 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 9 0 6 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 9 0 6 ]   Page Referenced: 0 | No eviction
+Memory: [ 5 9 0 1 ]   Page Referenced: 1 | Page 6 evicted
+Memory: [ 5 9 0 2 ]   Page Referenced: 2 | Page 1 evicted
+Memory: [ 5 9 0 3 ]   Page Referenced: 3 | Page 2 evicted
+Memory: [ 5 9 0 4 ]   Page Referenced: 4 | Page 3 evicted
+Memory: [ 5 9 0 4 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 9 0 3 ]   Page Referenced: 3 | Page 4 evicted
+Memory: [ 5 9 0 1 ]   Page Referenced: 1 | Page 3 evicted
+Memory: [ 5 9 0 2 ]   Page Referenced: 2 | Page 1 evicted
+Memory: [ 5 9 0 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 5 9 0 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 5 9 0 7 ]   Page Referenced: 7 | Page 2 evicted
+Memory: [ 5 9 0 6 ]   Page Referenced: 6 | Page 7 evicted
+Memory: [ 5 9 0 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 5 9 0 6 ]   Page Referenced: 9 | No eviction
+Memory: [ 5 9 0 6 ]   Page Referenced: 0 | No eviction
+Memory: [ 5 9 0 6 ]   Page Referenced: 9 | No eviction
+Memory: [ 5 9 0 3 ]   Page Referenced: 3 | Page 6 evicted
+Memory: [ 5 9 0 4 ]   Page Referenced: 4 | Page 3 evicted
+Memory: [ 5 9 0 4 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 9 0 7 ]   Page Referenced: 7 | Page 4 evicted
+Memory: [ 5 9 0 3 ]   Page Referenced: 3 | Page 7 evicted
+Memory: [ 5 9 0 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 5 9 0 2 ]   Page Referenced: 2 | Page 3 evicted
+Memory: [ 5 9 0 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 5 9 0 3 ]   Page Referenced: 3 | Page 2 evicted
+Memory: [ 5 9 0 2 ]   Page Referenced: 2 | Page 3 evicted
+Memory: [ 5 9 0 3 ]   Page Referenced: 3 | Page 2 evicted
+Memory: [ 5 9 0 3 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 9 0 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 5 9 0 4 ]   Page Referenced: 4 | Page 3 evicted
+Memory: [ 5 9 0 3 ]   Page Referenced: 3 | Page 4 evicted
+Memory: [ 5 9 0 2 ]   Page Referenced: 2 | Page 3 evicted
+Memory: [ 5 9 0 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 5 9 0 3 ]   Page Referenced: 3 | Page 2 evicted
+Memory: [ 5 9 0 4 ]   Page Referenced: 4 | Page 3 evicted
+Memory: [ 5 9 0 3 ]   Page Referenced: 3 | Page 4 evicted
+Memory: [ 5 9 0 2 ]   Page Referenced: 2 | Page 3 evicted
+Memory: [ 5 9 0 4 ]   Page Referenced: 4 | Page 2 evicted
+Memory: [ 5 9 0 3 ]   Page Referenced: 3 | Page 4 evicted
+Memory: [ 5 9 0 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 5 9 0 2 ]   Page Referenced: 2 | Page 3 evicted
+Memory: [ 5 9 0 6 ]   Page Referenced: 6 | Page 2 evicted
+Memory: [ 5 9 0 2 ]   Page Referenced: 2 | Page 6 evicted
+Memory: [ 5 9 0 6 ]   Page Referenced: 6 | Page 2 evicted
+Memory: [ 5 9 0 2 ]   Page Referenced: 2 | Page 6 evicted
+Memory: [ 5 9 0 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 5 9 0 3 ]   Page Referenced: 3 | Page 2 evicted
+Memory: [ 5 9 0 3 ]   Page Referenced: 0 | No eviction
+Memory: [ 5 9 0 1 ]   Page Referenced: 1 | Page 3 evicted
+Memory: [ 5 9 0 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 5 9 0 2 ]   Page Referenced: 2 | Page 1 evicted
+Memory: [ 5 9 0 3 ]   Page Referenced: 3 | Page 2 evicted
+Memory: [ 5 9 0 3 ]   Page Referenced: 3 | No eviction
+
+Run 5 Hit Ratio: 44%
+----------- MFU Start -----------
+~~~~~ Most Frequently Used ~~~~~
+Memory: [ 9 X X X ]   Page Referenced: 9 | No eviction
+Memory: [ 9 0 X X ]   Page Referenced: 0 | No eviction
+Memory: [ 9 0 X X ]   Page Referenced: 0 | No eviction
+Memory: [ 9 0 3 X ]   Page Referenced: 3 | No eviction
+Memory: [ 9 0 3 X ]   Page Referenced: 0 | No eviction
+Memory: [ 9 0 3 X ]   Page Referenced: 0 | No eviction
+Memory: [ 9 0 3 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 9 0 3 7 ]   Page Referenced: 3 | No eviction
+Memory: [ 9 0 3 7 ]   Page Referenced: 3 | No eviction
+Memory: [ 3 9 7 8 ]   Page Referenced: 8 | Page 0 evicted
+Memory: [ 3 9 7 8 ]   Page Referenced: 9 | No eviction
+Memory: [ 3 9 7 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 3 9 7 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 3 9 7 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 3 9 7 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 3 9 7 0 ]   Page Referenced: 0 | Page 8 evicted
+Memory: [ 9 7 0 2 ]   Page Referenced: 2 | Page 3 evicted
+Memory: [ 7 0 2 1 ]   Page Referenced: 1 | Page 9 evicted
+Memory: [ 7 0 2 1 ]   Page Referenced: 0 | No eviction
+Memory: [ 7 2 1 9 ]   Page Referenced: 9 | Page 0 evicted
+Memory: [ 2 1 9 0 ]   Page Referenced: 0 | Page 7 evicted
+Memory: [ 2 1 9 0 ]   Page Referenced: 1 | No eviction
+Memory: [ 2 1 9 0 ]   Page Referenced: 2 | No eviction
+Memory: [ 2 1 9 0 ]   Page Referenced: 9 | No eviction
+Memory: [ 2 1 9 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 1 9 0 3 ]   Page Referenced: 3 | Page 2 evicted
+Memory: [ 1 9 0 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 9 0 3 2 ]   Page Referenced: 2 | Page 1 evicted
+Memory: [ 0 3 2 4 ]   Page Referenced: 4 | Page 9 evicted
+Memory: [ 3 2 4 5 ]   Page Referenced: 5 | Page 0 evicted
+Memory: [ 3 2 4 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 3 2 4 5 ]   Page Referenced: 4 | No eviction
+Memory: [ 3 2 4 5 ]   Page Referenced: 3 | No eviction
+Memory: [ 3 2 4 5 ]   Page Referenced: 2 | No eviction
+Memory: [ 2 4 5 1 ]   Page Referenced: 1 | Page 3 evicted
+Memory: [ 4 5 1 0 ]   Page Referenced: 0 | Page 2 evicted
+Memory: [ 4 5 1 0 ]   Page Referenced: 1 | No eviction
+Memory: [ 5 1 0 2 ]   Page Referenced: 2 | Page 4 evicted
+Memory: [ 1 0 2 3 ]   Page Referenced: 3 | Page 5 evicted
+Memory: [ 1 0 2 3 ]   Page Referenced: 0 | No eviction
+Memory: [ 1 0 2 3 ]   Page Referenced: 1 | No eviction
+Memory: [ 1 0 2 3 ]   Page Referenced: 2 | No eviction
+Memory: [ 0 2 3 5 ]   Page Referenced: 5 | Page 1 evicted
+Memory: [ 2 3 5 6 ]   Page Referenced: 6 | Page 0 evicted
+Memory: [ 2 3 5 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 2 3 5 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 2 3 5 8 ]   Page Referenced: 8 | Page 6 evicted
+Memory: [ 3 5 8 9 ]   Page Referenced: 9 | Page 2 evicted
+Memory: [ 3 5 8 9 ]   Page Referenced: 8 | No eviction
+Memory: [ 3 5 8 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 3 5 8 9 ]   Page Referenced: 8 | No eviction
+Memory: [ 3 5 8 9 ]   Page Referenced: 8 | No eviction
+Memory: [ 3 5 8 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 9 3 5 4 ]   Page Referenced: 4 | Page 8 evicted
+Memory: [ 9 3 5 4 ]   Page Referenced: 3 | No eviction
+Memory: [ 3 5 4 2 ]   Page Referenced: 2 | Page 9 evicted
+Memory: [ 3 5 4 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 3 5 4 2 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 2 4 1 ]   Page Referenced: 1 | Page 3 evicted
+Memory: [ 5 2 4 1 ]   Page Referenced: 2 | No eviction
+Memory: [ 5 2 4 1 ]   Page Referenced: 2 | No eviction
+Memory: [ 5 2 4 1 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 4 1 9 ]   Page Referenced: 9 | Page 2 evicted
+Memory: [ 5 4 1 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 9 4 1 0 ]   Page Referenced: 0 | Page 5 evicted
+Memory: [ 4 1 0 7 ]   Page Referenced: 7 | Page 9 evicted
+Memory: [ 1 0 7 6 ]   Page Referenced: 6 | Page 4 evicted
+Memory: [ 0 7 6 5 ]   Page Referenced: 5 | Page 1 evicted
+Memory: [ 0 7 6 5 ]   Page Referenced: 0 | No eviction
+Memory: [ 0 7 6 5 ]   Page Referenced: 0 | No eviction
+Memory: [ 7 6 5 1 ]   Page Referenced: 1 | Page 0 evicted
+Memory: [ 6 5 1 3 ]   Page Referenced: 3 | Page 7 evicted
+Memory: [ 6 5 1 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 6 5 1 2 ]   Page Referenced: 2 | Page 3 evicted
+Memory: [ 5 1 2 9 ]   Page Referenced: 9 | Page 6 evicted
+Memory: [ 1 2 9 8 ]   Page Referenced: 8 | Page 5 evicted
+Memory: [ 1 2 9 8 ]   Page Referenced: 1 | No eviction
+Memory: [ 1 2 9 8 ]   Page Referenced: 2 | No eviction
+Memory: [ 2 9 8 3 ]   Page Referenced: 3 | Page 1 evicted
+Memory: [ 2 9 8 3 ]   Page Referenced: 9 | No eviction
+Memory: [ 2 9 8 3 ]   Page Referenced: 8 | No eviction
+Memory: [ 2 9 8 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 9 8 3 4 ]   Page Referenced: 4 | Page 2 evicted
+Memory: [ 9 8 3 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 8 3 4 5 ]   Page Referenced: 5 | Page 9 evicted
+Memory: [ 8 3 4 5 ]   Page Referenced: 8 | No eviction
+Memory: [ 3 4 5 9 ]   Page Referenced: 9 | Page 8 evicted
+Memory: [ 3 4 5 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 4 9 5 8 ]   Page Referenced: 8 | Page 3 evicted
+Memory: [ 9 5 8 7 ]   Page Referenced: 7 | Page 4 evicted
+Memory: [ 5 8 7 1 ]   Page Referenced: 1 | Page 9 evicted
+Memory: [ 8 7 1 0 ]   Page Referenced: 0 | Page 5 evicted
+Memory: [ 8 7 1 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 8 7 1 9 ]   Page Referenced: 9 | Page 0 evicted
+Memory: [ 8 7 1 9 ]   Page Referenced: 7 | No eviction
+Memory: [ 8 7 1 9 ]   Page Referenced: 8 | No eviction
+Memory: [ 8 7 1 9 ]   Page Referenced: 8 | No eviction
+Memory: [ 8 7 1 9 ]   Page Referenced: 8 | No eviction
+Memory: [ 8 7 1 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 7 9 1 5 ]   Page Referenced: 5 | Page 8 evicted
+
+Run 1 Hit Ratio: 55%
+~~~~~ Most Frequently Used ~~~~~
+Memory: [ 8 X X X ]   Page Referenced: 8 | No eviction
+Memory: [ 8 X X X ]   Page Referenced: 8 | No eviction
+Memory: [ 8 9 X X ]   Page Referenced: 9 | No eviction
+Memory: [ 8 9 X X ]   Page Referenced: 8 | No eviction
+Memory: [ 8 9 X X ]   Page Referenced: 8 | No eviction
+Memory: [ 8 9 X X ]   Page Referenced: 8 | No eviction
+Memory: [ 8 9 X X ]   Page Referenced: 8 | No eviction
+Memory: [ 8 9 5 X ]   Page Referenced: 5 | No eviction
+Memory: [ 8 9 5 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 9 5 6 7 ]   Page Referenced: 7 | Page 8 evicted
+Memory: [ 9 5 6 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 9 5 6 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 9 5 6 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 9 5 6 7 ]   Page Referenced: 5 | No eviction
+Memory: [ 9 5 6 7 ]   Page Referenced: 5 | No eviction
+Memory: [ 9 5 6 7 ]   Page Referenced: 6 | No eviction
+Memory: [ 9 5 6 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 5 6 9 8 ]   Page Referenced: 8 | Page 7 evicted
+Memory: [ 5 6 9 8 ]   Page Referenced: 9 | No eviction
+Memory: [ 6 9 8 2 ]   Page Referenced: 2 | Page 5 evicted
+Memory: [ 6 9 8 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 9 2 8 1 ]   Page Referenced: 1 | Page 6 evicted
+Memory: [ 2 8 1 3 ]   Page Referenced: 3 | Page 9 evicted
+Memory: [ 8 1 3 5 ]   Page Referenced: 5 | Page 2 evicted
+Memory: [ 1 3 5 7 ]   Page Referenced: 7 | Page 8 evicted
+Memory: [ 3 5 7 0 ]   Page Referenced: 0 | Page 1 evicted
+Memory: [ 5 7 0 1 ]   Page Referenced: 1 | Page 3 evicted
+Memory: [ 7 0 1 2 ]   Page Referenced: 2 | Page 5 evicted
+Memory: [ 0 1 2 6 ]   Page Referenced: 6 | Page 7 evicted
+Memory: [ 1 2 6 3 ]   Page Referenced: 3 | Page 0 evicted
+Memory: [ 1 2 6 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 1 2 6 0 ]   Page Referenced: 0 | Page 3 evicted
+Memory: [ 1 2 6 0 ]   Page Referenced: 2 | No eviction
+Memory: [ 1 2 6 0 ]   Page Referenced: 1 | No eviction
+Memory: [ 1 2 6 0 ]   Page Referenced: 1 | No eviction
+Memory: [ 1 2 6 0 ]   Page Referenced: 1 | No eviction
+Memory: [ 1 2 6 0 ]   Page Referenced: 1 | No eviction
+Memory: [ 1 2 6 0 ]   Page Referenced: 2 | No eviction
+Memory: [ 2 6 0 3 ]   Page Referenced: 3 | Page 1 evicted
+Memory: [ 2 6 0 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 2 6 0 3 ]   Page Referenced: 0 | No eviction
+Memory: [ 0 3 6 1 ]   Page Referenced: 1 | Page 2 evicted
+Memory: [ 0 3 6 1 ]   Page Referenced: 3 | No eviction
+Memory: [ 0 6 1 2 ]   Page Referenced: 2 | Page 3 evicted
+Memory: [ 0 6 1 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 2 6 1 3 ]   Page Referenced: 3 | Page 0 evicted
+Memory: [ 6 1 3 4 ]   Page Referenced: 4 | Page 2 evicted
+Memory: [ 6 1 3 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 6 1 3 4 ]   Page Referenced: 6 | No eviction
+Memory: [ 4 1 3 7 ]   Page Referenced: 7 | Page 6 evicted
+Memory: [ 4 1 3 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 7 1 3 6 ]   Page Referenced: 6 | Page 4 evicted
+Memory: [ 1 3 6 5 ]   Page Referenced: 5 | Page 7 evicted
+Memory: [ 3 6 5 4 ]   Page Referenced: 4 | Page 1 evicted
+Memory: [ 3 6 5 4 ]   Page Referenced: 3 | No eviction
+Memory: [ 3 6 5 4 ]   Page Referenced: 3 | No eviction
+Memory: [ 3 6 5 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 3 6 5 4 ]   Page Referenced: 5 | No eviction
+Memory: [ 3 6 5 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 4 5 6 7 ]   Page Referenced: 7 | Page 3 evicted
+Memory: [ 4 5 6 7 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 6 7 1 ]   Page Referenced: 1 | Page 4 evicted
+Memory: [ 5 6 7 1 ]   Page Referenced: 6 | No eviction
+Memory: [ 5 6 7 1 ]   Page Referenced: 6 | No eviction
+Memory: [ 5 6 7 1 ]   Page Referenced: 6 | No eviction
+Memory: [ 5 6 7 1 ]   Page Referenced: 6 | No eviction
+Memory: [ 5 6 7 1 ]   Page Referenced: 7 | No eviction
+Memory: [ 5 7 1 4 ]   Page Referenced: 4 | Page 6 evicted
+Memory: [ 7 1 4 0 ]   Page Referenced: 0 | Page 5 evicted
+Memory: [ 7 1 4 0 ]   Page Referenced: 4 | No eviction
+Memory: [ 4 1 0 9 ]   Page Referenced: 9 | Page 7 evicted
+Memory: [ 4 1 0 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 9 1 0 8 ]   Page Referenced: 8 | Page 4 evicted
+Memory: [ 9 1 0 8 ]   Page Referenced: 9 | No eviction
+Memory: [ 9 1 0 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 9 1 0 8 ]   Page Referenced: 9 | No eviction
+Memory: [ 9 1 0 8 ]   Page Referenced: 9 | No eviction
+Memory: [ 9 1 0 8 ]   Page Referenced: 9 | No eviction
+Memory: [ 9 1 0 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 9 1 0 8 ]   Page Referenced: 9 | No eviction
+Memory: [ 9 1 0 8 ]   Page Referenced: 0 | No eviction
+Memory: [ 9 1 0 8 ]   Page Referenced: 0 | No eviction
+Memory: [ 0 8 1 6 ]   Page Referenced: 6 | Page 9 evicted
+Memory: [ 0 8 1 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 8 6 1 5 ]   Page Referenced: 5 | Page 0 evicted
+Memory: [ 6 1 5 4 ]   Page Referenced: 4 | Page 8 evicted
+Memory: [ 1 5 4 2 ]   Page Referenced: 2 | Page 6 evicted
+Memory: [ 1 5 4 2 ]   Page Referenced: 1 | No eviction
+Memory: [ 1 5 4 2 ]   Page Referenced: 5 | No eviction
+Memory: [ 1 5 4 2 ]   Page Referenced: 4 | No eviction
+Memory: [ 5 4 2 8 ]   Page Referenced: 8 | Page 1 evicted
+Memory: [ 4 2 8 9 ]   Page Referenced: 9 | Page 5 evicted
+Memory: [ 4 2 8 9 ]   Page Referenced: 8 | No eviction
+Memory: [ 4 2 8 9 ]   Page Referenced: 8 | No eviction
+Memory: [ 4 2 8 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 4 9 2 0 ]   Page Referenced: 0 | Page 8 evicted
+Memory: [ 9 2 0 6 ]   Page Referenced: 6 | Page 4 evicted
+Memory: [ 2 0 6 1 ]   Page Referenced: 1 | Page 9 evicted
+Memory: [ 0 6 1 5 ]   Page Referenced: 5 | Page 2 evicted
+Memory: [ 0 6 1 5 ]   Page Referenced: 5 | No eviction
+
+Run 2 Hit Ratio: 58%
+~~~~~ Most Frequently Used ~~~~~
+Memory: [ 2 X X X ]   Page Referenced: 2 | No eviction
+Memory: [ 2 3 X X ]   Page Referenced: 3 | No eviction
+Memory: [ 2 3 1 X ]   Page Referenced: 1 | No eviction
+Memory: [ 2 3 1 X ]   Page Referenced: 2 | No eviction
+Memory: [ 2 3 1 X ]   Page Referenced: 2 | No eviction
+Memory: [ 2 3 1 X ]   Page Referenced: 1 | No eviction
+Memory: [ 2 3 1 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 1 3 8 7 ]   Page Referenced: 7 | Page 2 evicted
+Memory: [ 3 8 7 4 ]   Page Referenced: 4 | Page 1 evicted
+Memory: [ 8 7 4 5 ]   Page Referenced: 5 | Page 3 evicted
+Memory: [ 7 4 5 3 ]   Page Referenced: 3 | Page 8 evicted
+Memory: [ 7 4 5 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 7 4 5 3 ]   Page Referenced: 5 | No eviction
+Memory: [ 3 7 4 2 ]   Page Referenced: 2 | Page 5 evicted
+Memory: [ 7 4 2 1 ]   Page Referenced: 1 | Page 3 evicted
+Memory: [ 7 4 2 1 ]   Page Referenced: 2 | No eviction
+Memory: [ 7 4 2 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 1 7 4 0 ]   Page Referenced: 0 | Page 2 evicted
+Memory: [ 7 4 0 6 ]   Page Referenced: 6 | Page 1 evicted
+Memory: [ 4 0 6 5 ]   Page Referenced: 5 | Page 7 evicted
+Memory: [ 0 6 5 9 ]   Page Referenced: 9 | Page 4 evicted
+Memory: [ 6 5 9 2 ]   Page Referenced: 2 | Page 0 evicted
+Memory: [ 6 5 9 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 6 5 9 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 6 5 9 8 ]   Page Referenced: 8 | Page 2 evicted
+Memory: [ 5 9 8 2 ]   Page Referenced: 2 | Page 6 evicted
+Memory: [ 9 8 2 3 ]   Page Referenced: 3 | Page 5 evicted
+Memory: [ 9 8 2 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 9 8 2 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 9 8 2 0 ]   Page Referenced: 0 | Page 3 evicted
+Memory: [ 9 8 2 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 9 8 2 0 ]   Page Referenced: 2 | No eviction
+Memory: [ 9 8 2 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 2 9 8 7 ]   Page Referenced: 7 | Page 0 evicted
+Memory: [ 2 9 8 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 7 9 8 4 ]   Page Referenced: 4 | Page 2 evicted
+Memory: [ 9 8 4 2 ]   Page Referenced: 2 | Page 7 evicted
+Memory: [ 8 4 2 1 ]   Page Referenced: 1 | Page 9 evicted
+Memory: [ 4 2 1 0 ]   Page Referenced: 0 | Page 8 evicted
+Memory: [ 2 1 0 3 ]   Page Referenced: 3 | Page 4 evicted
+Memory: [ 2 1 0 3 ]   Page Referenced: 2 | No eviction
+Memory: [ 2 1 0 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 3 1 0 5 ]   Page Referenced: 5 | Page 2 evicted
+Memory: [ 1 0 5 2 ]   Page Referenced: 2 | Page 3 evicted
+Memory: [ 0 5 2 3 ]   Page Referenced: 3 | Page 1 evicted
+Memory: [ 0 5 2 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 0 5 2 3 ]   Page Referenced: 0 | No eviction
+Memory: [ 0 5 2 3 ]   Page Referenced: 0 | No eviction
+Memory: [ 3 5 2 7 ]   Page Referenced: 7 | Page 0 evicted
+Memory: [ 5 2 7 6 ]   Page Referenced: 6 | Page 3 evicted
+Memory: [ 5 2 7 6 ]   Page Referenced: 7 | No eviction
+Memory: [ 5 2 6 8 ]   Page Referenced: 8 | Page 7 evicted
+Memory: [ 2 6 8 9 ]   Page Referenced: 9 | Page 5 evicted
+Memory: [ 6 8 9 0 ]   Page Referenced: 0 | Page 2 evicted
+Memory: [ 8 9 0 1 ]   Page Referenced: 1 | Page 6 evicted
+Memory: [ 8 9 0 1 ]   Page Referenced: 0 | No eviction
+Memory: [ 8 9 0 1 ]   Page Referenced: 0 | No eviction
+Memory: [ 8 9 0 1 ]   Page Referenced: 0 | No eviction
+Memory: [ 8 9 1 7 ]   Page Referenced: 7 | Page 0 evicted
+Memory: [ 9 1 7 4 ]   Page Referenced: 4 | Page 8 evicted
+Memory: [ 9 1 7 4 ]   Page Referenced: 7 | No eviction
+Memory: [ 9 1 4 6 ]   Page Referenced: 6 | Page 7 evicted
+Memory: [ 1 4 6 5 ]   Page Referenced: 5 | Page 9 evicted
+Memory: [ 4 6 5 7 ]   Page Referenced: 7 | Page 1 evicted
+Memory: [ 4 6 5 7 ]   Page Referenced: 4 | No eviction
+Memory: [ 4 6 5 7 ]   Page Referenced: 4 | No eviction
+Memory: [ 4 6 5 7 ]   Page Referenced: 5 | No eviction
+Memory: [ 4 6 5 7 ]   Page Referenced: 5 | No eviction
+Memory: [ 4 6 5 7 ]   Page Referenced: 5 | No eviction
+Memory: [ 4 6 5 7 ]   Page Referenced: 4 | No eviction
+Memory: [ 5 6 7 3 ]   Page Referenced: 3 | Page 4 evicted
+Memory: [ 6 7 3 2 ]   Page Referenced: 2 | Page 5 evicted
+Memory: [ 7 3 2 1 ]   Page Referenced: 1 | Page 6 evicted
+Memory: [ 3 2 1 6 ]   Page Referenced: 6 | Page 7 evicted
+Memory: [ 3 2 1 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 3 2 1 5 ]   Page Referenced: 5 | Page 6 evicted
+Memory: [ 3 2 1 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 3 2 1 5 ]   Page Referenced: 3 | No eviction
+Memory: [ 3 2 1 5 ]   Page Referenced: 3 | No eviction
+Memory: [ 5 2 1 4 ]   Page Referenced: 4 | Page 3 evicted
+Memory: [ 5 2 1 4 ]   Page Referenced: 5 | No eviction
+Memory: [ 2 1 4 6 ]   Page Referenced: 6 | Page 5 evicted
+Memory: [ 1 4 6 7 ]   Page Referenced: 7 | Page 2 evicted
+Memory: [ 1 4 6 7 ]   Page Referenced: 6 | No eviction
+Memory: [ 1 4 7 0 ]   Page Referenced: 0 | Page 6 evicted
+Memory: [ 1 4 7 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 1 4 7 8 ]   Page Referenced: 8 | Page 0 evicted
+Memory: [ 1 4 7 8 ]   Page Referenced: 4 | No eviction
+Memory: [ 1 7 8 5 ]   Page Referenced: 5 | Page 4 evicted
+Memory: [ 1 7 8 5 ]   Page Referenced: 7 | No eviction
+Memory: [ 1 8 5 3 ]   Page Referenced: 3 | Page 7 evicted
+Memory: [ 1 8 5 3 ]   Page Referenced: 8 | No eviction
+Memory: [ 1 8 5 3 ]   Page Referenced: 1 | No eviction
+Memory: [ 8 5 3 9 ]   Page Referenced: 9 | Page 1 evicted
+Memory: [ 8 5 3 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 8 5 3 9 ]   Page Referenced: 8 | No eviction
+Memory: [ 8 5 3 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 9 5 3 0 ]   Page Referenced: 0 | Page 8 evicted
+Memory: [ 5 3 0 1 ]   Page Referenced: 1 | Page 9 evicted
+Memory: [ 5 3 0 1 ]   Page Referenced: 1 | No eviction
+
+Run 3 Hit Ratio: 46%
+~~~~~ Most Frequently Used ~~~~~
+Memory: [ 5 X X X ]   Page Referenced: 5 | No eviction
+Memory: [ 5 4 X X ]   Page Referenced: 4 | No eviction
+Memory: [ 5 4 X X ]   Page Referenced: 4 | No eviction
+Memory: [ 5 4 3 X ]   Page Referenced: 3 | No eviction
+Memory: [ 5 4 3 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 5 3 2 9 ]   Page Referenced: 9 | Page 4 evicted
+Memory: [ 3 2 9 8 ]   Page Referenced: 8 | Page 5 evicted
+Memory: [ 2 9 8 1 ]   Page Referenced: 1 | Page 3 evicted
+Memory: [ 9 8 1 0 ]   Page Referenced: 0 | Page 2 evicted
+Memory: [ 8 1 0 2 ]   Page Referenced: 2 | Page 9 evicted
+Memory: [ 8 1 0 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 8 1 0 2 ]   Page Referenced: 1 | No eviction
+Memory: [ 8 1 0 2 ]   Page Referenced: 0 | No eviction
+Memory: [ 0 2 8 9 ]   Page Referenced: 9 | Page 1 evicted
+Memory: [ 0 2 8 9 ]   Page Referenced: 8 | No eviction
+Memory: [ 2 8 9 7 ]   Page Referenced: 7 | Page 0 evicted
+Memory: [ 2 8 9 7 ]   Page Referenced: 8 | No eviction
+Memory: [ 2 9 7 1 ]   Page Referenced: 1 | Page 8 evicted
+Memory: [ 2 9 7 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 1 9 7 4 ]   Page Referenced: 4 | Page 2 evicted
+Memory: [ 9 7 4 5 ]   Page Referenced: 5 | Page 1 evicted
+Memory: [ 9 7 4 5 ]   Page Referenced: 4 | No eviction
+Memory: [ 9 7 5 1 ]   Page Referenced: 1 | Page 4 evicted
+Memory: [ 7 5 1 2 ]   Page Referenced: 2 | Page 9 evicted
+Memory: [ 7 5 1 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 7 5 1 2 ]   Page Referenced: 7 | No eviction
+Memory: [ 2 5 1 8 ]   Page Referenced: 8 | Page 7 evicted
+Memory: [ 5 1 8 0 ]   Page Referenced: 0 | Page 2 evicted
+Memory: [ 1 8 0 9 ]   Page Referenced: 9 | Page 5 evicted
+Memory: [ 1 8 0 9 ]   Page Referenced: 8 | No eviction
+Memory: [ 1 8 0 9 ]   Page Referenced: 8 | No eviction
+Memory: [ 1 8 0 9 ]   Page Referenced: 8 | No eviction
+Memory: [ 1 8 0 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 1 8 0 9 ]   Page Referenced: 1 | No eviction
+Memory: [ 1 8 0 9 ]   Page Referenced: 0 | No eviction
+Memory: [ 1 0 9 3 ]   Page Referenced: 3 | Page 8 evicted
+Memory: [ 0 9 3 2 ]   Page Referenced: 2 | Page 1 evicted
+Memory: [ 9 3 2 1 ]   Page Referenced: 1 | Page 0 evicted
+Memory: [ 9 3 2 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 9 3 2 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 9 3 2 1 ]   Page Referenced: 2 | No eviction
+Memory: [ 9 3 2 1 ]   Page Referenced: 3 | No eviction
+Memory: [ 9 3 2 1 ]   Page Referenced: 2 | No eviction
+Memory: [ 1 9 3 5 ]   Page Referenced: 5 | Page 2 evicted
+Memory: [ 9 3 5 4 ]   Page Referenced: 4 | Page 1 evicted
+Memory: [ 9 3 5 4 ]   Page Referenced: 5 | No eviction
+Memory: [ 9 3 5 4 ]   Page Referenced: 5 | No eviction
+Memory: [ 9 3 5 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 9 3 5 4 ]   Page Referenced: 3 | No eviction
+Memory: [ 9 3 5 4 ]   Page Referenced: 9 | No eviction
+Memory: [ 9 3 5 4 ]   Page Referenced: 9 | No eviction
+Memory: [ 3 5 4 8 ]   Page Referenced: 8 | Page 9 evicted
+Memory: [ 5 4 8 9 ]   Page Referenced: 9 | Page 3 evicted
+Memory: [ 5 4 8 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 4 9 8 0 ]   Page Referenced: 0 | Page 5 evicted
+Memory: [ 9 8 0 1 ]   Page Referenced: 1 | Page 4 evicted
+Memory: [ 9 8 0 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 9 8 0 1 ]   Page Referenced: 9 | No eviction
+Memory: [ 9 8 0 1 ]   Page Referenced: 0 | No eviction
+Memory: [ 9 8 0 1 ]   Page Referenced: 0 | No eviction
+Memory: [ 9 8 0 1 ]   Page Referenced: 0 | No eviction
+Memory: [ 9 8 0 1 ]   Page Referenced: 0 | No eviction
+Memory: [ 9 8 0 1 ]   Page Referenced: 9 | No eviction
+Memory: [ 9 8 0 1 ]   Page Referenced: 0 | No eviction
+Memory: [ 9 8 0 1 ]   Page Referenced: 8 | No eviction
+Memory: [ 9 8 0 1 ]   Page Referenced: 8 | No eviction
+Memory: [ 9 8 0 1 ]   Page Referenced: 0 | No eviction
+Memory: [ 9 8 0 1 ]   Page Referenced: 9 | No eviction
+Memory: [ 9 8 0 1 ]   Page Referenced: 8 | No eviction
+Memory: [ 9 8 0 1 ]   Page Referenced: 8 | No eviction
+Memory: [ 9 8 0 1 ]   Page Referenced: 9 | No eviction
+Memory: [ 9 8 1 6 ]   Page Referenced: 6 | Page 0 evicted
+Memory: [ 9 8 1 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 9 8 1 6 ]   Page Referenced: 8 | No eviction
+Memory: [ 9 8 1 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 9 8 1 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 8 6 1 3 ]   Page Referenced: 3 | Page 9 evicted
+Memory: [ 8 6 1 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 6 1 3 2 ]   Page Referenced: 2 | Page 8 evicted
+Memory: [ 6 1 3 2 ]   Page Referenced: 6 | No eviction
+Memory: [ 1 3 2 5 ]   Page Referenced: 5 | Page 6 evicted
+Memory: [ 3 2 5 4 ]   Page Referenced: 4 | Page 1 evicted
+Memory: [ 2 5 4 9 ]   Page Referenced: 9 | Page 3 evicted
+Memory: [ 5 4 9 3 ]   Page Referenced: 3 | Page 2 evicted
+Memory: [ 4 9 3 6 ]   Page Referenced: 6 | Page 5 evicted
+Memory: [ 9 3 6 5 ]   Page Referenced: 5 | Page 4 evicted
+Memory: [ 9 3 6 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 9 3 6 5 ]   Page Referenced: 6 | No eviction
+Memory: [ 9 3 6 5 ]   Page Referenced: 6 | No eviction
+Memory: [ 9 3 6 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 9 3 6 5 ]   Page Referenced: 9 | No eviction
+Memory: [ 9 3 6 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 9 3 6 5 ]   Page Referenced: 6 | No eviction
+Memory: [ 9 3 6 5 ]   Page Referenced: 6 | No eviction
+Memory: [ 9 3 6 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 9 3 6 5 ]   Page Referenced: 6 | No eviction
+Memory: [ 5 9 3 7 ]   Page Referenced: 7 | Page 6 evicted
+Memory: [ 5 9 3 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 5 9 3 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 7 9 3 0 ]   Page Referenced: 0 | Page 5 evicted
+
+Run 4 Hit Ratio: 61%
+~~~~~ Most Frequently Used ~~~~~
+Memory: [ 7 X X X ]   Page Referenced: 7 | No eviction
+Memory: [ 7 6 X X ]   Page Referenced: 6 | No eviction
+Memory: [ 7 6 X X ]   Page Referenced: 7 | No eviction
+Memory: [ 7 6 0 X ]   Page Referenced: 0 | No eviction
+Memory: [ 7 6 0 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 7 6 0 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 9 6 0 8 ]   Page Referenced: 8 | Page 7 evicted
+Memory: [ 9 6 0 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 9 6 0 8 ]   Page Referenced: 9 | No eviction
+Memory: [ 9 6 0 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 9 6 0 8 ]   Page Referenced: 0 | No eviction
+Memory: [ 9 6 0 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 9 0 6 2 ]   Page Referenced: 2 | Page 8 evicted
+Memory: [ 0 6 2 7 ]   Page Referenced: 7 | Page 9 evicted
+Memory: [ 0 6 2 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 7 6 2 8 ]   Page Referenced: 8 | Page 0 evicted
+Memory: [ 7 6 2 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 8 6 2 9 ]   Page Referenced: 9 | Page 7 evicted
+Memory: [ 6 2 9 0 ]   Page Referenced: 0 | Page 8 evicted
+Memory: [ 6 2 9 0 ]   Page Referenced: 9 | No eviction
+Memory: [ 6 2 9 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 6 2 9 0 ]   Page Referenced: 9 | No eviction
+Memory: [ 0 6 2 5 ]   Page Referenced: 5 | Page 9 evicted
+Memory: [ 0 6 2 5 ]   Page Referenced: 6 | No eviction
+Memory: [ 6 2 5 7 ]   Page Referenced: 7 | Page 0 evicted
+Memory: [ 6 2 5 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 7 2 5 1 ]   Page Referenced: 1 | Page 6 evicted
+Memory: [ 7 2 5 1 ]   Page Referenced: 2 | No eviction
+Memory: [ 7 2 5 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 7 2 5 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 7 2 5 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 7 2 5 4 ]   Page Referenced: 4 | Page 1 evicted
+Memory: [ 2 5 4 3 ]   Page Referenced: 3 | Page 7 evicted
+Memory: [ 5 4 3 8 ]   Page Referenced: 8 | Page 2 evicted
+Memory: [ 4 3 8 6 ]   Page Referenced: 6 | Page 5 evicted
+Memory: [ 3 8 6 5 ]   Page Referenced: 5 | Page 4 evicted
+Memory: [ 3 8 6 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 3 8 6 5 ]   Page Referenced: 6 | No eviction
+Memory: [ 5 3 8 9 ]   Page Referenced: 9 | Page 6 evicted
+Memory: [ 3 8 9 4 ]   Page Referenced: 4 | Page 5 evicted
+Memory: [ 8 9 4 7 ]   Page Referenced: 7 | Page 3 evicted
+Memory: [ 8 9 4 7 ]   Page Referenced: 4 | No eviction
+Memory: [ 8 9 7 6 ]   Page Referenced: 6 | Page 4 evicted
+Memory: [ 8 9 7 6 ]   Page Referenced: 7 | No eviction
+Memory: [ 8 9 7 6 ]   Page Referenced: 9 | No eviction
+Memory: [ 8 9 7 6 ]   Page Referenced: 9 | No eviction
+Memory: [ 8 9 7 6 ]   Page Referenced: 9 | No eviction
+Memory: [ 8 9 7 6 ]   Page Referenced: 7 | No eviction
+Memory: [ 8 9 7 6 ]   Page Referenced: 8 | No eviction
+Memory: [ 8 9 7 6 ]   Page Referenced: 7 | No eviction
+Memory: [ 8 9 7 6 ]   Page Referenced: 7 | No eviction
+Memory: [ 8 9 7 6 ]   Page Referenced: 8 | No eviction
+Memory: [ 8 9 7 6 ]   Page Referenced: 8 | No eviction
+Memory: [ 8 9 7 6 ]   Page Referenced: 7 | No eviction
+Memory: [ 8 9 7 6 ]   Page Referenced: 8 | No eviction
+Memory: [ 8 9 7 6 ]   Page Referenced: 7 | No eviction
+Memory: [ 8 9 7 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 8 9 7 6 ]   Page Referenced: 7 | No eviction
+Memory: [ 8 9 6 5 ]   Page Referenced: 5 | Page 7 evicted
+Memory: [ 9 6 5 4 ]   Page Referenced: 4 | Page 8 evicted
+Memory: [ 6 5 4 3 ]   Page Referenced: 3 | Page 9 evicted
+Memory: [ 6 5 4 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 6 5 4 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 6 5 4 3 ]   Page Referenced: 4 | No eviction
+Memory: [ 6 5 4 3 ]   Page Referenced: 4 | No eviction
+Memory: [ 3 6 5 0 ]   Page Referenced: 0 | Page 4 evicted
+Memory: [ 3 6 5 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 6 0 5 7 ]   Page Referenced: 7 | Page 3 evicted
+Memory: [ 6 0 5 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 0 7 5 8 ]   Page Referenced: 8 | Page 6 evicted
+Memory: [ 7 5 8 9 ]   Page Referenced: 9 | Page 0 evicted
+Memory: [ 7 5 8 9 ]   Page Referenced: 8 | No eviction
+Memory: [ 8 5 9 0 ]   Page Referenced: 0 | Page 7 evicted
+Memory: [ 8 5 9 0 ]   Page Referenced: 9 | No eviction
+Memory: [ 8 5 9 0 ]   Page Referenced: 9 | No eviction
+Memory: [ 8 5 9 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 8 0 5 2 ]   Page Referenced: 2 | Page 9 evicted
+Memory: [ 0 5 2 3 ]   Page Referenced: 3 | Page 8 evicted
+Memory: [ 0 5 2 3 ]   Page Referenced: 2 | No eviction
+Memory: [ 2 5 3 8 ]   Page Referenced: 8 | Page 0 evicted
+Memory: [ 2 5 3 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 8 5 3 6 ]   Page Referenced: 6 | Page 2 evicted
+Memory: [ 8 5 3 6 ]   Page Referenced: 5 | No eviction
+Memory: [ 8 5 3 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 8 5 3 6 ]   Page Referenced: 8 | No eviction
+Memory: [ 5 6 3 7 ]   Page Referenced: 7 | Page 8 evicted
+Memory: [ 6 3 7 8 ]   Page Referenced: 8 | Page 5 evicted
+Memory: [ 3 7 8 9 ]   Page Referenced: 9 | Page 6 evicted
+Memory: [ 7 8 9 4 ]   Page Referenced: 4 | Page 3 evicted
+Memory: [ 7 8 9 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 7 8 9 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 7 8 9 5 ]   Page Referenced: 5 | Page 4 evicted
+Memory: [ 8 9 5 6 ]   Page Referenced: 6 | Page 7 evicted
+Memory: [ 8 9 5 6 ]   Page Referenced: 5 | No eviction
+Memory: [ 8 9 5 6 ]   Page Referenced: 8 | No eviction
+Memory: [ 5 9 6 7 ]   Page Referenced: 7 | Page 8 evicted
+Memory: [ 5 9 6 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 7 9 6 8 ]   Page Referenced: 8 | Page 5 evicted
+Memory: [ 9 6 8 4 ]   Page Referenced: 4 | Page 7 evicted
+Memory: [ 9 6 8 4 ]   Page Referenced: 6 | No eviction
+
+Run 5 Hit Ratio: 57%
+----------- Random Pick Start -----------
+~~~~~ Random Pick ~~~~~
+Memory: [ 4 X X X ]   Page Referenced: 4 | No eviction
+Memory: [ 4 5 X X ]   Page Referenced: 5 | No eviction
+Memory: [ 4 5 3 X ]   Page Referenced: 3 | No eviction
+Memory: [ 4 5 3 X ]   Page Referenced: 3 | No eviction
+Memory: [ 4 5 3 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 4 5 8 9 ]   Page Referenced: 9 | Page 3 evicted
+Memory: [ 5 8 9 3 ]   Page Referenced: 3 | Page 4 evicted
+Memory: [ 5 8 3 6 ]   Page Referenced: 6 | Page 9 evicted
+Memory: [ 5 8 3 6 ]   Page Referenced: 5 | No eviction
+Memory: [ 8 3 6 7 ]   Page Referenced: 7 | Page 5 evicted
+Memory: [ 8 3 6 7 ]   Page Referenced: 6 | No eviction
+Memory: [ 8 3 6 7 ]   Page Referenced: 6 | No eviction
+Memory: [ 3 6 7 5 ]   Page Referenced: 5 | Page 8 evicted
+Memory: [ 6 7 5 9 ]   Page Referenced: 9 | Page 3 evicted
+Memory: [ 6 7 5 9 ]   Page Referenced: 5 | No eviction
+Memory: [ 6 7 5 9 ]   Page Referenced: 6 | No eviction
+Memory: [ 6 7 5 9 ]   Page Referenced: 7 | No eviction
+Memory: [ 6 5 9 8 ]   Page Referenced: 8 | Page 7 evicted
+Memory: [ 6 5 9 8 ]   Page Referenced: 9 | No eviction
+Memory: [ 6 5 9 0 ]   Page Referenced: 0 | Page 8 evicted
+Memory: [ 6 9 0 1 ]   Page Referenced: 1 | Page 5 evicted
+Memory: [ 6 9 0 1 ]   Page Referenced: 6 | No eviction
+Memory: [ 6 9 0 1 ]   Page Referenced: 6 | No eviction
+Memory: [ 6 9 0 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 6 9 0 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 6 9 0 1 ]   Page Referenced: 0 | No eviction
+Memory: [ 6 9 0 1 ]   Page Referenced: 9 | No eviction
+Memory: [ 6 9 0 1 ]   Page Referenced: 0 | No eviction
+Memory: [ 6 9 0 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 6 9 0 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 6 9 0 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 9 0 1 3 ]   Page Referenced: 3 | Page 6 evicted
+Memory: [ 9 0 1 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 9 0 3 4 ]   Page Referenced: 4 | Page 1 evicted
+Memory: [ 9 0 3 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 9 3 4 7 ]   Page Referenced: 7 | Page 0 evicted
+Memory: [ 9 3 4 8 ]   Page Referenced: 8 | Page 7 evicted
+Memory: [ 9 3 4 8 ]   Page Referenced: 3 | No eviction
+Memory: [ 9 3 4 8 ]   Page Referenced: 3 | No eviction
+Memory: [ 9 3 4 8 ]   Page Referenced: 4 | No eviction
+Memory: [ 3 4 8 1 ]   Page Referenced: 1 | Page 9 evicted
+Memory: [ 3 4 1 9 ]   Page Referenced: 9 | Page 8 evicted
+Memory: [ 3 4 9 0 ]   Page Referenced: 0 | Page 1 evicted
+Memory: [ 3 9 0 7 ]   Page Referenced: 7 | Page 4 evicted
+Memory: [ 9 0 7 8 ]   Page Referenced: 8 | Page 3 evicted
+Memory: [ 9 7 8 6 ]   Page Referenced: 6 | Page 0 evicted
+Memory: [ 9 7 8 6 ]   Page Referenced: 7 | No eviction
+Memory: [ 7 8 6 4 ]   Page Referenced: 4 | Page 9 evicted
+Memory: [ 7 8 6 4 ]   Page Referenced: 6 | No eviction
+Memory: [ 8 6 4 2 ]   Page Referenced: 2 | Page 7 evicted
+Memory: [ 8 6 2 0 ]   Page Referenced: 0 | Page 4 evicted
+Memory: [ 8 6 2 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 8 2 0 3 ]   Page Referenced: 3 | Page 6 evicted
+Memory: [ 2 0 3 4 ]   Page Referenced: 4 | Page 8 evicted
+Memory: [ 2 3 4 7 ]   Page Referenced: 7 | Page 0 evicted
+Memory: [ 3 4 7 8 ]   Page Referenced: 8 | Page 2 evicted
+Memory: [ 3 7 8 9 ]   Page Referenced: 9 | Page 4 evicted
+Memory: [ 3 7 9 2 ]   Page Referenced: 2 | Page 8 evicted
+Memory: [ 3 9 2 1 ]   Page Referenced: 1 | Page 7 evicted
+Memory: [ 3 9 2 0 ]   Page Referenced: 0 | Page 1 evicted
+Memory: [ 9 2 0 6 ]   Page Referenced: 6 | Page 3 evicted
+Memory: [ 9 0 6 7 ]   Page Referenced: 7 | Page 2 evicted
+Memory: [ 9 0 6 7 ]   Page Referenced: 0 | No eviction
+Memory: [ 9 0 6 7 ]   Page Referenced: 0 | No eviction
+Memory: [ 9 0 7 1 ]   Page Referenced: 1 | Page 6 evicted
+Memory: [ 9 0 7 1 ]   Page Referenced: 9 | No eviction
+Memory: [ 9 0 7 1 ]   Page Referenced: 9 | No eviction
+Memory: [ 9 7 1 5 ]   Page Referenced: 5 | Page 0 evicted
+Memory: [ 9 7 1 5 ]   Page Referenced: 9 | No eviction
+Memory: [ 9 7 1 4 ]   Page Referenced: 4 | Page 5 evicted
+Memory: [ 9 7 1 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 9 7 1 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 7 1 4 3 ]   Page Referenced: 3 | Page 9 evicted
+Memory: [ 7 1 4 3 ]   Page Referenced: 4 | No eviction
+Memory: [ 7 1 4 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 7 1 4 3 ]   Page Referenced: 7 | No eviction
+Memory: [ 7 4 3 6 ]   Page Referenced: 6 | Page 1 evicted
+Memory: [ 7 4 3 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 7 4 3 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 7 4 6 2 ]   Page Referenced: 2 | Page 3 evicted
+Memory: [ 7 4 6 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 7 4 2 1 ]   Page Referenced: 1 | Page 6 evicted
+Memory: [ 7 4 2 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 7 4 2 1 ]   Page Referenced: 2 | No eviction
+Memory: [ 7 2 1 3 ]   Page Referenced: 3 | Page 4 evicted
+Memory: [ 7 1 3 4 ]   Page Referenced: 4 | Page 2 evicted
+Memory: [ 7 1 4 5 ]   Page Referenced: 5 | Page 3 evicted
+Memory: [ 7 1 4 8 ]   Page Referenced: 8 | Page 5 evicted
+Memory: [ 7 1 4 8 ]   Page Referenced: 7 | No eviction
+Memory: [ 7 1 8 0 ]   Page Referenced: 0 | Page 4 evicted
+Memory: [ 1 8 0 9 ]   Page Referenced: 9 | Page 7 evicted
+Memory: [ 1 8 0 9 ]   Page Referenced: 8 | No eviction
+Memory: [ 8 0 9 4 ]   Page Referenced: 4 | Page 1 evicted
+Memory: [ 8 0 9 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 8 0 4 2 ]   Page Referenced: 2 | Page 9 evicted
+Memory: [ 0 4 2 9 ]   Page Referenced: 9 | Page 8 evicted
+Memory: [ 0 4 2 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 0 4 2 9 ]   Page Referenced: 0 | No eviction
+Memory: [ 0 4 2 9 ]   Page Referenced: 0 | No eviction
+Memory: [ 0 4 2 9 ]   Page Referenced: 0 | No eviction
+
+Run 1 Hit Ratio: 48%
+~~~~~ Random Pick ~~~~~
+Memory: [ 1 X X X ]   Page Referenced: 1 | No eviction
+Memory: [ 1 4 X X ]   Page Referenced: 4 | No eviction
+Memory: [ 1 4 X X ]   Page Referenced: 4 | No eviction
+Memory: [ 1 4 3 X ]   Page Referenced: 3 | No eviction
+Memory: [ 1 4 3 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 1 4 3 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 1 4 3 2 ]   Page Referenced: 3 | No eviction
+Memory: [ 1 4 3 6 ]   Page Referenced: 6 | Page 2 evicted
+Memory: [ 1 4 3 7 ]   Page Referenced: 7 | Page 6 evicted
+Memory: [ 4 3 7 6 ]   Page Referenced: 6 | Page 1 evicted
+Memory: [ 4 3 6 5 ]   Page Referenced: 5 | Page 7 evicted
+Memory: [ 4 3 6 5 ]   Page Referenced: 6 | No eviction
+Memory: [ 4 6 5 7 ]   Page Referenced: 7 | Page 3 evicted
+Memory: [ 4 6 5 7 ]   Page Referenced: 6 | No eviction
+Memory: [ 4 6 5 7 ]   Page Referenced: 6 | No eviction
+Memory: [ 4 6 5 7 ]   Page Referenced: 5 | No eviction
+Memory: [ 4 6 5 7 ]   Page Referenced: 6 | No eviction
+Memory: [ 4 6 5 1 ]   Page Referenced: 1 | Page 7 evicted
+Memory: [ 4 6 5 1 ]   Page Referenced: 5 | No eviction
+Memory: [ 4 6 5 1 ]   Page Referenced: 5 | No eviction
+Memory: [ 4 6 5 1 ]   Page Referenced: 4 | No eviction
+Memory: [ 4 6 5 1 ]   Page Referenced: 4 | No eviction
+Memory: [ 4 6 1 9 ]   Page Referenced: 9 | Page 5 evicted
+Memory: [ 4 6 1 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 6 1 9 0 ]   Page Referenced: 0 | Page 4 evicted
+Memory: [ 6 1 9 0 ]   Page Referenced: 9 | No eviction
+Memory: [ 6 1 9 0 ]   Page Referenced: 9 | No eviction
+Memory: [ 6 9 0 2 ]   Page Referenced: 2 | Page 1 evicted
+Memory: [ 6 9 0 2 ]   Page Referenced: 0 | No eviction
+Memory: [ 6 9 2 1 ]   Page Referenced: 1 | Page 0 evicted
+Memory: [ 6 9 2 1 ]   Page Referenced: 6 | No eviction
+Memory: [ 6 9 2 1 ]   Page Referenced: 6 | No eviction
+Memory: [ 6 9 2 1 ]   Page Referenced: 6 | No eviction
+Memory: [ 9 2 1 0 ]   Page Referenced: 0 | Page 6 evicted
+Memory: [ 9 2 1 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 9 2 1 0 ]   Page Referenced: 9 | No eviction
+Memory: [ 9 2 1 8 ]   Page Referenced: 8 | Page 0 evicted
+Memory: [ 9 2 1 8 ]   Page Referenced: 2 | No eviction
+Memory: [ 9 2 1 8 ]   Page Referenced: 2 | No eviction
+Memory: [ 9 2 1 8 ]   Page Referenced: 2 | No eviction
+Memory: [ 9 2 1 3 ]   Page Referenced: 3 | Page 8 evicted
+Memory: [ 9 2 1 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 9 2 1 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 9 2 1 3 ]   Page Referenced: 9 | No eviction
+Memory: [ 9 2 3 0 ]   Page Referenced: 0 | Page 1 evicted
+Memory: [ 9 2 3 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 9 2 0 1 ]   Page Referenced: 1 | Page 3 evicted
+Memory: [ 9 2 0 7 ]   Page Referenced: 7 | Page 1 evicted
+Memory: [ 9 2 0 8 ]   Page Referenced: 8 | Page 7 evicted
+Memory: [ 9 2 0 8 ]   Page Referenced: 9 | No eviction
+Memory: [ 9 2 0 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 9 2 0 8 ]   Page Referenced: 9 | No eviction
+Memory: [ 9 2 0 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 9 2 0 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 9 2 0 8 ]   Page Referenced: 9 | No eviction
+Memory: [ 9 2 0 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 9 2 0 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 9 2 0 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 9 2 0 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 9 2 0 8 ]   Page Referenced: 0 | No eviction
+Memory: [ 9 2 0 8 ]   Page Referenced: 0 | No eviction
+Memory: [ 9 2 0 8 ]   Page Referenced: 0 | No eviction
+Memory: [ 9 2 0 8 ]   Page Referenced: 0 | No eviction
+Memory: [ 2 0 8 4 ]   Page Referenced: 4 | Page 9 evicted
+Memory: [ 2 0 4 6 ]   Page Referenced: 6 | Page 8 evicted
+Memory: [ 2 0 4 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 2 0 6 7 ]   Page Referenced: 7 | Page 4 evicted
+Memory: [ 2 0 7 8 ]   Page Referenced: 8 | Page 6 evicted
+Memory: [ 2 0 7 8 ]   Page Referenced: 2 | No eviction
+Memory: [ 2 0 7 8 ]   Page Referenced: 2 | No eviction
+Memory: [ 2 0 7 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 2 0 7 8 ]   Page Referenced: 7 | No eviction
+Memory: [ 0 7 8 6 ]   Page Referenced: 6 | Page 2 evicted
+Memory: [ 0 7 8 6 ]   Page Referenced: 7 | No eviction
+Memory: [ 0 7 8 6 ]   Page Referenced: 7 | No eviction
+Memory: [ 0 7 8 6 ]   Page Referenced: 8 | No eviction
+Memory: [ 0 7 8 6 ]   Page Referenced: 7 | No eviction
+Memory: [ 0 8 6 1 ]   Page Referenced: 1 | Page 7 evicted
+Memory: [ 8 6 1 4 ]   Page Referenced: 4 | Page 0 evicted
+Memory: [ 8 1 4 5 ]   Page Referenced: 5 | Page 6 evicted
+Memory: [ 8 1 4 5 ]   Page Referenced: 4 | No eviction
+Memory: [ 8 1 5 7 ]   Page Referenced: 7 | Page 4 evicted
+Memory: [ 1 5 7 4 ]   Page Referenced: 4 | Page 8 evicted
+Memory: [ 1 5 4 3 ]   Page Referenced: 3 | Page 7 evicted
+Memory: [ 1 4 3 2 ]   Page Referenced: 2 | Page 5 evicted
+Memory: [ 1 4 3 2 ]   Page Referenced: 3 | No eviction
+Memory: [ 1 4 3 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 4 3 2 6 ]   Page Referenced: 6 | Page 1 evicted
+Memory: [ 3 2 6 5 ]   Page Referenced: 5 | Page 4 evicted
+Memory: [ 3 2 6 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 3 2 6 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 3 2 5 4 ]   Page Referenced: 4 | Page 6 evicted
+Memory: [ 3 2 5 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 2 5 4 0 ]   Page Referenced: 0 | Page 3 evicted
+Memory: [ 2 4 0 7 ]   Page Referenced: 7 | Page 5 evicted
+Memory: [ 4 0 7 8 ]   Page Referenced: 8 | Page 2 evicted
+Memory: [ 4 0 7 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 4 0 7 8 ]   Page Referenced: 7 | No eviction
+Memory: [ 4 0 8 6 ]   Page Referenced: 6 | Page 7 evicted
+Memory: [ 4 0 8 6 ]   Page Referenced: 8 | No eviction
+
+Run 2 Hit Ratio: 60%
+~~~~~ Random Pick ~~~~~
+Memory: [ 5 X X X ]   Page Referenced: 5 | No eviction
+Memory: [ 5 6 X X ]   Page Referenced: 6 | No eviction
+Memory: [ 5 6 9 X ]   Page Referenced: 9 | No eviction
+Memory: [ 5 6 9 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 5 6 9 7 ]   Page Referenced: 7 | Page 8 evicted
+Memory: [ 6 9 7 3 ]   Page Referenced: 3 | Page 5 evicted
+Memory: [ 6 9 7 4 ]   Page Referenced: 4 | Page 3 evicted
+Memory: [ 6 7 4 5 ]   Page Referenced: 5 | Page 9 evicted
+Memory: [ 6 7 4 5 ]   Page Referenced: 4 | No eviction
+Memory: [ 6 7 4 2 ]   Page Referenced: 2 | Page 5 evicted
+Memory: [ 6 4 2 3 ]   Page Referenced: 3 | Page 7 evicted
+Memory: [ 6 2 3 8 ]   Page Referenced: 8 | Page 4 evicted
+Memory: [ 6 3 8 7 ]   Page Referenced: 7 | Page 2 evicted
+Memory: [ 6 3 8 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 6 3 8 7 ]   Page Referenced: 8 | No eviction
+Memory: [ 6 3 8 7 ]   Page Referenced: 3 | No eviction
+Memory: [ 6 3 7 2 ]   Page Referenced: 2 | Page 8 evicted
+Memory: [ 6 3 7 2 ]   Page Referenced: 7 | No eviction
+Memory: [ 6 3 7 2 ]   Page Referenced: 6 | No eviction
+Memory: [ 6 3 2 1 ]   Page Referenced: 1 | Page 7 evicted
+Memory: [ 6 2 1 0 ]   Page Referenced: 0 | Page 3 evicted
+Memory: [ 6 2 1 0 ]   Page Referenced: 1 | No eviction
+Memory: [ 6 2 1 0 ]   Page Referenced: 6 | No eviction
+Memory: [ 6 2 1 0 ]   Page Referenced: 6 | No eviction
+Memory: [ 2 1 0 5 ]   Page Referenced: 5 | Page 6 evicted
+Memory: [ 2 1 0 3 ]   Page Referenced: 3 | Page 5 evicted
+Memory: [ 2 0 3 6 ]   Page Referenced: 6 | Page 1 evicted
+Memory: [ 0 3 6 4 ]   Page Referenced: 4 | Page 2 evicted
+Memory: [ 0 3 6 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 0 3 6 4 ]   Page Referenced: 6 | No eviction
+Memory: [ 0 6 4 1 ]   Page Referenced: 1 | Page 3 evicted
+Memory: [ 0 6 4 2 ]   Page Referenced: 2 | Page 1 evicted
+Memory: [ 0 6 4 9 ]   Page Referenced: 9 | Page 2 evicted
+Memory: [ 6 4 9 8 ]   Page Referenced: 8 | Page 0 evicted
+Memory: [ 6 4 8 7 ]   Page Referenced: 7 | Page 9 evicted
+Memory: [ 6 4 8 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 6 4 8 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 6 4 8 7 ]   Page Referenced: 8 | No eviction
+Memory: [ 6 4 8 7 ]   Page Referenced: 8 | No eviction
+Memory: [ 4 8 7 9 ]   Page Referenced: 9 | Page 6 evicted
+Memory: [ 4 8 7 9 ]   Page Referenced: 8 | No eviction
+Memory: [ 4 8 7 0 ]   Page Referenced: 0 | Page 9 evicted
+Memory: [ 4 7 0 1 ]   Page Referenced: 1 | Page 8 evicted
+Memory: [ 4 7 0 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 4 0 1 6 ]   Page Referenced: 6 | Page 7 evicted
+Memory: [ 4 0 1 3 ]   Page Referenced: 3 | Page 6 evicted
+Memory: [ 4 0 3 5 ]   Page Referenced: 5 | Page 1 evicted
+Memory: [ 4 0 3 2 ]   Page Referenced: 2 | Page 5 evicted
+Memory: [ 4 0 3 2 ]   Page Referenced: 0 | No eviction
+Memory: [ 4 0 3 2 ]   Page Referenced: 4 | No eviction
+Memory: [ 0 3 2 8 ]   Page Referenced: 8 | Page 4 evicted
+Memory: [ 0 3 2 4 ]   Page Referenced: 4 | Page 8 evicted
+Memory: [ 3 2 4 5 ]   Page Referenced: 5 | Page 0 evicted
+Memory: [ 2 4 5 1 ]   Page Referenced: 1 | Page 3 evicted
+Memory: [ 2 4 1 7 ]   Page Referenced: 7 | Page 5 evicted
+Memory: [ 2 4 1 5 ]   Page Referenced: 5 | Page 7 evicted
+Memory: [ 2 4 1 5 ]   Page Referenced: 4 | No eviction
+Memory: [ 2 4 1 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 2 4 1 5 ]   Page Referenced: 2 | No eviction
+Memory: [ 2 4 1 3 ]   Page Referenced: 3 | Page 5 evicted
+Memory: [ 2 4 1 3 ]   Page Referenced: 2 | No eviction
+Memory: [ 2 4 1 3 ]   Page Referenced: 1 | No eviction
+Memory: [ 2 4 1 3 ]   Page Referenced: 2 | No eviction
+Memory: [ 2 4 1 3 ]   Page Referenced: 2 | No eviction
+Memory: [ 2 4 1 3 ]   Page Referenced: 1 | No eviction
+Memory: [ 2 4 1 3 ]   Page Referenced: 1 | No eviction
+Memory: [ 2 4 1 3 ]   Page Referenced: 2 | No eviction
+Memory: [ 2 4 1 3 ]   Page Referenced: 1 | No eviction
+Memory: [ 2 4 1 3 ]   Page Referenced: 1 | No eviction
+Memory: [ 2 4 1 3 ]   Page Referenced: 1 | No eviction
+Memory: [ 2 1 3 0 ]   Page Referenced: 0 | Page 4 evicted
+Memory: [ 2 1 0 9 ]   Page Referenced: 9 | Page 3 evicted
+Memory: [ 2 1 0 9 ]   Page Referenced: 0 | No eviction
+Memory: [ 2 1 0 9 ]   Page Referenced: 1 | No eviction
+Memory: [ 2 1 0 9 ]   Page Referenced: 1 | No eviction
+Memory: [ 2 1 0 9 ]   Page Referenced: 0 | No eviction
+Memory: [ 2 1 0 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 2 1 0 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 1 0 9 8 ]   Page Referenced: 8 | Page 2 evicted
+Memory: [ 1 0 9 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 1 0 8 7 ]   Page Referenced: 7 | Page 9 evicted
+Memory: [ 1 8 7 6 ]   Page Referenced: 6 | Page 0 evicted
+Memory: [ 1 7 6 5 ]   Page Referenced: 5 | Page 8 evicted
+Memory: [ 1 7 6 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 1 7 6 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 1 7 6 5 ]   Page Referenced: 6 | No eviction
+Memory: [ 1 7 6 9 ]   Page Referenced: 9 | Page 5 evicted
+Memory: [ 1 7 6 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 1 7 6 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 1 7 6 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 7 6 9 2 ]   Page Referenced: 2 | Page 1 evicted
+Memory: [ 7 6 2 1 ]   Page Referenced: 1 | Page 9 evicted
+Memory: [ 7 6 1 0 ]   Page Referenced: 0 | Page 2 evicted
+Memory: [ 7 6 1 9 ]   Page Referenced: 9 | Page 0 evicted
+Memory: [ 7 6 1 9 ]   Page Referenced: 1 | No eviction
+Memory: [ 7 6 1 9 ]   Page Referenced: 1 | No eviction
+Memory: [ 7 6 1 9 ]   Page Referenced: 1 | No eviction
+Memory: [ 7 6 9 0 ]   Page Referenced: 0 | Page 1 evicted
+Memory: [ 7 6 9 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 7 6 9 0 ]   Page Referenced: 9 | No eviction
+
+Run 3 Hit Ratio: 50%
+~~~~~ Random Pick ~~~~~
+Memory: [ 3 X X X ]   Page Referenced: 3 | No eviction
+Memory: [ 3 2 X X ]   Page Referenced: 2 | No eviction
+Memory: [ 3 2 X X ]   Page Referenced: 3 | No eviction
+Memory: [ 3 2 X X ]   Page Referenced: 2 | No eviction
+Memory: [ 3 2 X X ]   Page Referenced: 2 | No eviction
+Memory: [ 3 2 1 X ]   Page Referenced: 1 | No eviction
+Memory: [ 3 2 1 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 3 2 1 4 ]   Page Referenced: 4 | Page 5 evicted
+Memory: [ 2 1 4 5 ]   Page Referenced: 5 | Page 3 evicted
+Memory: [ 2 1 4 5 ]   Page Referenced: 4 | No eviction
+Memory: [ 2 1 4 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 2 1 4 5 ]   Page Referenced: 4 | No eviction
+Memory: [ 2 1 4 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 2 1 4 5 ]   Page Referenced: 2 | No eviction
+Memory: [ 2 1 5 3 ]   Page Referenced: 3 | Page 4 evicted
+Memory: [ 2 5 3 4 ]   Page Referenced: 4 | Page 1 evicted
+Memory: [ 2 5 3 4 ]   Page Referenced: 3 | No eviction
+Memory: [ 2 5 3 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 2 5 3 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 2 5 3 7 ]   Page Referenced: 7 | Page 4 evicted
+Memory: [ 2 5 3 7 ]   Page Referenced: 2 | No eviction
+Memory: [ 5 3 7 1 ]   Page Referenced: 1 | Page 2 evicted
+Memory: [ 5 3 7 2 ]   Page Referenced: 2 | Page 1 evicted
+Memory: [ 5 7 2 8 ]   Page Referenced: 8 | Page 3 evicted
+Memory: [ 5 7 8 9 ]   Page Referenced: 9 | Page 2 evicted
+Memory: [ 5 7 8 9 ]   Page Referenced: 8 | No eviction
+Memory: [ 5 7 8 9 ]   Page Referenced: 7 | No eviction
+Memory: [ 5 7 9 6 ]   Page Referenced: 6 | Page 8 evicted
+Memory: [ 5 7 6 2 ]   Page Referenced: 2 | Page 9 evicted
+Memory: [ 5 7 6 3 ]   Page Referenced: 3 | Page 2 evicted
+Memory: [ 5 7 3 4 ]   Page Referenced: 4 | Page 6 evicted
+Memory: [ 5 7 3 4 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 7 3 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 5 7 4 8 ]   Page Referenced: 8 | Page 3 evicted
+Memory: [ 5 7 4 8 ]   Page Referenced: 7 | No eviction
+Memory: [ 5 7 4 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 5 7 4 9 ]   Page Referenced: 9 | Page 8 evicted
+Memory: [ 7 4 9 0 ]   Page Referenced: 0 | Page 5 evicted
+Memory: [ 7 4 9 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 7 4 9 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 4 9 0 8 ]   Page Referenced: 8 | Page 7 evicted
+Memory: [ 4 9 8 5 ]   Page Referenced: 5 | Page 0 evicted
+Memory: [ 4 9 8 3 ]   Page Referenced: 3 | Page 5 evicted
+Memory: [ 4 9 8 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 4 9 8 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 4 9 8 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 4 9 3 6 ]   Page Referenced: 6 | Page 8 evicted
+Memory: [ 4 9 3 6 ]   Page Referenced: 9 | No eviction
+Memory: [ 4 3 6 8 ]   Page Referenced: 8 | Page 9 evicted
+Memory: [ 4 3 6 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 3 6 8 9 ]   Page Referenced: 9 | Page 4 evicted
+Memory: [ 3 8 9 7 ]   Page Referenced: 7 | Page 6 evicted
+Memory: [ 3 8 9 7 ]   Page Referenced: 8 | No eviction
+Memory: [ 3 8 9 7 ]   Page Referenced: 8 | No eviction
+Memory: [ 3 8 9 7 ]   Page Referenced: 9 | No eviction
+Memory: [ 3 8 9 7 ]   Page Referenced: 9 | No eviction
+Memory: [ 8 9 7 6 ]   Page Referenced: 6 | Page 3 evicted
+Memory: [ 8 9 7 6 ]   Page Referenced: 6 | No eviction
+Memory: [ 8 9 7 6 ]   Page Referenced: 7 | No eviction
+Memory: [ 8 9 7 6 ]   Page Referenced: 8 | No eviction
+Memory: [ 8 9 7 6 ]   Page Referenced: 7 | No eviction
+Memory: [ 8 9 7 6 ]   Page Referenced: 9 | No eviction
+Memory: [ 9 7 6 0 ]   Page Referenced: 0 | Page 8 evicted
+Memory: [ 9 7 6 1 ]   Page Referenced: 1 | Page 0 evicted
+Memory: [ 9 7 6 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 7 6 1 0 ]   Page Referenced: 0 | Page 9 evicted
+Memory: [ 7 6 1 8 ]   Page Referenced: 8 | Page 0 evicted
+Memory: [ 7 6 1 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 7 6 1 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 6 1 8 3 ]   Page Referenced: 3 | Page 7 evicted
+Memory: [ 1 8 3 0 ]   Page Referenced: 0 | Page 6 evicted
+Memory: [ 1 8 3 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 1 3 0 5 ]   Page Referenced: 5 | Page 8 evicted
+Memory: [ 3 0 5 6 ]   Page Referenced: 6 | Page 1 evicted
+Memory: [ 3 0 5 6 ]   Page Referenced: 5 | No eviction
+Memory: [ 3 0 5 6 ]   Page Referenced: 5 | No eviction
+Memory: [ 0 5 6 4 ]   Page Referenced: 4 | Page 3 evicted
+Memory: [ 0 5 6 4 ]   Page Referenced: 4 | No eviction
+Memory: [ 5 6 4 3 ]   Page Referenced: 3 | Page 0 evicted
+Memory: [ 5 6 4 3 ]   Page Referenced: 6 | No eviction
+Memory: [ 5 6 4 3 ]   Page Referenced: 4 | No eviction
+Memory: [ 5 6 3 9 ]   Page Referenced: 9 | Page 4 evicted
+Memory: [ 5 6 3 9 ]   Page Referenced: 9 | No eviction
+Memory: [ 5 3 9 0 ]   Page Referenced: 0 | Page 6 evicted
+Memory: [ 5 9 0 1 ]   Page Referenced: 1 | Page 3 evicted
+Memory: [ 5 9 0 1 ]   Page Referenced: 9 | No eviction
+Memory: [ 5 9 0 1 ]   Page Referenced: 0 | No eviction
+Memory: [ 5 9 0 2 ]   Page Referenced: 2 | Page 1 evicted
+Memory: [ 5 0 2 3 ]   Page Referenced: 3 | Page 9 evicted
+Memory: [ 5 0 2 3 ]   Page Referenced: 2 | No eviction
+Memory: [ 5 0 2 3 ]   Page Referenced: 0 | No eviction
+Memory: [ 5 0 2 6 ]   Page Referenced: 6 | Page 3 evicted
+Memory: [ 5 0 2 6 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 2 6 7 ]   Page Referenced: 7 | Page 0 evicted
+Memory: [ 5 2 6 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 5 2 6 7 ]   Page Referenced: 7 | No eviction
+Memory: [ 5 2 6 7 ]   Page Referenced: 6 | No eviction
+Memory: [ 5 2 6 7 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 6 7 1 ]   Page Referenced: 1 | Page 2 evicted
+Memory: [ 5 7 1 0 ]   Page Referenced: 0 | Page 6 evicted
+
+Run 4 Hit Ratio: 53%
+~~~~~ Random Pick ~~~~~
+Memory: [ 5 X X X ]   Page Referenced: 5 | No eviction
+Memory: [ 5 6 X X ]   Page Referenced: 6 | No eviction
+Memory: [ 5 6 0 X ]   Page Referenced: 0 | No eviction
+Memory: [ 5 6 0 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 5 6 0 1 ]   Page Referenced: 5 | No eviction
+Memory: [ 5 0 1 4 ]   Page Referenced: 4 | Page 6 evicted
+Memory: [ 5 0 1 3 ]   Page Referenced: 3 | Page 4 evicted
+Memory: [ 5 0 1 3 ]   Page Referenced: 1 | No eviction
+Memory: [ 5 0 1 3 ]   Page Referenced: 1 | No eviction
+Memory: [ 5 0 1 3 ]   Page Referenced: 0 | No eviction
+Memory: [ 5 0 1 3 ]   Page Referenced: 1 | No eviction
+Memory: [ 5 0 1 2 ]   Page Referenced: 2 | Page 3 evicted
+Memory: [ 5 0 1 3 ]   Page Referenced: 3 | Page 2 evicted
+Memory: [ 5 0 1 3 ]   Page Referenced: 3 | No eviction
+Memory: [ 0 1 3 2 ]   Page Referenced: 2 | Page 5 evicted
+Memory: [ 0 1 3 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 0 1 3 2 ]   Page Referenced: 0 | No eviction
+Memory: [ 0 3 2 8 ]   Page Referenced: 8 | Page 1 evicted
+Memory: [ 3 2 8 9 ]   Page Referenced: 9 | Page 0 evicted
+Memory: [ 3 2 8 0 ]   Page Referenced: 0 | Page 9 evicted
+Memory: [ 3 2 8 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 3 2 8 0 ]   Page Referenced: 2 | No eviction
+Memory: [ 3 2 8 6 ]   Page Referenced: 6 | Page 0 evicted
+Memory: [ 2 8 6 9 ]   Page Referenced: 9 | Page 3 evicted
+Memory: [ 2 8 6 7 ]   Page Referenced: 7 | Page 9 evicted
+Memory: [ 2 8 6 7 ]   Page Referenced: 8 | No eviction
+Memory: [ 2 8 6 1 ]   Page Referenced: 1 | Page 7 evicted
+Memory: [ 2 8 6 1 ]   Page Referenced: 2 | No eviction
+Memory: [ 2 8 6 3 ]   Page Referenced: 3 | Page 1 evicted
+Memory: [ 2 8 6 3 ]   Page Referenced: 6 | No eviction
+Memory: [ 2 8 6 3 ]   Page Referenced: 6 | No eviction
+Memory: [ 2 6 3 5 ]   Page Referenced: 5 | Page 8 evicted
+Memory: [ 2 6 3 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 2 6 3 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 2 6 3 5 ]   Page Referenced: 6 | No eviction
+Memory: [ 2 6 3 5 ]   Page Referenced: 6 | No eviction
+Memory: [ 6 3 5 7 ]   Page Referenced: 7 | Page 2 evicted
+Memory: [ 6 3 5 7 ]   Page Referenced: 6 | No eviction
+Memory: [ 6 3 5 7 ]   Page Referenced: 5 | No eviction
+Memory: [ 6 3 5 7 ]   Page Referenced: 6 | No eviction
+Memory: [ 6 3 5 8 ]   Page Referenced: 8 | Page 7 evicted
+Memory: [ 3 5 8 9 ]   Page Referenced: 9 | Page 6 evicted
+Memory: [ 5 8 9 1 ]   Page Referenced: 1 | Page 3 evicted
+Memory: [ 8 9 1 2 ]   Page Referenced: 2 | Page 5 evicted
+Memory: [ 8 9 1 2 ]   Page Referenced: 1 | No eviction
+Memory: [ 8 9 1 2 ]   Page Referenced: 2 | No eviction
+Memory: [ 8 9 1 2 ]   Page Referenced: 1 | No eviction
+Memory: [ 8 9 1 2 ]   Page Referenced: 1 | No eviction
+Memory: [ 8 9 2 0 ]   Page Referenced: 0 | Page 1 evicted
+Memory: [ 8 9 2 1 ]   Page Referenced: 1 | Page 0 evicted
+Memory: [ 8 9 2 0 ]   Page Referenced: 0 | Page 1 evicted
+Memory: [ 8 9 2 0 ]   Page Referenced: 9 | No eviction
+Memory: [ 8 9 2 0 ]   Page Referenced: 8 | No eviction
+Memory: [ 8 9 2 0 ]   Page Referenced: 8 | No eviction
+Memory: [ 8 9 2 0 ]   Page Referenced: 9 | No eviction
+Memory: [ 8 9 2 0 ]   Page Referenced: 8 | No eviction
+Memory: [ 8 9 2 0 ]   Page Referenced: 9 | No eviction
+Memory: [ 8 9 2 0 ]   Page Referenced: 9 | No eviction
+Memory: [ 8 9 2 0 ]   Page Referenced: 0 | No eviction
+Memory: [ 8 2 0 1 ]   Page Referenced: 1 | Page 9 evicted
+Memory: [ 8 2 0 1 ]   Page Referenced: 0 | No eviction
+Memory: [ 2 0 1 9 ]   Page Referenced: 9 | Page 8 evicted
+Memory: [ 2 0 9 8 ]   Page Referenced: 8 | Page 1 evicted
+Memory: [ 2 0 9 1 ]   Page Referenced: 1 | Page 8 evicted
+Memory: [ 2 0 9 3 ]   Page Referenced: 3 | Page 1 evicted
+Memory: [ 2 0 9 3 ]   Page Referenced: 2 | No eviction
+Memory: [ 2 0 9 1 ]   Page Referenced: 1 | Page 3 evicted
+Memory: [ 2 0 9 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 2 0 9 1 ]   Page Referenced: 1 | No eviction
+Memory: [ 2 0 9 1 ]   Page Referenced: 2 | No eviction
+Memory: [ 2 0 9 1 ]   Page Referenced: 2 | No eviction
+Memory: [ 2 0 9 1 ]   Page Referenced: 2 | No eviction
+Memory: [ 0 9 1 7 ]   Page Referenced: 7 | Page 2 evicted
+Memory: [ 0 9 1 6 ]   Page Referenced: 6 | Page 7 evicted
+Memory: [ 0 9 1 6 ]   Page Referenced: 0 | No eviction
+Memory: [ 0 9 1 6 ]   Page Referenced: 9 | No eviction
+Memory: [ 0 9 6 8 ]   Page Referenced: 8 | Page 1 evicted
+Memory: [ 0 9 6 8 ]   Page Referenced: 9 | No eviction
+Memory: [ 0 9 6 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 0 9 6 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 0 9 6 8 ]   Page Referenced: 8 | No eviction
+Memory: [ 0 9 6 8 ]   Page Referenced: 0 | No eviction
+Memory: [ 0 6 8 5 ]   Page Referenced: 5 | Page 9 evicted
+Memory: [ 0 6 8 5 ]   Page Referenced: 6 | No eviction
+Memory: [ 0 6 8 5 ]   Page Referenced: 5 | No eviction
+Memory: [ 0 6 8 4 ]   Page Referenced: 4 | Page 5 evicted
+Memory: [ 0 8 4 3 ]   Page Referenced: 3 | Page 6 evicted
+Memory: [ 0 8 3 2 ]   Page Referenced: 2 | Page 4 evicted
+Memory: [ 0 8 3 2 ]   Page Referenced: 3 | No eviction
+Memory: [ 0 3 2 9 ]   Page Referenced: 9 | Page 8 evicted
+Memory: [ 0 3 2 4 ]   Page Referenced: 4 | Page 9 evicted
+Memory: [ 0 3 2 4 ]   Page Referenced: 3 | No eviction
+Memory: [ 0 3 2 4 ]   Page Referenced: 3 | No eviction
+Memory: [ 0 3 2 4 ]   Page Referenced: 3 | No eviction
+Memory: [ 0 3 4 7 ]   Page Referenced: 7 | Page 2 evicted
+Memory: [ 0 3 4 7 ]   Page Referenced: 0 | No eviction
+Memory: [ 0 3 4 7 ]   Page Referenced: 3 | No eviction
+Memory: [ 0 3 4 7 ]   Page Referenced: 4 | No eviction
+Memory: [ 0 3 4 7 ]   Page Referenced: 3 | No eviction
+Memory: [ 0 3 4 7 ]   Page Referenced: 4 | No eviction
+
+Run 5 Hit Ratio: 58%
+
+Average Hit Ratio for "FIFO": 54.20%
+Average Hit Ratio for "LRU": 47.80%
+Average Hit Ratio for "LFU": 47.80%
+Average Hit Ratio for "MFU": 55.40%
+Average Hit Ratio for "Random Pick": 53.80%
