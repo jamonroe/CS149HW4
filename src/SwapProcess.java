@@ -42,7 +42,11 @@ public class SwapProcess
 	}
 	
 	public boolean isComplete() { return remaining_time == 0; }
-	public void run() { remaining_time--; } //decrements the remaining time of this process
+	public void run() //decrements the remaining time of this process
+	{ 
+		if (remaining_time > 0)
+			remaining_time--; 
+	} 
 	
 	public static Comparator<SwapProcess> startPointComparator() {
 		return new Comparator<SwapProcess>() {

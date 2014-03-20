@@ -116,6 +116,19 @@ public class SwapSimulator
 		{
 			int index = 0;
 			
+			//remove completed processes at beginning of quanta
+			for (int z = 0; z < list.size(); z++)
+			{
+				SwapProcess sp = list.get(z);
+				
+				if (sp.isComplete())
+				{
+					list.remove(sp);
+					printSwappedOut(sp, i);
+				}
+			}
+			
+			//add new processes at beginning of quanta
 			if (alg == "FF")
 			{
 				while (list.swapInFirstFit(q.peek()))
@@ -124,19 +137,7 @@ public class SwapSimulator
 					printSwappedIn(gotten, i);
 					count++;
 				}
-				
-				for (int z = 0; z < list.size(); z++)
-				{
-					SwapProcess sp = list.get(z);
-					
-					if (sp.isComplete())
-					{
-						list.remove(sp);
-						printSwappedOut(sp, i);
-					}
-				}
 			}
-			
 			else if (alg == "NF")
 			{
 				while (list.swapInNextFit(q.peek(), index))
@@ -146,42 +147,18 @@ public class SwapSimulator
 					index = list.indexOf(gotten);
 					count++;
 				}
-				
-				for (int z = 0; z < list.size(); z++)
-				{
-					SwapProcess sp = list.get(z);
-					
-					if (sp.isComplete())
-					{
-						list.remove(sp);
-						printSwappedOut(sp, i);
-					}
-				}
 			}
-			
-			else if (alg == "BF") //ADDED A STUPID SEMICOLON RIGHT HERE AND I WASTED 40 MINS TRYING TO 
-				//FIGURE OUT WHAT WAS GOING ON!!! OMG!!!!
+			else if (alg == "BF")
 			{
-				while (list.swapInBestFit(q.peek())) //ADDED ONE RIGHT HERE TOO! WHAT WAS I THINKING?
+				while (list.swapInBestFit(q.peek()))
 				{
 					SwapProcess gotten = q.remove();
 					printSwappedIn(gotten, i);
 					count++;
 				}
-				
-				for (int z = 0; z < list.size(); z++)
-				{
-					SwapProcess sp = list.get(z);
-					
-					if (sp.isComplete())
-					{
-						list.remove(sp);
-						printSwappedOut(sp, i);
-					}
-				}
 			}
 			
-			list.run();
+			list.run(); //run all the processes
 		}
 		
 		return count;
